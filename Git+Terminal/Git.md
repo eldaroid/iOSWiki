@@ -43,13 +43,15 @@
 ### 2) Gitflow
 
 Существуют различные модели ветвления, наиболее популярные: 
-#### * [Git flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitflow.md)
+* [Git flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitflow.md)
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/GitFlow.png" alt="alt text" width="400" height="300">
- * [Github flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Githubflow.md)
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/GithubFlow.jpeg" alt="alt text" width="300" height="550">
-[**Gitlab flow:**](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitlabflow.md)
+* [Github flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Githubflow.md)
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GithubFlow.jpeg" alt="alt text" width="550" height="300">
+
+* [Gitlab flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitlabflow.md)
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/GitlabFlow.jpeg" alt="alt text" width="300" height="350">
 
