@@ -43,15 +43,18 @@
 ### 2) Gitflow
 
 Существуют различные модели ветвления, наиболее популярные: 
-#### * [Git flow](https://github.com/eldaroid/iosBasics/new/master/Git%2BTerminal)
-#### * [Github flow]()
-#### * [Gitlab flow]()
+#### * [Git flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitflow.md)
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GitFlow.png" alt="alt text" width="400" height="300">
+#### * [Github flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Githubflow.md)
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GithubFlow.jpeg" alt="alt text" width="300" height="550">
+#### * [Gitlab flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitlabflow.md)
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GitlabFlow.jpeg" alt="alt text" width="300" height="350">
 
 > [Базовые принципы популярных моделей ветвления](https://www.atlassian.com/git/tutorials/comparing-workflows)
-* Любое значимое изменение должно оформляться как отдельная ветвь
-* Текущая версия главное ветви всегда корректна. В любой момент сборка проекта, проведенная из текущей ветви, должна быть успешной.
-* Версии проекта помечаются тегами. Выделенная и помеченная тегом версия более никогда не изменяется.
-* Любые рабочие, тестовые или демонтрационные версии проекта собираются только из репозитоиия системы. 
+> * Любое значимое изменение должно оформляться как отдельная ветвь
+> * Текущая версия главное ветви всегда корректна. В любой момент сборка проекта, проведенная из текущей ветви, должна быть успешной.
+> * Версии проекта помечаются тегами. Выделенная и помеченная тегом версия более никогда не изменяется.
+> * Любые рабочие, тестовые или демонтрационные версии проекта собираются только из репозитоиия системы. 
 
 ### 3) Практика
 
@@ -63,7 +66,7 @@
 
 Удобный формат `git log --online`:
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog--online.png" alt="alt text" width="500" height="300">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog--online.png" alt="alt text" width="550" height="250">
 
 Опции: 
 * --stat — выведет статистику для каждого коммита
