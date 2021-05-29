@@ -65,6 +65,9 @@
 
 #### Просмотр истории коммитов
 
+<details><summary>CLICK ME</summary>
+<p>
+  
 По умолчанию `git log` вывод в таком формате:
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog.png" alt="alt text" width="300" height="300">
@@ -79,6 +82,8 @@
 * --decorate — покажет “головы” (HEAD)
 * --all — покажет все ветки
 * -- oneline - чтобы все это поместилось в одной строке
+</p>
+</details>
 
 #### Удаляем ветку:
 1) git checkout develop - переключаемся на любую ветку
