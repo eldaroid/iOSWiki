@@ -1,0 +1,26 @@
+### Github Flow
+
+> Github Flow – самая простая модель ветвления, являющаяся практической реализацией основных принципов разработки ПО в VCS без учета релизных циклов ПО. Подходит для методологии Kanban.
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GithubFlow.jpeg" alt="alt text" width="550" height="250">
+
+#### Принципы
+
+* Одна главная ветка master – текущая стабильная версия
+
+* Вспомогательные feature или hotfix ветки ответвляются от master и сливаются обратно в неё через pull-request
+
+* Все слияния происходят только через pull-request’ы
+
+| Плюсы: | Минусы: |
+| ------------- |------------------|
+| Готовый функционал не «отлёживается» в релизах, а сразу же отправляется на пром | Требует крайне высокой культуры разработки и сопровождения |
+| Простая и прозрачная схема работы для разработчика | Требует максимальной автоматизации процессов тестирования и доставки |
+
+#### Дополнительные материалы:
+[Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+[GitHub Flow: рабочий процесс Гитхаба](https://habrahabr.ru/post/189046/)
+
+---
+
+[Previous Theme](/Git%2BTerminal/Gitflow.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal/Gitlabflow.md)
