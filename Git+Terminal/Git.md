@@ -17,6 +17,9 @@
 
 #### Архитектура систем контроля версий (от англ. Version Control System, VCS)
 
+<details><summary>CLICK ME</summary>
+<p>
+
 Инструменты VCS имеют два основных типа удаленной архитектуры:
 
 * централизованный (Centralized VCS);
@@ -30,7 +33,14 @@
 Родительский коммит - тот, от которого пошли разделения на ветки.
 Имя основной ветки по умолчанию в Git — master.
 
+</p>
+</details>
+
 #### Состояния файлов Git
+
+<details><summary>CLICK ME</summary>
+<p>
+
 Файл в Git может находится в одном из трёх состояний:
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/git_files.png" alt="alt text" width="800" height="400">
@@ -40,7 +50,13 @@
 * staged (:green_circle:) — добавлен в индекс для включения в коммит.
 * commited (:white_circle:) — объект уже сохранен на базе.
 
+</p>
+</details>
+
 ### 2) Gitflow
+
+<details><summary>CLICK ME</summary>
+<p>
 
 Существуют различные модели ветвления, наиболее популярные: 
 * [Git flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitflow.md)
@@ -60,6 +76,39 @@
 > * Текущая версия главное ветви всегда корректна. В любой момент сборка проекта, проведенная из текущей ветви, должна быть успешной.
 > * Версии проекта помечаются тегами. Выделенная и помеченная тегом версия более никогда не изменяется.
 > * Любые рабочие, тестовые или демонтрационные версии проекта собираются только из репозитоиия системы. 
+
+</p>
+</details>
+
+#### Pull Request
+
+<details><summary>CLICK ME</summary>
+<p>
+
+Общим принципом для всех моделей ветвления является то, что все изменения между ветками переносятся с помощью запросов на слияние.
+  
+**Запрос на слияние** (Pull-Request - BitBucket, Merge request - Gitlab) – механизм системы контроля версий, позволяющий оформить изменения из ветки в виде предложения к слиянию в основную (или какую-то иную) ветку репозитория.
+  
+<img src="https://github.com/eldaroid/pictures/blob/master/other/pull_request.png" alt="alt text" width="400" height="300">
+  
+Что даёт:
+
+* Описание предлагаемого изменения видно в интерфейсе системы контроля версий всем заинтересованным участникам
+
+* Возможность провести code review и оставить комментарии ещё до включения изменений в целевую ветку
+
+* Возможность не допустить слияния, пока не будут выполнены все необходимые условия. 
+    
+    Например:
+  
+        * Минимальное количество подтверждений от участников, проводящих ревью
+  
+        * Успешно прошедшая сборка в системе CI
+        
+        * Отсутствие критичных замечаний по результатам автоматического статического анализа
+   
+</p>
+</details>
 
 ### 3) Практика
 
@@ -86,6 +135,10 @@
 </details>
 
 #### Удаляем ветку:
+
+<details><summary>CLICK ME</summary>
+<p>
+  
 1) git checkout develop - переключаемся на любую ветку
 2) git branch -d [your branch] - удаляем локальную
 3) git push [origin] --delete [your branch] - удаляем удаленную. 
@@ -98,14 +151,33 @@ git branch bugfix/elizarov/ASSESSMENT-191
 git checkout bugfix/elizarov/ASSESSMENT-191
 2) git push --set-upstream origin bugfix/elizarov/ASSESSMENT-191
 
+</p>
+</details>
+  
 #### Удалить локальные изменения:
+
+<details><summary>CLICK ME</summary>
+<p>
+
 Git reset –hard HEAD – удаляет локальные изменения
 
+</p>
+</details>
+
 #### Rebase
+
+<details><summary>CLICK ME</summary>
+<p>
+
 Куда: origin/release
 Откуда: bugfix
 git checkout origin/release && git fetch && git pull && git checkout bugfix
 git rebase origin/release
 git push -f
+
+</p>
+</details>
+
+####  Pull Request
 
 [Previous Theme](/Git%2BTerminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal)
