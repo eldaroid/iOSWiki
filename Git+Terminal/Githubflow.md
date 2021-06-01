@@ -18,8 +18,10 @@
 | Простая и прозрачная схема работы для разработчика | Требует максимальной автоматизации процессов тестирования и доставки |
 
 #### Дополнительные материалы:
-[Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-[GitHub Flow: рабочий процесс Гитхаба](https://habrahabr.ru/post/189046/)
+
+* [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+
+* [GitHub Flow: рабочий процесс Гитхаба](https://habrahabr.ru/post/189046/)
 
 ---
 
