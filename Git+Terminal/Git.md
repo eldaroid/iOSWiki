@@ -159,7 +159,9 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 <details><summary>CLICK ME</summary>
 <p>
 
-Git reset –hard HEAD – удаляет локальные изменения
+git reset –hard HEAD – удаляет локальные изменения
+  
+git reset --hard origin/bugfix/elizarov/ASSESSMENT-371
 
 </p>
 </details>
