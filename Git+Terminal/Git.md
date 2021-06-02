@@ -6,6 +6,7 @@
 2. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
 3. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 4. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+5. - [ ] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
 
 ### 1) про Git
 
@@ -210,6 +211,6 @@ git push -f
 </details>
 
 [1] origin: `git remote`
-[2] **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями, **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью, **git push** - отправка
+[2] **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями, **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью (выполняет git fetch и git merge origin/[your branch]), **git push** - отправка изменений в удаленный репозиторий.
 
 [Previous Theme](/Git%2BTerminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal)
