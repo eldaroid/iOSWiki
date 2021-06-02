@@ -121,7 +121,7 @@
 то же самое, что и : 
 git branch bugfix/elizarov/ASSESSMENT-191
 git checkout bugfix/elizarov/ASSESSMENT-191
-2) git push --set-upstream origin bugfix/elizarov/ASSESSMENT-191
+2) git push --set-upstream [1] bugfix/elizarov/ASSESSMENT-191
 
 </p>
 </details>
@@ -157,8 +157,8 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 
 2) git branch -d [your branch] - удаляем локальную
   
-3) git push [origin] --delete [your branch] - удаляем удаленную. 
-[origin] - то, что мы прописывали в git push "origin" HEAD:[your branch]
+3) git push [1] --delete [your branch] - удаляем удаленную. 
+[origin] - то, что мы прописывали в git push [1] HEAD:[your branch]
 
 </p>
 </details>
@@ -170,7 +170,7 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 
 git reset –hard HEAD – удаляет локальные изменения
   
-git reset --hard origin/bugfix/elizarov/ASSESSMENT-371
+git reset --hard [1]/bugfix/elizarov/ASSESSMENT-371
 
 </p>
 </details>
@@ -179,11 +179,15 @@ git reset --hard origin/bugfix/elizarov/ASSESSMENT-371
 
 <details><summary>CLICK ME</summary>
 <p>
-
+  
 * git checkout master
 * git merge my_branch
   
 My_branch слилась в master 
+
+**Merge-конфликт** все, что выше `=======` - это HEAD, все, что ниже до `>>>>>>>` - это то, что мы сливали в мастер (My_branch)
+  
+Merge при конфликтах становится опасной утилитой - не всегда можно заметить какие строчки добавлены или файлы (а они могут влиять на работу программы). Справитсья с такой проблемой поможет команда `git mergetool`. Выведется vimdiff, который покажет полную разницу в файлах.
   
 </p>
 </details>
@@ -193,16 +197,19 @@ My_branch слилась в master
 <details><summary>CLICK ME</summary>
 <p>
 
-Куда: origin/release
+Куда: [1]/release
 Откуда: bugfix
 
-git checkout origin/release && git fetch && git pull && git checkout bugfix
+git checkout [1]/release && git fetch && git pull && git checkout bugfix
   
-git rebase origin/release
+git rebase [1]/release
 
 git push -f
 
 </p>
 </details>
+
+[1] origin: `git remote`
+[2] **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями, **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью, **git push** - отправка
 
 [Previous Theme](/Git%2BTerminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal)
