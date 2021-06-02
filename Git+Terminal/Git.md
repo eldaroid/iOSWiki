@@ -2,11 +2,12 @@
 
 ### Как изучать?
 
-1. - [x] [Сбер: "Инструменты DevOps: Git"]()
-2. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
-3. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
-4. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+1. - [ ] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
+2. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+3. - [x] Сбер: "Инструменты DevOps: Git"
+4. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
 5. - [ ] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
+6. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
 ### 1) про Git
 
