@@ -61,7 +61,7 @@
 Существуют различные модели ветвления, наиболее популярные: 
 * [Git flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Gitflow.md)
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/GitFlow.png" alt="alt text" width="400" height="300">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/GitFlow.png" alt="alt text" width="450" height="300">
 
 * [Github flow:](https://github.com/eldaroid/iosBasics/blob/master/Git%2BTerminal/Githubflow.md)
 
@@ -111,7 +111,21 @@
 </details>
 
 ### 3) Практика
+  
+#### Создание ветки: 
 
+<details><summary>CLICK ME</summary>
+<p>
+  
+1) git checkout -b bugfix/elizarov/ASSESSMENT-191
+то же самое, что и : 
+git branch bugfix/elizarov/ASSESSMENT-191
+git checkout bugfix/elizarov/ASSESSMENT-191
+2) git push --set-upstream origin bugfix/elizarov/ASSESSMENT-191
+
+</p>
+</details>
+  
 #### Просмотр истории коммитов
 
 <details><summary>CLICK ME</summary>
@@ -123,7 +137,7 @@
 
 Удобный формат `git log --online`:
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog--online.png" alt="alt text" width="550" height="250">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog--online.png" alt="alt text" width="550" height="200">
 
 Опции: 
 * --stat — выведет статистику для каждого коммита
@@ -133,23 +147,18 @@
 * -- oneline - чтобы все это поместилось в одной строке
 </p>
 </details>
-
+  
 #### Удаляем ветку:
 
 <details><summary>CLICK ME</summary>
 <p>
   
 1) git checkout develop - переключаемся на любую ветку
+
 2) git branch -d [your branch] - удаляем локальную
+  
 3) git push [origin] --delete [your branch] - удаляем удаленную. 
 [origin] - то, что мы прописывали в git push "origin" HEAD:[your branch]
-
-#### Создание ветки: 
-1) git checkout -b bugfix/elizarov/ASSESSMENT-191
-то же самое, что и : 
-git branch bugfix/elizarov/ASSESSMENT-191
-git checkout bugfix/elizarov/ASSESSMENT-191
-2) git push --set-upstream origin bugfix/elizarov/ASSESSMENT-191
 
 </p>
 </details>
@@ -166,6 +175,19 @@ git reset --hard origin/bugfix/elizarov/ASSESSMENT-371
 </p>
 </details>
 
+#### Merge
+
+<details><summary>CLICK ME</summary>
+<p>
+
+* git checkout master
+* git merge my_branch
+  
+My_branch слилась в master 
+  
+</p>
+</details>
+  
 #### Rebase
 
 <details><summary>CLICK ME</summary>
@@ -173,13 +195,14 @@ git reset --hard origin/bugfix/elizarov/ASSESSMENT-371
 
 Куда: origin/release
 Откуда: bugfix
+
 git checkout origin/release && git fetch && git pull && git checkout bugfix
+  
 git rebase origin/release
+
 git push -f
 
 </p>
 </details>
-
-####  Pull Request
 
 [Previous Theme](/Git%2BTerminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal)
