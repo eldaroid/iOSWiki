@@ -2,7 +2,7 @@
 
 ### Как изучать?
 
-1. - [ ] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
+1. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
 2. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 3. - [x] Сбер: "Инструменты DevOps: Git"
 4. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
@@ -112,7 +112,29 @@
 </p>
 </details>
 
-### 3) Практика
+### 3) Команды
+
+<details><summary>CLICK ME</summary>
+<p>
+
+  * git diff - просмотр неотслеживаемых изменений. 
+  
+  * git add - добавляет файлы в отслеживаемые. -A - флаг для добавления всех измененных файлов.
+  
+  * git show [commit_id] - показывает изменения этого коммита.
+  
+  * git push - отправляет изменения в удаленный репозиторий. Пушит все, кроме тегом, для тегов использовать флаг --tag.
+  
+  Разница между git fetch и git pull
+  > **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями
+  > **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью (выполняет git fetch и git merge origin/[your branch]), **git push** - отправка изменений в удаленный репозиторий.
+  
+  git merge - сливание двух веток в одну
+  
+</p>
+</details>
+
+### 4) Практика
   
 #### Создание ветки: 
 
@@ -212,6 +234,22 @@ git rebase [1]/release
 
 git push -f
 
+</p>
+</details>
+
+#### Alias git
+
+<details><summary>CLICK ME</summary>
+<p>
+
+  * git config alias.st = status - теперь вместо полной команды git status можно писать просто git st. 
+  
+  или
+  
+  * vim .git/config, добавляем в конец [alias] и с новой строки добавлять все алиасы.
+  
+  <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="100" height="100">
+  
 </p>
 </details>
 
