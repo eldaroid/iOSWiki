@@ -235,6 +235,8 @@ git checkout [1]/release && git fetch && git pull && git checkout bugfix
 git rebase [1]/release
 
 git push -f
+  
+  [только n коммитов ребейзнуть](https://stackoverflow.com/questions/39084984/how-to-rebase-only-last-two-commits-without-the-whole-branch#:~:text=First%20create%20the%20branch%20other_feature%20at%20the%20same%20commit%20as%20feature%20.&text=Rebase%20the%20previous%20two%20commits%20onto%20master%20.&text=Checkout%20feature%20.&text=Reset%20feature%20to%20the%20commit%20where%20you%20want%20it.)
 
 </p>
 </details>
