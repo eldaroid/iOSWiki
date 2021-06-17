@@ -1,5 +1,9 @@
 ## Terminal
 
+### Как изучать?
+
+1. - [x] [Курс «Инструменты промышленной разработки». Лекция 1 (Данила Кутенин)](https://www.youtube.com/watch?v=LGFMbSNEY20&t=3060s&ab_channel=ANDROIDHELPER%5BUNITY3Dandmore%5DANDROIDHELPER%5BUNITY3Dandmore%5D)
+
 ### Запуск нескольких команд 
 
 **";"** : `command_1; command_2; command_3` - последовательный запуск нескольких команд за раз. 
