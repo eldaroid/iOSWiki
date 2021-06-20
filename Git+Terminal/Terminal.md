@@ -56,17 +56,35 @@
 
 Пример скрипта в терминале:
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/script1.png" alt="alt text" width="200" height="200">
+```console
+➜  Desktop mcd() {
+function> mkdir -p "$1"
+function> cd "$1"
+function> }
+➜  Desktop mcd testFolder
+➜  testFolder 
+```
 
 Создать исполняемый файл:
 
 `vim python.sh` 
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/script2.png" alt="alt text" width="200" height="200">
+```console
+➜  Desktop vim python.py
+➜  Desktop which python 
+/usr/bin/python
+➜  Desktop chmod +x python.py 
+➜  Desktop ./python.py 
+hello
+```
 
 -> `chmod +x python.sh` -> `./python.sh`
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/script3.png" alt="alt text" width="200" height="200">
+```console
+➜  Desktop cat python.py 
+#!/usr/bin/python3
+print("hello")
+```
 
 ```
 #! - [Шебанг](https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D0%B1%D0%B0%D0%BD%D0%B3_(Unix)) означает, что нужно взять бинарник (/bin) из этой директории и начать его исполнять
@@ -75,7 +93,19 @@
 ```
 $:
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/script4.png" alt="alt text" width="200" height="200">
+```console
+➜  Desktop print_args() {
+echo $1
+echo $@
+echo $#
+echo $$
+}
+➜  Desktop print_args 1 2 3 4 helloWorld!
+1
+1 2 3 4 helloWorld!
+5
+877
+```
 
 ```
 $1 - первый переданный аргумент функции
