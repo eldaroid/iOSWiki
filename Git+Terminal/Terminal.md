@@ -52,11 +52,33 @@
 
 Чтобы алиасы работали всегда их нужно закинуть в файл .bashrc или .zshrc: вписываем `alias ll="ls -alF"`, после перезапуска терминала алиасы вступают в силу. 
 
+#### Базовые скрипты
+
+Пример скрипта в терминале:
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/script1.png" alt="alt text" width="200" height="200">
+
+Создать исполняемый файл:
+
+`vim python.sh` 
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/script2.png" alt="alt text" width="200" height="200">
+
+-> `chmod +x python.sh` -> `./python.sh`
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/script3.png" alt="alt text" width="200" height="200">
+
+```
+#! - [Шебанг](https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D0%B1%D0%B0%D0%BD%D0%B3_(Unix)) означает, что нужно взять бинарник (/bin) из этой директории и начать его исполнять
+Для проверки где происходит исполнение скрипта на нужном нам языке, пишем `which (название языка/команды)`
+Для того, чтобы дать права на исполнение созданному файлу нужно написать команду `chmod +x (название файла)`
+```
+
 #### Скрипт при запуске терминала
 
-vim .zshrc
+vim .zshrc или .bashrc
 
-sudo -S purge - очищает ненужные
+sudo -S purge - очищает ненужные процессы.
 
 3я строчка - это тот скрипт, который ты хочешь запускать при запуске терминала.
 
