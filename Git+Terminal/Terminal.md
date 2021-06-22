@@ -3,6 +3,7 @@
 ### Как изучать?
 
 1. - [x] [Курс «Инструменты промышленной разработки». Лекция 1 (Данила Кутенин)](https://www.youtube.com/watch?v=LGFMbSNEY20&t=3060s&ab_channel=ANDROIDHELPER%5BUNITY3Dandmore%5DANDROIDHELPER%5BUNITY3Dandmore%5D)
+2. - [x] [Инструменты промышленной разработки](https://github.com/danlark1/hse_missing_cs_education)
 
 ### Запуск нескольких команд 
 
