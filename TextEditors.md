@@ -192,9 +192,8 @@ Vim поддерживает набор открытых файлов, назы�
 
 ## Кастомизация
 
-Vim можно кастомизировать через `~/.vimrc`. Можете <a href="https://github.com/eldaroid/iosBasics/blob/master/vimrc" download>Click to Download</a>
-дефолтный конфиг, который в разы лучше, чем стандартный с огромным количеством
-комментариев.
+Vim можно кастомизировать, для этого нужно скопировать 
+[конфиг вима](https://github.com/eldaroid/iosBasics/blob/master/vimrc) и поместить его содержимое в `~/.vimrc`.
 
 Это ещё одна очень сильная точка для Vim. Очень много плагинов под разные
 языки, автодополнения, goto definition, pony plugins, code search, magic
@@ -213,7 +212,7 @@ motions, и т.д.
 * [Vim Advent Calendar](https://vimways.org/2019/)
 * [Vi/Vim Stack Exchange](https://vi.stackexchange.com/)
 * [Vim Screencasts](http://vimcasts.org/)
-* [Practical Vim](https://pragprog.com/titles/dnvim2/) (книжка)
+* [Practical Vim](https://pragprog.com/titles/dnvim2/) (книга)
 
 
 
