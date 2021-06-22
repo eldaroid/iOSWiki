@@ -5,6 +5,8 @@
 1. - [x] [Курс «Инструменты промышленной разработки». Лекция 1 (Данила Кутенин)](https://www.youtube.com/watch?v=LGFMbSNEY20&t=3060s&ab_channel=ANDROIDHELPER%5BUNITY3Dandmore%5DANDROIDHELPER%5BUNITY3Dandmore%5D)
 2. - [x] [Инструменты промышленной разработки](https://github.com/danlark1/hse_missing_cs_education)
 
+### про Текстовые Редакторы можно почитать [здесь](https://github.com/danlark1/hse_missing_cs_education/tree/master/text_editors)
+
 ### Запуск нескольких команд 
 
 **";"** : `command_1; command_2; command_3` - последовательный запуск нескольких команд за раз. 
@@ -43,7 +45,7 @@
 `Ctrl+Command+T` - в той же директории открыть новое окно. `Ctrl+T` - в новой директории.
 
 ### Скрипты и алиасы
----
+
 #### Алиасы
 Задаются следующим образом: 
 
