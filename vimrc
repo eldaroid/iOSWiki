@@ -64,3 +64,27 @@ set ruler
 " Ability to undo the last actions on Ctrl-Z
 nnoremap <c-z> :u<CR>      " Avoid using this**
 inoremap <c-z> <c-o>:u<CR>
+
+" Implement Ctrl-C Ctrl-V
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"i+p
+imap <C-v> <C-r><C-o>+
+
+:" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+nnoremap <C-a> <Home>
+inoremap <C-a> <Home>
+nnoremap <C-e> <End>
+inoremap <C-e> <End>
+
+" Select with shift + arrows
+inoremap    <S-Left>              <Left><C-o>v
+inoremap    <S-Right>             <C-o>v
+inoremap    <S-Up>                <Left><C-o>v<Up><Right>
+inoremap    <S-Down>              <C-o>v<Down><Left>
+imap        <C-S-Left>            <S-Left><C-Left>
+imap        <C-S-Right>           <S-Right><C-Right>
+vnoremap    <S-Left>              <Left>
+vnoremap    <S-Right>             <Right>
+vnoremap    <S-Up>                <Up>
+vnoremap    <S-Down>              <Down>
