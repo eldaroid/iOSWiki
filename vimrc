@@ -60,3 +60,7 @@ set cursorline
 
 " Bottom right shows useful information
 set ruler
+
+" Ability to undo the last actions on Ctrl-Z
+nnoremap <c-z> :u<CR>      " Avoid using this**
+inoremap <c-z> <c-o>:u<CR>
