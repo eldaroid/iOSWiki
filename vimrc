@@ -62,8 +62,10 @@ set cursorline
 set ruler
 
 " Ability to undo the last actions on Ctrl-Z
-nnoremap <c-z> :u<CR>      " Avoid using this**
+nnoremap <c-z> :u<CR>
+vnoremap <c-z> :u<CR> 
 inoremap <c-z> <c-o>:u<CR>
+vnoremap <c-z> <c-o>:u<CR>
 
 " Implement Ctrl-C Ctrl-V
 vmap <C-c> "+yi
