@@ -125,6 +125,8 @@
   
   * git push - отправляет изменения в удаленный репозиторий. Пушит все, кроме тегом, для тегов использовать флаг --tag.
   
+  * git commit --amend -m "" - добавляет изменения к предыдущему коммиту, не создавая новый
+  
   Разница между git fetch и git pull
   > **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями
   > **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью (выполняет git fetch и git merge origin/[your branch]), **git push** - отправка изменений в удаленный репозиторий.
@@ -189,7 +191,7 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 </p>
 </details>
   
-#### Удалить локальные изменения:
+#### Удалить локальные изменения/откат коммитов:
 
 <details><summary>CLICK ME</summary>
 <p>
@@ -201,7 +203,8 @@ git checkout bugfix/elizarov/ASSESSMENT-191
   
 Откатиться по коммиту: 
 
-* git reset --hard HEAD~1
+* git reset --hard HEAD~1 - назад на 1 коммит
+
 </p>
 </details>
 
@@ -239,10 +242,6 @@ git rebase [1]/release
 git push -f
   
   [только n коммитов ребейзнуть](https://stackoverflow.com/questions/39084984/how-to-rebase-only-last-two-commits-without-the-whole-branch#:~:text=First%20create%20the%20branch%20other_feature%20at%20the%20same%20commit%20as%20feature%20.&text=Rebase%20the%20previous%20two%20commits%20onto%20master%20.&text=Checkout%20feature%20.&text=Reset%20feature%20to%20the%20commit%20where%20you%20want%20it.)
-
-  Откат изменений
-  
-  git reset --hard HEAD~1 - назад на 1 коммит
   
 </p>
 </details>
