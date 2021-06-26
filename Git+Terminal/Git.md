@@ -3,11 +3,12 @@
 ### Как изучать?
 
 1. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
-2. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
-3. - [x] Сбер: "Инструменты DevOps: Git"
-4. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
-5. - [ ] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
-6. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
+2. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
+3. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+4. - [x] Сбер: "Инструменты DevOps: Git"
+5. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
+6. - [ ] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
+7. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
 ### 1) про Git
 
@@ -131,7 +132,16 @@
   > **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями
   > **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью (выполняет git fetch и git merge origin/[your branch]), **git push** - отправка изменений в удаленный репозиторий.
   
-  * git merge - сливание двух веток в одну
+  * git merge - это 1/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Сливание двух веток в одну
+
+  * [git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=From%20a%20content%20perspective%2C%20rebasing,them%20to%20the%20specified%20base) - это 2/2 Git, которая специализируется на интеграции изменений из одной ветки в другую. Меняет историю ваших коммитов.
+  
+  Опции: 
+        * squash — строит текстовый граф
+        * fixup - то же самое, что и squash, но не добавляет предыдущий коммит к новому
+        * reword — измение сообщение коммита (вместо pick - reword, вместо сообщения справа от хеша - новое сообщение коммита)
+        * drop — удалить коммит. Могут быть проблемы с тем, что мы дальше меняли файл после того как удалили.
+        * reset — жестко меняем HEAD на новый (вся последующая история после того, на что мы сделали reset - не сохраняется)
   
   * git grep "test" - ищет в рабочем каталоге слово test (как в коде, так и в названии файлов) 
   
