@@ -92,7 +92,7 @@
   
 **Запрос на слияние** (Pull-Request - BitBucket, Merge request - Gitlab) – механизм системы контроля версий, позволяющий оформить изменения из ветки в виде предложения к слиянию в основную (или какую-то иную) ветку репозитория.
   
-<img src="https://github.com/eldaroid/pictures/blob/master/other/pull_request.png" alt="alt text" width="400" height="300">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/pull_request.png" alt="alt text" width="500" height="300">
   
 Что даёт:
 
@@ -105,9 +105,7 @@
     Например:
   
         * Минимальное количество подтверждений от участников, проводящих ревью
-  
         * Успешно прошедшая сборка в системе CI
-        
         * Отсутствие критичных замечаний по результатам автоматического статического анализа
    
 </p>
@@ -126,7 +124,7 @@
   
   * git push - отправляет изменения в удаленный репозиторий. Пушит все, кроме тегом, для тегов использовать флаг --tag.
   
-  * git commit --amend -m "" - добавляет изменения к предыдущему коммиту, не создавая новый
+  * git commit --amend -m "" - добавляет изменения к предыдущему коммиту, не создавая новый, при это хеш меняется
   
   Разница между git fetch и git pull
   > **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями
@@ -210,8 +208,13 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 
 * git reset –hard HEAD – удаляет локальные изменения
   
-* git reset --hard [1]/bugfix/elizarov/ASSESSMENT-371
+  или
 
+* git reset --hard [1]/bugfix/elizarov/ASSESSMENT-371 - более точно указываем к чем мы хотим откатить (к оригинальной ветка, которая хранится удаленно)
+
+  или если хочешь изменить только файлы
+ 
+* git checkout (our file) - заменяет ваш локальный файл на оригинальной из удаленного репозитория
   
 Откатиться по коммиту: 
 
@@ -273,6 +276,24 @@ git push -f
   
 </p>
 </details>
+
+#### Если clone слишком большой
+
+<details><summary>CLICK ME</summary>
+<p>
+
+```console
+➜ git config --global core.compression 0
+➜ git config --global http.postBuffer 1048576000
+➜ git config --global http.maxRequestBuffer 100M
+➜ git clone
+```
+
+`git config --global http.maxRequestBuffer 100M --depth=1 - также может помочь, означает, что надо засквошить все коммиты в 1 последний`
+
+</p>
+</details>
+
 
 [1] origin: `git remote -v`
 
