@@ -132,7 +132,7 @@
   
   * git merge - это 1/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Сливание двух веток в одну
 
-  * [git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=From%20a%20content%20perspective%2C%20rebasing,them%20to%20the%20specified%20base) - это 2/2 Git, которая специализируется на интеграции изменений из одной ветки в другую. Меняет историю ваших коммитов.
+  * [git rebase](https://www.atlassian.com/ru/git/tutorials/rewriting-history/git-rebase) - это 2/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Меняет историю ваших коммитов.
   
   Опции: 
         * squash — строит текстовый граф
