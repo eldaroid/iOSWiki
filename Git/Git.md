@@ -21,7 +21,7 @@
 
 #### Архитектура систем контроля версий (от англ. Version Control System, VCS)
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 Инструменты VCS имеют два основных типа удаленной архитектуры:
@@ -42,7 +42,7 @@
 
 #### Состояния файлов Git
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 Файл в Git может находится в одном из трёх состояний:
@@ -59,7 +59,7 @@
 
 ### 2) Gitflow
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 Существуют различные модели ветвления, наиболее популярные: 
@@ -86,7 +86,7 @@
 
 #### Pull Request
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 Общим принципом для всех моделей ветвления является то, что все изменения между ветками переносятся с помощью запросов на слияние.
@@ -114,7 +114,7 @@
 
 ### 3) Команды
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
   * git diff - просмотр неотслеживаемых изменений
@@ -153,7 +153,7 @@
   
 #### Создание ветки: 
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
   
 1) git checkout -b bugfix/elizarov/ASSESSMENT-191
@@ -167,29 +167,44 @@ git checkout bugfix/elizarov/ASSESSMENT-191
   
 #### Просмотр истории коммитов
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
   
 По умолчанию `git log` вывод в таком формате:
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog.png" alt="alt text" width="300" height="300">
 
-Удобный формат `git log --online`:
-
-<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog--online.png" alt="alt text" width="550" height="200">
+Удобный формат `git log --graph --oneline --decorate --stat`
 
 Опции: 
 * --stat — выведет статистику для каждого коммита
-* --graph — строит текстовый граф
+* --graph — выводит дерево зависимостей для всех коммитов
 * --decorate — покажет “головы” (HEAD)
 * --all — покажет все ветки
-* -- oneline - чтобы все это поместилось в одной строке
+* -- oneline - выводит сокращённые данные коммита (в виде одной строки)
+</p>
+</details>
+  
+#### Извлечение файла из другой ветки
+
+<details><summary>Open</summary>
+<p>
+  
+  Пример команды: `git show some-branch:some-file.js`
+  
+  Иногда бывает удобно посмотреть на какой-либо файл в другой ветке, не переключаясь на неё. 
+  Это можно сделать с помощью команды git show some-branch-name:some-file-name.js, которая выведет содержимое файла в указанной ветке прямо в терминал.
+  
+  А с помощью перенаправления вывода можно сохранить этот файл в указанное место на диске, например, если вы заходите открыть два файла одновременно в своём редакторе: git show some-branch-name:some-file-name.js > deleteme.js.
+
+  Примечание: если вам нужно всего лишь сравнить два файла, то можно выполнить такую команду: git diff some-branch some-filename.js
+  
 </p>
 </details>
   
 #### Удаляем ветку:
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
   
 1) git checkout develop - переключаемся на любую ветку
@@ -204,7 +219,7 @@ git checkout bugfix/elizarov/ASSESSMENT-191
   
 #### Удалить локальные изменения/откат коммитов:
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 * git reset –hard HEAD – удаляет локальные изменения
@@ -226,7 +241,7 @@ git checkout bugfix/elizarov/ASSESSMENT-191
 
 #### Merge
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
   
 * git checkout master
@@ -243,7 +258,7 @@ Merge при конфликтах становится опасной утили
   
 #### Rebase
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
   Ребейз на новую ветку
@@ -264,7 +279,7 @@ git push -f
 
 #### Alias git
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
   * git config alias.st = status - теперь вместо полной команды git status можно писать просто git st. 
@@ -280,7 +295,7 @@ git push -f
 
 #### Если clone слишком большой
 
-<details><summary>CLICK ME</summary>
+<details><summary>Open</summary>
 <p>
 
 ```console
@@ -295,6 +310,7 @@ git push -f
 </p>
 </details>
 
+---
 
 [1] origin: `git remote -v`
 
