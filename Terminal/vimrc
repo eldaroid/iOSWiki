@@ -76,8 +76,8 @@ imap <C-v> <C-r><C-o>+
 :" Map Ctrl-A -> Start of line, Ctrl-E -> End of line
 nnoremap <C-a> <Home>
 inoremap <C-a> <Home>
-nnoremap <C-e> <End>
-inoremap <C-e> <End>
+nnoremap <C-e> <End><Right>
+inoremap <C-e> <End><Right>
 
 " Select with shift + arrows
 inoremap    <S-Left>              <Left><C-o>v
