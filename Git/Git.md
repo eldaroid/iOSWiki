@@ -298,7 +298,7 @@ git push -f
   
   или
   
-  * vim .git/config, добавляем в конец [alias] и с новой строки добавлять все алиасы.
+  * vim ~/.gitconfig, добавляем в конец [alias] и с новой строки добавлять все алиасы.
   
   <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="250" height="100">
   
