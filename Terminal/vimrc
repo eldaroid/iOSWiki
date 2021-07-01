@@ -1,7 +1,7 @@
 " Comments in Vimscript start with a `"`.
 
 " Now the backlight always works
-filetype plugin indent on
+" filetype plugin indent on
 
 " Turn on syntax highlighting.
 syntax on
@@ -90,3 +90,6 @@ vnoremap    <S-Left>              <Left>
 vnoremap    <S-Right>             <Right>
 vnoremap    <S-Up>                <Up>
 vnoremap    <S-Down>              <Down>
+
+" equivalence :Wq and :wq
+command! Wq wq
