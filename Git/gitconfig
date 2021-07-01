@@ -10,6 +10,7 @@
 	postBuffer = 2048M
 	maxRequestBuffer = 1024M
 [alias]
+	a = add -A
  	l = log --graph --oneline --decorate --stat
  	co = checkout
 	cm = commit -m
