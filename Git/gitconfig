@@ -1,0 +1,27 @@
+[user]
+	name = eldaroid
+	email = eldario10@mail.ru
+[core]
+	excludesfile = ~/.gitignore_global
+# 	totally disable compression
+	compression = 0
+	editor = vim
+[http]
+	postBuffer = 1048576000
+	maxRequestBuffer = 100M
+[ssh]
+	postBuffer = 2048M
+	maxRequestBuffer = 1024M
+[alias]
+ 	l = log --graph --oneline --decorate --stat
+ 	co = checkout
+	cm = commit -m
+# с флагом -a можно не писать git add, но только если файлы не новый
+	cma = commit -am
+[color "status"]
+	added = green bold
+	changed = yellow bold
+ 	untracked = red bold
+[log]
+	date = short
+
