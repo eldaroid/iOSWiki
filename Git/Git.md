@@ -8,7 +8,7 @@
 4. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 5. - [x] Сбер: "Инструменты DevOps: Git"
 6. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
-7. - [ ] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
+7. - [х] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
 8. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
 ### 1) про Git
@@ -320,7 +320,9 @@ git push -f
 ➜ git clone
 ```
 
-`git config --global http.maxRequestBuffer 100M --depth=1 - также может помочь, означает, что надо засквошить все коммиты в 1 последний`
+```
+git config --global http.maxRequestBuffer 100M --depth=1 - также может помочь, означает, что надо засквошить все коммиты в 1 последний. Когда это сработает, перейдите в новый каталог и получите оставшуюся часть клона: git fetch --unshallow  и git pull --all
+``` 
 
 </p>
 </details>
