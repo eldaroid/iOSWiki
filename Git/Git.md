@@ -104,7 +104,6 @@
 * Возможность не допустить слияния, пока не будут выполнены все необходимые условия
     
     Например:
-  
         * Минимальное количество подтверждений от участников, проводящих ревью
         * Успешно прошедшая сборка в системе CI
         * Отсутствие критичных замечаний по результатам автоматического статического анализа
@@ -136,7 +135,7 @@
 >   * `git commit --amend --no-edit` - Не добавляет новый коммит, оставляет старый, при этом не запускает редактор. 
 >   Если ветка уже запушена, то после этой команды нужно прописать `git push -f` и удалённая ветка будет перезаписана. 
   
-  * git merge - это 1/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Сливание двух веток в одну
+  * `git merge` - это 1/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Сливание двух веток в одну
 
   * [git rebase](https://www.atlassian.com/ru/git/tutorials/rewriting-history/git-rebase) - это 2/2 утилит Git, которая специализируется на интеграции изменений из одной ветки в другую. Меняет историю ваших коммитов.
   
@@ -147,10 +146,23 @@
 >   * drop — удалить коммит. Могут быть проблемы с тем, что мы дальше меняли файл после того как удалили.
 >   * reset — жестко меняем HEAD на новый (вся последующая история после того, на что мы сделали reset - не сохраняется)
   
-  * git blame (file) - показывает кто, когда, какую строчку кода написал/изменил
+  * `git blame (file)` - показывает кто, когда, какую строчку кода написал/изменил
   
-  * git grep "test" - ищет в рабочем каталоге слово test (как в коде, так и в названии файлов) 
-  
+  * `git grep "test"` - ищет в рабочем каталоге слово test (как в коде, так и в названии файлов)
+
+  * `git log` - просмотр истории коммитов. По умолчанию `git log` вывод в таком формате:
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog.png" alt="alt text" width="320" height="280">
+
+Более удобный формат: `git log --graph --oneline --decorate --stat`
+
+> Опции: 
+>   * --stat — выведет статистику для каждого коммита
+>   * --graph — выводит дерево зависимостей для всех коммитов
+>   * --decorate — покажет “головы” (HEAD)
+>   * --all — покажет все ветки
+>   * -- oneline - выводит сокращённые данные коммита (в виде одной строки)
+	
 </p>
 </details>
 
@@ -167,26 +179,6 @@ git branch bugfix/elizarov/ASSESSMENT-191
 git checkout bugfix/elizarov/ASSESSMENT-191
 2) git push --set-upstream [1] bugfix/elizarov/ASSESSMENT-191
 
-</p>
-</details>
-  
-#### Просмотр истории коммитов
-
-<details><summary>Open</summary>
-<p>
-  
-По умолчанию `git log` вывод в таком формате:
-
-<img src="https://github.com/eldaroid/pictures/blob/master/other/gitlog.png" alt="alt text" width="300" height="300">
-
-Удобный формат `git log --graph --oneline --decorate --stat`
-
-> Опции: 
->   * --stat — выведет статистику для каждого коммита
->   * --graph — выводит дерево зависимостей для всех коммитов
->   * --decorate — покажет “головы” (HEAD)
->   * --all — покажет все ветки
->   * -- oneline - выводит сокращённые данные коммита (в виде одной строки)
 </p>
 </details>
   
@@ -298,12 +290,8 @@ git push -f
 
 <details><summary>Open</summary>
 <p>
-
-  * git config alias.st = status - теперь вместо полной команды git status можно писать просто git st. 
   
-  или
-  
-  * vim ~/.gitconfig, добавляем в конец [alias] и с новой строки добавлять алиасы
+  * vim ~/.gitconfig, пишем [alias] и с новой строки добавлять алиасы. Например: co = checkout - теперь вместо полной команды git checkout можно писать просто git co. 
 
   ```
   [alias]
@@ -316,7 +304,7 @@ git push -f
 	cma = commit -am
   ```
   
-  <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="250" height="80">
+  <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="500" height="150">
   
 </p>
 </details>
