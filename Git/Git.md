@@ -295,11 +295,12 @@ git push -f
 
   ```
   [alias]
+	a = add -A
  	l = log --graph --oneline --decorate --stat
  	co = checkout
 	cm = commit -m
 # --amend добавляет изменения к предыдущему коммиту, не создавая новый
-  cmA = commit --amend -m 
+  	cmA = commit --amend -m 
 # с флагом -a можно не писать git add, но только если файлы не новый
 	cma = commit -am
   ```
