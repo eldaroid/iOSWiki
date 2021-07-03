@@ -9,15 +9,17 @@
 [ssh]
 	postBuffer = 2048M
 	maxRequestBuffer = 1024M
-[alias]
+ [alias]
 	a = add -A
- 	l = log --graph --oneline --decorate --stat
- 	co = checkout
+	l = log --pretty=format:\"%C(yellow)%h %C(cyan)%ar [%C(blue)%an%C(reset)] %C(auto)%d | %Creset%s\" --graph --shortstat
+	co = checkout
 	cm = commit -m
 # --amend добавляет изменения к предыдущему коммиту, не создавая новый
-    cmA = commit --amend -m 
+	cma = commit --amend -m
 # с флагом -a можно не писать git add, но только если файлы не новый
-	cma = commit -am
+	cam = commit -am
+# для команда, начинающихся с git, нужно вставлять !
+	alias = ! git config --list | grep alias
 [color "status"]
 	added = green bold
 	changed = yellow bold

@@ -80,16 +80,21 @@ nnoremap <C-e> <End><Right>
 inoremap <C-e> <End><Right>
 
 " Select with shift + arrows
-inoremap    <S-Left>              <Left><C-o>v
-inoremap    <S-Right>             <C-o>v
-inoremap    <S-Up>                <Left><C-o>v<Up><Right>
-inoremap    <S-Down>              <C-o>v<Down><Left>
-imap        <C-S-Left>            <S-Left><C-Left>
-imap        <C-S-Right>           <S-Right><C-Right>
-vnoremap    <S-Left>              <Left>
-vnoremap    <S-Right>             <Right>
-vnoremap    <S-Up>                <Up>
-vnoremap    <S-Down>              <Down>
+inoremap <S-Left>    <Left><C-o>v
+inoremap <S-Right>   <C-o>v
+inoremap <S-Up>      <Left><C-o>v<Up><Right>
+inoremap <S-Down>    <C-o>v<Down><Left>
+imap     <C-S-Left>  <S-Left><C-Left>
+imap     <C-S-Right> <S-Right><C-Right>
+vnoremap <S-Left>    <Left>
+vnoremap <S-Right>   <Right>
+vnoremap <S-Up>      <Up>
+vnoremap <S-Down>    <Down>
 
 " equivalence :Wq and :wq
 command! Wq wq
+command! W w
+command! Q q
+
+" ability to set mouse coursor to the end of line
+set ve=onemore
