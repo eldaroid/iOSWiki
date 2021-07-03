@@ -2,14 +2,15 @@
 
 ### Как изучать?
 
-1. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
-2. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
-3. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
-4. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
-5. - [x] Сбер: "Инструменты DevOps: Git"
-6. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
-7. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
-8. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
+1. - [x] [Визуализация происходящего в гите](http://git-school.github.io/visualizing-git/)
+2. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
+3. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
+4. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
+5. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+6. - [x] Сбер: "Инструменты DevOps: Git"
+7. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
+8. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
+9. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
 ### 1) про Git
 
@@ -339,7 +340,7 @@ pick b94463d file2
 	alias = ! git config --list | grep alias
  ```
   
-  <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="600" height="150">
+ <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="600" height="150">
   
 </p>
 </details>
@@ -367,7 +368,6 @@ git config --global http.maxRequestBuffer 100M --depth=1 - также может
 ### 5) Мои конфигурации Git
 
 Чтобы применить мои конфигурации к себе нужно: содержимое файла [gitconfig](./gitconfig) поместить в ~/.gitconfig.
-
 
 ---
 
