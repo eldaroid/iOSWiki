@@ -94,7 +94,7 @@
   
 **Запрос на слияние** (Pull-Request - BitBucket, Merge request - Gitlab) – механизм системы контроля версий, позволяющий оформить изменения из ветки в виде предложения к слиянию в основную (или какую-то иную) ветку репозитория.
   
-<img src="https://github.com/eldaroid/pictures/blob/master/other/pull_request.png" alt="alt text" width="500" height="300">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/pull_request.png" alt="alt text" width="550" height="300">
   
 Что даёт:
 
@@ -318,7 +318,19 @@ pick b94463d file2
 
 	3) Pull --rebase
 
-Удаленная ветка: A--B--C. Вы работаете: A--B--C--(D) - D еще не на удаленной репе. Кто то в вашей ветке делает удаленный коммит: А--В--С--Е. Теперь вы не можете запушить (D), появляется ошибка: ``
+Удаленная ветка: A--B--C. Вы работаете: A--B--C--(D) - D еще не на удаленной репе. Кто то в вашей ветке делает удаленный коммит: А--В--С--Е. Теперь вы не можете запушить (D), появляется ошибка: 
+
+```console
+! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/eldaroid/iosBasics.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.	
+```
+
+Решение: `git pull --rebase` = делает `git fetch` + `git rebase`. Получается у нас следующая картина: А--В--С--Е--(D). Теперь пушим изменения `git push`. Получается следующяя картина: А--В--С--Е--D.
 
 </p>
 </details>
@@ -343,8 +355,6 @@ pick b94463d file2
 # для команда, начинающихся с git, нужно вставлять !
 	alias = ! git config --list | grep alias
  ```
-  
- <img src="https://github.com/eldaroid/pictures/blob/master/other/aliasInGit.png" alt="alt text" width="600" height="150">
   
 </p>
 </details>
