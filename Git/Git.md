@@ -171,17 +171,36 @@
 
 ### 4) Практика
   
-#### Создание ветки: 
+#### Создание, удаление, переименовывание веток: 
 
 <details><summary>Open</summary>
 <p>
   
-1) git checkout -b bugfix
-то же самое, что и : 
-git branch bugfix
-git checkout bugfix
-2) git push --set-upstream [1] bugfix
+1) Создание ветки:
+	
+* git checkout -b bugfix
+	
+то же самое, что и:  git branch bugfix + git checkout bugfix
+	
+* git push --set-upstream [1] bugfix
 
+2) Удаление ветки:
+	
+* git checkout develop 				# переключаемся на любую ветку
+
+* git branch -d your_branch 			# удаляем локальную
+  
+* git push [1] --delete your_branch 		# удаляем удаленную
+`[origin] - то, что мы прописывали в git push [1] HEAD:[your branch]`
+
+3) Переименовывание ветки:
+
+* git branch -m old_branch new_branch        	# Rename branch locally
+
+* git push origin :old_branch                	# Delete the old branch
+
+* git push --set-upstream origin new_branch  	# Push the new branch, set local branch to track the new remote
+	
 </p>
 </details>
   
@@ -199,21 +218,6 @@ git checkout bugfix
 
   Примечание: если вам нужно всего лишь сравнить два файла, то можно выполнить такую команду: git diff some-branch some-filename.js
   
-</p>
-</details>
-  
-#### Удаляем ветку:
-
-<details><summary>Open</summary>
-<p>
-  
-1) git checkout develop - переключаемся на любую ветку
-
-2) git branch -d your_branch - удаляем локальную
-  
-3) git push [1] --delete your_branch - удаляем удаленную. 
-[origin] - то, что мы прописывали в git push [1] HEAD:[your branch]
-
 </p>
 </details>
   
