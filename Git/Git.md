@@ -387,6 +387,10 @@ git config --global http.maxRequestBuffer 100M --depth=1 - также может
 
 Чтобы применить мои конфигурации к себе нужно: содержимое файла [gitconfig](./gitconfig) поместить в ~/.gitconfig.
 
+```console
+	`git --no-pager (любая команда)` - позволяет вывод показывать в терминале, не в виме. Например: `git --no-pager config --list | grep alias`
+```
+
 ---
 
 [1] origin: `git remote -v`
