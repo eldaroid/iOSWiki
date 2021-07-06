@@ -12,7 +12,7 @@
 8. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
 9. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
-### 1) про Git
+### 1) [про Git для новичков](https://github.com/ancatmara/python-for-dh/blob/master/Classes/1/git_markdown.md)
 
 > Проект был создан [Линусом Торвальдсом](https://github.com/torvalds) для управления разработкой ядра Linux. 
 На сегодняшний день его поддерживает [Джунио Хамано](https://github.com/gitster?tab=repositories).
