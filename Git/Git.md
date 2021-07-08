@@ -4,13 +4,14 @@
 
 1. - [x] [Визуализация происходящего в гите](http://git-school.github.io/visualizing-git/)
 2. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
-3. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
-4. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
-5. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
-6. - [x] Сбер: "Инструменты DevOps: Git"
-7. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
-8. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
-9. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
+3. - [ ] [Git: курс](https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb)
+4. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
+5. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
+6. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+7. - [x] Сбер: "Инструменты DevOps: Git"
+8. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
+9. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
+10. - [ ] [Что скрывает от нас директория .git](https://habr.com/ru/post/143079/)
 
 ### 1) [про Git для новичков](https://github.com/ancatmara/python-for-dh/blob/master/Classes/1/git_markdown.md)
 
