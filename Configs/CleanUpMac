@@ -1,0 +1,26 @@
+### Удалите неиспользуемые пакеты и кеши
+conda clean --all
+conda clean --dry-run --all
+conda config --set auto_activate_base false
+
+### Xcode
+rm -rf ~/Library/Preferences/com.apple.Xcode.plist/*
+rm -rf ~/Library/Developer/Xcode/DerivedData
+rm -rf ~/Library/Caches/com.apple.dt.Xcode
+xcrun simctl delete unavailable
+xcodebuild -alltargets clean
+rm -rf ~/Library/Developer/CoreSimulator
+rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"
+
+### MS Teams
+rm -rf ~/Library/Application\ Support/Microsoft/Teams/Cache/*
+rm -rf ~/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage/*
+
+### Caches: Safari, Chrome, WhatsApp
+Safari:
+rm -rf ~/Library/Containers/com.apple.Safari/Data/Library/Caches/*
+
+
+
+
+
