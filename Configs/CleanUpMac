@@ -1,59 +1,67 @@
+BGreen='\033[1;32m'
+Green='\033[0;32m'
+Blue='\033[0;34m' 
+
 # user cache file
-echo "cleaning user cache file from ~/Library/Caches"
+echo "${Blue}cleaning user cache file from ~/Library/Caches"
 rm -rf ~/Library/Caches/*
-echo "done cleaning from ~/Library/Caches"
+echo "${Green}done cleaning from ~/Library/Caches"
 # user logs
-echo "cleaning user log file from ~/Library/logs"
+echo "${Blue}cleaning user log file from ~/Library/logs"
 rm -rf ~/Library/logs/*
-echo "done cleaning from ~/Library/logs"
+echo "${Green}done cleaning from ~/Library/logs"
 # user preference log
-echo "cleaning user preference logs"
+echo "${Blue}cleaning user preference logs"
 # rm -rf ~/Library/Preferences/*
-echo "done cleaning from /Library/Preferences"
+echo "${Green}done cleaning from /Library/Preferences"
 # system caches
-echo "cleaning system caches"
+echo "${Blue}cleaning system caches"
 sudo rm -rf /Library/Caches/*
-echo "done cleaning system cache"
+echo "${Green}done cleaning system cache"
 # system logs
-echo "cleaning system logs from /Library/logs"
+echo "${Blue}cleaning system logs from /Library/logs"
 sudo rm -rf /Library/logs/*
-echo "done cleaning from /Library/logs"
-echo "cleaning system logs from /var/log"
+echo "${Green}done cleaning from /Library/logs"
+echo "${Blue}cleaning system logs from /var/log"
 sudo rm -rf /var/log/*
-echo "done cleaning from /var/log"
-echo "cleaning from /private/var/folders"
+echo "${Green}done cleaning from /var/log"
+echo "${Blue}cleaning from /private/var/folders"
 sudo rm -rf /private/var/folders/*
-echo "done cleaning from /private/var/folders"
+echo "${Green}done cleaning from /private/var/folders"
 # Xcode
+echo "${Blue}cleaning cache Xcode"
 xcrun simctl delete unavailable
 xcodebuild -alltargets clean
 rm -rf ~/Library/Preferences/com.apple.Xcode.plist/*
 rm -rf ~/Library/Developer/Xcode/DerivedData
 rm -rf ~/Library/Developer/CoreSimulator
 rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"
-echo "done cleaning Xcode"
+echo "${Green}done cleaning Xcode"
 # Удалите неиспользуемые пакеты и кеши anaconda
+echo "${Blue}cleaning anaconda"
 conda clean --dry-run --all
 conda config --set auto_activate_base false
-echo "done cleaning anaconda"
+echo "${Green}done cleaning anaconda"
 # MS Teams
+echo "${Blue}cleaning MS Teams"
 rm -rf ~/Library/Application\ Support/Microsoft/Teams/Cache/*
 rm -rf ~/Library/Application\ Support/Microsoft/Teams/Service\ Worker/CacheStorage/*
-echo "done cleaning MS Teams"
+echo "${Green}done cleaning MS Teams"
 # Slack:
+echo "${Blue}cleaning Slack"
 rm -rf ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/Cache
 rm -rf ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/Service\ Worker/CacheStorage
-echo "done cleaning slack"
+echo "${Green}done cleaning slack"
 # ios photo caches
-echo "cleaning ios photo caches"
+echo "${Blue}cleaning ios photo caches"
 rm -rf ~/Pictures/iPhoto\ Library/iPod\ Photo\ Cache/*
-echo "done cleaning from ~/Pictures/iPhoto Library/iPod Photo Cache"
+echo "${Green}done cleaning from ~/Pictures/iPhoto Library/iPod Photo Cache"
 # application caches
-echo >&2 -e "cleaning application caches"
+echo >&2 -e "${Blue}cleaning application caches"
 for x in $(ls ~/Library/Containers/) 
 do 
     echo "cleaning ~/Library/Containers/$x/Data/Library/Caches/"
     rm -rf ~/Library/Containers/$x/Data/Library/Caches/*
     echo "done cleaning ~/Library/Containers/$x/Data/Library/Caches"
 done
-echo >&2 -e "done cleaning for application caches"
+echo >&2 -e "${BGreen}done cleaning for application caches"
