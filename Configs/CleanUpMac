@@ -1,7 +1,11 @@
+# Reset
+Color_Off='\033[0m'       # Text Reset
 BGreen='\033[1;32m'
 Green='\033[0;32m'
 BGreen='\033[1;32m'
-Blue='\033[0;34m' 
+Blue='\033[0;34m'
+BIPurple='\033[1;95m'
+BIGreen='\033[1;92m'
 
 bytesToHuman() {
 	b=${1:-0}
@@ -85,3 +89,5 @@ echo "${BGreen}done cleaning for application caches"
 newAvailable=$(df / | tail -1 | awk '{print $4}')
 count=$((newAvailable - oldAvailable))
 bytesToHuman $count
+
+echo "${BIPurple}Now you can go to open source mac-cleanup project for the ongoing cleaning mac: ${BIGreen}github.com/fwartner/mac-cleanup"
