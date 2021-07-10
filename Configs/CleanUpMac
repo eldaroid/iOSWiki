@@ -1,6 +1,22 @@
 BGreen='\033[1;32m'
 Green='\033[0;32m'
+BGreen='\033[1;32m'
 Blue='\033[0;34m' 
+
+bytesToHuman() {
+	b=${1:-0}
+	d=''
+	s=1
+	S=(Bytes {K,M,G,T,E,P,Y,Z}iB)
+	while ((b > 1024)); do
+		d="$(printf ".%02d" $((b % 1024 * 100 / 1024)))"
+		b=$((b / 1024))
+		((s++))
+	done
+	echo "$b$d ${S[$s]} of space was cleaned up"
+}
+
+oldAvailable=$(df / | tail -1 | awk '{print $4}')
 
 # user cache file
 echo "${Blue}cleaning user cache file from ~/Library/Caches"
@@ -57,11 +73,15 @@ echo "${Blue}cleaning ios photo caches"
 rm -rf ~/Pictures/iPhoto\ Library/iPod\ Photo\ Cache/*
 echo "${Green}done cleaning from ~/Pictures/iPhoto Library/iPod Photo Cache"
 # application caches
-echo >&2 -e "${Blue}cleaning application caches"
+echo "${Blue}cleaning application caches"
 for x in $(ls ~/Library/Containers/) 
 do 
     echo "cleaning ~/Library/Containers/$x/Data/Library/Caches/"
     rm -rf ~/Library/Containers/$x/Data/Library/Caches/*
     echo "done cleaning ~/Library/Containers/$x/Data/Library/Caches"
 done
-echo >&2 -e "${BGreen}done cleaning for application caches"
+echo "${BGreen}done cleaning for application caches"
+
+newAvailable=$(df / | tail -1 | awk '{print $4}')
+count=$((newAvailable - oldAvailable))
+bytesToHuman $count
