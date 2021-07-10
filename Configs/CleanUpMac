@@ -14,13 +14,60 @@ rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"
 
 ### MS Teams
 rm -rf ~/Library/Application\ Support/Microsoft/Teams/Cache/*
-rm -rf ~/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage/*
+rm -rf ~/Library/Application\ Support/Microsoft/Teams/Service\ Worker/CacheStorage/*
 
-### Caches: Safari, Chrome, WhatsApp
+### Caches: Safari, Chrome, WhatsApp, Mac
 Safari:
 rm -rf ~/Library/Containers/com.apple.Safari/Data/Library/Caches/*
+rm -rf ~/Library/Containers/desktop.WhatsApp/Data/Library/Application\ Support/WhatsApp/Cache/*
+rm -rf ~/Library/Containers/desktop.WhatsApp/Data/Library/Application\ Support/WhatsApp/Service\ Worker/CacheStorage/*
+Slack:
+rm -rf ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/Cache
+rm -rf ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/Service\ Worker/CacheStorage
+Chrome:
+rm -rf ~/Library/Caches/Google/Chrome/
+Mac:
+rm -rf ~/Library/Caches
+rm -rf /Library/Caches/*
 
 
-
-
+#user cache file
+echo "cleaning user cache file from ~/Library/Caches"
+rm -rf ~/Library/Caches/*
+echo "done cleaning from ~/Library/Caches"
+#user logs
+echo "cleaning user log file from ~/Library/logs"
+rm -rf ~/Library/logs/*
+echo "done cleaning from ~/Library/logs"
+#user preference log
+echo "cleaning user preference logs"
+#rm -rf ~/Library/Preferences/*
+echo "done cleaning from /Library/Preferences"
+#system caches
+echo "cleaning system caches"
+sudo rm -rf /Library/Caches/*
+echo "done cleaning system cache"
+#system logs
+echo "cleaning system logs from /Library/logs"
+sudo rm -rf /Library/logs/*
+echo "done cleaning from /Library/logs"
+echo "cleaning system logs from /var/log"
+sudo rm -rf /var/log/*
+echo "done cleaning from /var/log"
+echo "cleaning from /private/var/folders"
+sudo rm -rf /private/var/folders/*
+echo "done cleaning from /private/var/folders"
+#ios photo caches
+echo "cleaning ios photo caches"
+rm -rf ~/Pictures/iPhoto\ Library/iPod\ Photo\ Cache/*
+echo "done cleaning from ~/Pictures/iPhoto Library/iPod Photo Cache"
+#application caches
+echo "cleaning application caches"
+for x in $(ls ~/Library/Containers/) 
+do 
+    echo "cleaning ~/Library/Containers/$x/Data/Library/Caches/"
+    rm -rf ~/Library/Containers/$x/Data/Library/Caches/*
+    echo "done cleaning ~/Library/Containers/$x/Data/Library/Caches"
+done
+echo "done cleaning for application caches"
 
