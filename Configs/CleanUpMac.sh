@@ -1,6 +1,6 @@
 # To start a project make it executable: chmod +x, then run: sh CleanUpMac.sh
 
-# Reset
+# Colored output in terminal
 Color_Off='\033[0m'       # Text Reset
 BGreen='\033[1;32m'
 Green='\033[0;32m'
