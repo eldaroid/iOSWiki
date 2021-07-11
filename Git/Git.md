@@ -210,7 +210,7 @@
 <details><summary>Open</summary>
 <p>
   
-  Пример команды: `git show some-branch:some-file.js`
+  Пример команды: `git show some-branch:some-file.js | vim -`
   
   Иногда бывает удобно посмотреть на какой-либо файл в другой ветке, не переключаясь на неё. 
   Это можно сделать с помощью команды git show some-branch-name:some-file-name.js, которая выведет содержимое файла в указанной ветке прямо в терминал.
@@ -396,6 +396,10 @@ git config --global http.maxRequestBuffer 100M --depth=1 - также может
 
 ```console
 	`git --no-pager (любая команда)` - позволяет вывод показывать в терминале, не в виме. Например: `git --no-pager config --list | grep alias`
+```
+
+```conole
+	`git show branch:file | vim -` - показывает вывод в vim, не в vi (как по дефолту).
 ```
 
 ---
