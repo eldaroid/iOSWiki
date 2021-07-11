@@ -1,3 +1,6 @@
+Переместить нижестоящий код: `vim ~/.vimrc`
+
+```
 " Comments in Vimscript start with a `"`.
 
 " Now the backlight always works
@@ -98,3 +101,5 @@ command! Q q
 
 " ability to set mouse coursor to the end of line
 set ve=onemore
+```
+

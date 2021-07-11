@@ -1,3 +1,6 @@
+Поместить этот код в `vim ~/.gitignore`:
+
+```
 [user]
 	name = eldaroid
 	email = eldario10@mail.ru
@@ -27,3 +30,5 @@
  	untracked = red bold
 [log]
 	date = short
+```
+
