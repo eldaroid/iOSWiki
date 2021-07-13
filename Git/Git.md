@@ -356,7 +356,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ```
  [alias]
 	a = add -A
-	l = log --pretty=format:\"%C(yellow)%h %C(cyan)%ar [%C(blue)%an%C(reset)] %C(auto)%d | %Creset%s\" --graph --shortstat
+	l = ! git log --pretty=format:\"%C(yellow)%h %C(cyan)%ar [%C(blue)%an%C(reset)] %C(auto)%d | %Creset%s\" --graph --shortstat -10
 	co = checkout
 	cm = commit -m
 # --amend добавляет изменения к предыдущему коммиту, не создавая новый
@@ -365,6 +365,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 	cam = commit -am
 # для команда, начинающихся с git, нужно вставлять !
 	alias = ! git config --list | grep alias
+	st = ! git status && echo last commit hash = $(git rev-parse --short HEAD)
  ```
   
 </p>
