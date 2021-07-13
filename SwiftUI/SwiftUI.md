@@ -1,5 +1,4 @@
-qq
-
+[Learn SwiftUI for iOS 13](https://designcode.io/swiftui-course)
 
 [Домашняя страница официального сайта SwiftUI](https://developer.apple.com/documentation/swiftui/)
 
