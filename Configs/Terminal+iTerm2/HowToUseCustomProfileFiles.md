@@ -6,5 +6,5 @@ iTerm2 -> Preferences (Cmd + ,) -> Profiles -> Other Action -> Import JSON Profi
 
 ## Appearance in Terminal
 
-Terminal -> Preferences (Cmd + ,) -> Profiles -> Other Action -> Импортировать -> Импортируем этот [файл](https://github.com/eldaroid/iosBasics/blob/master/Configs/Terminal%2BiTerm2/CustomProfileEldarTerminal.terminal)
+Terminal -> Preferences (Cmd + ,) -> Profiles -> Other Action -> Import -> Импортируем этот [файл](https://github.com/eldaroid/iosBasics/blob/master/Configs/Terminal%2BiTerm2/CustomProfileEldarTerminal.terminal)
 
