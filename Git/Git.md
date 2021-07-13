@@ -194,6 +194,8 @@
 * git push [1] --delete your_branch 		# удаляем удаленную
 `[origin] - то, что мы прописывали в git push [1] HEAD:[your branch]`
 
+ Если появляется ошибка `A branch named 'bugfix/elizarov/ASSESSMENT-510' already exists`, то заново прописать с флагом -D `git branch -D your_branch`
+	
 3) Переименовывание ветки:
 
 * git branch -m old_branch new_branch        	# Rename branch locally
