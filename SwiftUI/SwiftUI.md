@@ -7,7 +7,7 @@ qq
 
 [Using UIKit views in SwiftUI](https://swiftwithmajid.com/2020/01/29/using-uikit-views-in-swiftui/)
 
-[property wrappers](SwiftUI: @State vs @StateObject vs @ObservedObject vs @EnvironmentObject)
+[property wrappers](https://purple.telstra.com/blog/swiftui---state-vs--stateobject-vs--observedobject-vs--environme)
 
 [Формируем View в SwiftUI, исходя из условий](https://habr.com/ru/post/495746/)
 
