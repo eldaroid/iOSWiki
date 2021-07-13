@@ -8,3 +8,13 @@ qq
 [Using UIKit views in SwiftUI](https://swiftwithmajid.com/2020/01/29/using-uikit-views-in-swiftui/)
 
 [property wrappers](SwiftUI: @State vs @StateObject vs @ObservedObject vs @EnvironmentObject)
+
+[Формируем View в SwiftUI, исходя из условий](https://habr.com/ru/post/495746/)
+
+[The iOS Design Guidelines](https://ivomynttinen.com/blog/ios-design-guidelines)
+
+[SwiftUI по полочкам](https://habr.com/ru/post/485548/)
+
+[SwiftUI](https://swiftui-lab.com/frame-behaviors/)
+
+[SwiftUI](https://daddycoding.com/swiftui/)
