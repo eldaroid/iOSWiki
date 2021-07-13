@@ -189,7 +189,7 @@
 	
 * git checkout develop 				# переключаемся на любую ветку
 
-* git branch -d your_branch 			# удаляем локальную
+* git branch -d/-D your_branch 			# удаляем локальную; -D force удаление
   
 * git push [1] --delete your_branch 		# удаляем удаленную
 `[origin] - то, что мы прописывали в git push [1] HEAD:[your branch]`
