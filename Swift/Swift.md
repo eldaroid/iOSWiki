@@ -3,6 +3,7 @@
 1. :heavy_check_mark: 1-12 [100 Days of Swift](https://www.hackingwithswift.com/100)
 2. :heavy_check_mark: [Why can’t Swift add a Double to an Int?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-cant-swift-add-a-double-to-an-int)
 3. :heavy_check_mark: [When should you use a while loop instead of for?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-a-while-loop)
+4. :heavy_check_mark: [When should you use a repeat loop?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-a-repeat-loop)
 
 ## Коллекции (набор значений)
 
