@@ -1,6 +1,7 @@
 # Swift
 
 1. :heavy_check_mark: 1-12 [100 Days of Swift](https://www.hackingwithswift.com/100)
+2. :heavy_check_mark: [Why can’t Swift add a Double to an Int?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-cant-swift-add-a-double-to-an-int)
 
 ## Коллекции (набор значений)
 
