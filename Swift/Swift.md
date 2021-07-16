@@ -6,8 +6,9 @@
     3. :heavy_check_mark: [When should you use a repeat loop?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-a-repeat-loop)
     4. :heavy_check_mark: [Exiting multiple loops](https://www.hackingwithswift.com/sixty/4/5/exiting-multiple-loops)
     5. :heavy_check_mark: [Why does Swift have labeled statements?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-does-swift-have-labeled-statements)
-   
-   
+    6. :heavy_check_mark: [Skipping items](https://www.hackingwithswift.com/sixty/4/6/skipping-items)
+    7. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
+    8. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
    
    
    
