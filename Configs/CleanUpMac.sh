@@ -50,6 +50,13 @@ echo "${Green}done cleaning from /var/log"
 echo "${Blue}cleaning from /private/var/folders"
 sudo rm -rf /private/var/folders/*
 echo "${Green}done cleaning from /private/var/folders"
+# Homebrew
+echo "${Blue}cleaning cache Homebrew"
+brew cleanup --force -s &>/dev/null
+brew cask cleanup &>/dev/null
+rm -rfv /Library/Caches/Homebrew/* &>/dev/null
+brew tap --repair &>/dev/null
+echo "${Green}done cleaning Homebrew"
 # Xcode
 echo "${Blue}cleaning cache Xcode"
 xcrun simctl delete unavailable
