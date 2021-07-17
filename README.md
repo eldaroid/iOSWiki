@@ -5,7 +5,7 @@
 
 # 📝 Content
 
-1.  [Configs](/Configs)
+1.  [Configs Folder](/Configs)
     1. [Все Конфиги в одном месте](/Configs/AllStartingConfigs.md)
     2. [Скрипт при окрытии терминала](/Configs/openTerminalScript.md)
     3. [Костомизация терминала](/Configs/Terminal%2BiTerm2/HowToUseCustomProfileFiles.md)
@@ -16,12 +16,12 @@
 2. [Terminal Folder](/Terminal)
     1. [Terminal](/Terminal/Terminal.md) 
     2. [TextEditors](/Terminal/TextEditors.md)
-3. [Git](/Git)
+3. [Git Folder](/Git)
     1.  [Git](/Git/Git.md)
     2.  [Gitflow](/Git/Gitflow.md)
     3.  [Githubflow](/Git/Githubflow.md)
     4.  [Gitlabflow](/Git/Gitlabflow.md)
-4. [Swift](/Swift)
+4. [Swift Folder](/Swift)
 
 На будущее:
 [Combine:](https://heckj.github.io/swiftui-notes/#download-the-project)
