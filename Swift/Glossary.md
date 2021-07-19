@@ -73,6 +73,8 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 
 ## Property observers
 
+1. :heavy_check_mark: [When should you use willSet rather than didSet?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-willset-rather-than-didset)
+
 * willSet
 
 * didSet
