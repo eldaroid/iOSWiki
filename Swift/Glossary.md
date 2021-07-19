@@ -71,7 +71,7 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 
 `print("Haters", "gonna", "hate")` - print() also variadic function
 
-## Property observers
+## Property observers (только для структур и классов)
 
 1. :heavy_check_mark: [When should you use willSet rather than didSet?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-willset-rather-than-didset)
 
@@ -84,6 +84,26 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 >  let awayTeamScore: Int {
 >      didSet { print("Boo - they scored!") }}
 >  ```
+
+Пример правильного использования:
+
+```swift
+struct FishTank {
+    var capacity: Int
+    var fishCount: Int {
+        didSet {
+            if fishCount >= self.capacity {
+                capacity = fishCount
+                print("capacity changed to \(capacity)")
+            }
+        }
+    }
+}
+
+var new = FishTank(capacity: 1, fishCount: 2)
+
+new.fishCount = 10 // capacity changed to 10
+```
 
 ## Property wrappers
 
