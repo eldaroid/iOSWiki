@@ -79,6 +79,12 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 
 * didSet
 
+> Property observers не могут быть назначены константам (let):
+>  ```swift
+>  let awayTeamScore: Int {
+>      didSet { print("Boo - they scored!") }}
+>  ```
+
 ## Property wrappers
 
 * @State - все то, что изменяется
