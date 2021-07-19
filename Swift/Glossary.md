@@ -143,6 +143,8 @@ protocol TableViewViewModelType {
 
 ## *Метод* - numberOfRow:
 
+Функции внутри структур, протоколов, классов называются методами.
+
 ```
 protocol TableViewViewModelType {
     func numberOfRow() -> Int
