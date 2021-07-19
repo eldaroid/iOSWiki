@@ -87,6 +87,25 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 
 * @Publishers
 
+## Computed property
+
+Переменная, которая считается во время ее вызова.
+
+```swift
+    var investmentPlan: String {
+        if age < 30 {
+            return "Shares"
+        } else {
+            return "Bonds"
+        }
+    }
+```
+
+> ! Всегда должна быть var
+> ! Всегда после переменной должен быть указан тип
+> ! Всегда должна возвращать это указанный тип
+
+
 ## *Свойство* - numberOfRow: 
 ```
 protocol TableViewViewModelType {
