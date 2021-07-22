@@ -121,13 +121,13 @@
   > **git fetch [remote-name]** - Получает _список изменений_ в удаленном репозитории, а также сами изменения, без слияния с вашими изменениями
   > **git pull** получает изменения из удалённой ветви и сливает их со текущей ветвью (выполняет git fetch и git merge origin/[your branch]), **git push** - отправка изменений в удаленный репозиторий.
   
-  * git diff - просмотр неотслеживаемых изменений
+  * `git diff` - просмотр неотслеживаемых изменений
   
-  * git add - добавляет файлы в отслеживаемые. -A - флаг для добавления всех измененных файлов; git rm --cached (file) - удаляет из отслеживаемых файлов (без флага --cached удаляет файлы, которые уже закоммичены).
+  * `git add` - добавляет файлы в отслеживаемые. -A - флаг для добавления всех измененных файлов; git rm --cached (file) - удаляет из отслеживаемых файлов (без флага --cached удаляет файлы, которые уже закоммичены).
   
-  * git show [commit_id] - показывает изменения этого коммита.
+  * `git show [commit_id]` - показывает изменения этого коммита.
   
-  * git push - отправляет изменения в удаленный репозиторий. Пушит все, кроме тегом, для тегов использовать флаг --tag.
+  * `git push` - отправляет изменения в удаленный репозиторий. Пушит все, кроме тегом, для тегов использовать флаг --tag.
   
   * [git commit --amend -m ""](https://www.atlassian.com/ru/git/tutorials/rewriting-history) - добавляет изменения к предыдущему коммиту, не создавая новый, при это хеш меняется&
   
@@ -215,11 +215,11 @@
   Пример команды: `git show some-branch:some-file.js | vim -`
   
   Иногда бывает удобно посмотреть на какой-либо файл в другой ветке, не переключаясь на неё. 
-  Это можно сделать с помощью команды git show some-branch-name:some-file-name.js, которая выведет содержимое файла в указанной ветке прямо в терминал.
+  Это можно сделать с помощью команды `git show some-branch-name:some-file-name.js`, которая выведет содержимое файла в указанной ветке прямо в терминал.
   
   А с помощью перенаправления вывода можно сохранить этот файл в указанное место на диске, например, если вы заходите открыть два файла одновременно в своём редакторе: `git show some-branch-name:some-file-name.js > deleteme.js`
 
-  Примечание: если вам нужно всего лишь сравнить два файла, то можно выполнить такую команду: git diff some-branch some-filename.js
+  Примечание: если вам нужно всего лишь сравнить два файла, то можно выполнить такую команду: `git diff some-branch some-filename.js`
   
 </p>
 </details>
@@ -280,16 +280,16 @@ Merge при конфликтах становится опасной утили
 <details><summary>Open</summary>
 <p>
 
-	1) Ребейз на новую ветку
+1) Ребейз на новую ветку
 
 Куда: [1]/release
 Откуда: bugfix
 
-git checkout [1]/release && git fetch && git pull && git checkout bugfix
+	git checkout [1]/release && git fetch && git pull && git checkout bugfix
   
-git rebase [1]/release
+	git rebase [1]/release
 
-git push -f
+	git push -f
   
   [только n коммитов ребейзнуть:](https://stackoverflow.com/questions/39084984/how-to-rebase-only-last-two-commits-without-the-whole-branch#:~:text=First%20create%20the%20branch%20other_feature%20at%20the%20same%20commit%20as%20feature%20.&text=Rebase%20the%20previous%20two%20commits%20onto%20master%20.&text=Checkout%20feature%20.&text=Reset%20feature%20to%20the%20commit%20where%20you%20want%20it.)
 
@@ -299,7 +299,7 @@ git push -f
 	
 	branch1 rebased to branch2
 
-	2) squash
+2) squash
 
 `git rebase -i HEAD~4` - в интерактивном режиме выбирает 4 коммита(включая головной), чтобы с ними что-то делать. Открывается вим и снизу вверх показаны коммиты по новизне (снизу последний).
 
@@ -329,7 +329,7 @@ pick b94463d file2
 * bdb22e5 3 hours ago [eldaroid]  | file1
 ```
 
-	3) Pull --rebase
+3) Pull --rebase
 
 Удаленная ветка: A--B--C. Вы работаете: A--B--C--(D) - D еще не на удаленной репе. Кто то в вашей ветке делает удаленный коммит: А--В--С--Е. Теперь вы не можете запушить (D), появляется ошибка: 
 
@@ -353,7 +353,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 <details><summary>Open</summary>
 <p>
   
-  * vim ~/.gitconfig, пишем [alias] и с новой строки добавлять алиасы. Например: co = checkout - теперь вместо полной команды git checkout можно писать просто git co. 
+  * `vim ~/.gitconfig`, пишем [alias] и с новой строки добавлять алиасы. Например: co = checkout - теперь вместо полной команды `git checkout` можно писать просто `git co`. 
 
   ```
  [alias]
@@ -395,7 +395,7 @@ git config --global http.maxRequestBuffer 100M --depth=1 - также может
 
 ### 5) Мои конфигурации Git
 
-Чтобы применить мои конфигурации к себе нужно: содержимое файла [gitconfig](./gitconfig) поместить в ~/.gitconfig.
+Чтобы применить мои конфигурации к себе нужно: содержимое файла [gitconfig](./gitconfig) поместить в `~/.gitconfig`
 
 ```console
 	`git --no-pager (любая команда)` - позволяет вывод показывать в терминале, не в виме. Например: `git --no-pager config --list | grep alias`
