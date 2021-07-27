@@ -215,5 +215,10 @@ print(char1) // b
 
 > нельзя передавать константы (let) как inout параметр (&my_let)
 
+## lazy property
 
+1. :heavy_check_mark: [When should properties be lazy?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-properties-be-lazy)
+2. :negative_squared_cross_mark: [Swift Lazy Property Initialization](https://useyourloaf.com/blog/swift-lazy-property-initialization/)
+
+`lazy` свойства Swift позволяют нам отложить создание свойства до его фактического использования, что делает их похожими на вычисляемое свойство. Однако, в отличие от вычисляемого свойства, они сохраняют результат, который вычисляется, так что последующие обращения к свойству не повторяют работу. Это позволяет им обеспечивать дополнительную производительность, когда они не используются (потому что их код никогда не запускается), и дополнительную производительность, когда они используются повторно (поскольку их значение кэшируется).
 
