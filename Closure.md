@@ -63,6 +63,17 @@ animate(duration: 3) {
 }
 ```
 
+> Do not forget the trailing () to execute the closure
+
+```swift
+let button: UIButton = {
+  let button = UIButton(type: .system)
+  button.titleLabel?.font = UIFont.systemFont(ofSize: ViewMetrics.fontSize)
+  ...
+  return button
+}()
+```
+
 ### 3. Trailing замыкание с параметром 
 
 1. :heavy_check_mark: [Shorthand parameter names](https://www.hackingwithswift.com/sixty/6/8/shorthand-parameter-names)
@@ -211,13 +222,3 @@ thing = "airplanes"
 
 closure() // Prints: "I love airplanes"
 
-7. Do not forget the trailing () to execute the closure
-
-```swift
-let button: UIButton = {
-  let button = UIButton(type: .system)
-  button.titleLabel?.font = UIFont.systemFont(ofSize: ViewMetrics.fontSize)
-  ...
-  return button
-}()
-```
