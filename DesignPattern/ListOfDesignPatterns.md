@@ -5,3 +5,5 @@
 [Singleton](https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift)
 
 [Design Pattern](https://daddycoding.com/design-pattern/)
+
+[Шаблоны проектирования: 5 самых известных](https://apptractor.ru/info/articles/shablony-proektirovanija-5-samyh-izvestnyh.html)
