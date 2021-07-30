@@ -31,3 +31,4 @@
 [Combine (в DesignPatterns):](https://heckj.github.io/swiftui-notes/#download-the-project)
 [Swift Combine Framework Tutorial](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
 [Начинаем работу с Combine](https://apptractor.ru/info/articles/combine-tutorial-1.html)
+Combine - Apple одобрила функциональное реактивное программирование в виде Combine. Я с нетерпением жду, когда в будущем смогу заменить RxSwift на Combine.
