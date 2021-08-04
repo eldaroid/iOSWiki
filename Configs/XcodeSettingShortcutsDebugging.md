@@ -55,4 +55,4 @@ U-Untracked (файл новый или был изменен, но еще не 
 
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
-Теперь показывается время компиляции: ![alt text](https://up-blog-prod.s3.amazonaws.com/Xcode-Build-Time-zk66r.png)
+Теперь показывается время компиляции: [alt text](https://up-blog-prod.s3.amazonaws.com/Xcode-Build-Time-zk66r.png)
