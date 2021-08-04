@@ -51,4 +51,10 @@ print(enterprise.maxWarp)
 
 ## Final
 
+1. :heavy_check_mark: [Method Dispatch in Swift](https://www.rightpoint.com/rplabs/switch-method-dispatch-table)
+
+`final` меняет метод диспатч на дайрект (оптимизация), без `final` он будет думать, что мы можем наследовать и хранить в table dispatch.
+
 final enables direct dispatch on a method defined in a class. This keyword removes the possibility of any dynamic behavior. It can be used on any method, even in an extension where the dispatch would already be direct. This will also hide the method from the Objective-C runtime, and will not generate a selector.
+
+!!!Прочитать про 3 метода Dispatch
