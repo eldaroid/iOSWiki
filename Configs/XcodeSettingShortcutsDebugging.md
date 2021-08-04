@@ -6,11 +6,11 @@ Settings -> Key binding (связка ключей) -> Delete Line (Delitions). 
 
 <img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="450" height="250">
 
-## 2. Непонятные ошибки при компиляции
+## 3. Непонятные ошибки при компиляции
 
 Исправить ситуацию позволяет `Clean Build Folder` ⇧⌘K и ручное удаление производных данных `rm -rf ~/Library/Developer/Xcode/DerivedData` (в папке DerivedData записываются symbolicate crash logs - расшифровки крэш-логов).
 
-## 3. Debugging
+## 4. Debugging
 
 Стоит знать основы и понимать, что Apple / Xcode пытается сказать вам через logs.
 
@@ -51,3 +51,8 @@ U-Untracked (файл новый или был изменен, но еще не 
 
 `Cmd + Ctrl + Option + Click` - в новом окне
 
+## 5 Время компиляции
+
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+
+Теперь показывается время компиляции: ![alt text](https://up-blog-prod.s3.amazonaws.com/Xcode-Build-Time-zk66r.png)
