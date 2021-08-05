@@ -275,7 +275,7 @@ Merge при конфликтах становится опасной утили
 </p>
 </details>
   
-#### Rebase
+#### Rebase, подсчет коммитов до develop
 
 <details><summary>Open</summary>
 <p>
@@ -345,6 +345,11 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 Решение: `git pull --rebase` = делает `git fetch` + `git rebase`. Получается у нас следующая картина: А--В--С--Е--(D). Теперь пушим изменения `git push`. Получается следующяя картина: А--В--С--Е--D.
 
+	
+#### 4) Подсчет коммитов до develop
+	
+`git cherry -v develop | wc -l`
+	
 </p>
 </details>
 
