@@ -42,7 +42,8 @@
 
 `Ctrl+A и Ctrl+E` - переход в начало и конец строки.
 
-`Ctrl+Command+T` - в той же директории открыть новое окно. `Ctrl+T` - в новой директории.
+`Cmd+T` - открыть новую вкладку. Перемещение: `Cmd+1..n`. Закрыть: `Cmd+W`
+`Cmd+D` - открыть новое окно, разделив экран вертикально. Перемещение: `Cmd+[/]`. Закрыть: `Cmd+W`
 
 ### Скрипты и алиасы
 
@@ -112,8 +113,6 @@ echo $$
 $@ - показать все аргументы
 $# - показать количество аргументов
 $$ - показать PID (process ID)
-
-![alt text](https://github.com/eldaroid/pictures/blob/master/other/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-05-17%20%D0%B2%2019.57.39.jpg)
 
 [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](/Git%2BTerminal/Git.md)
 
