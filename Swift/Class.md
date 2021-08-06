@@ -11,7 +11,8 @@
 * Один класс может быть построен на основе другого класса («унаследован от»), получив его свойства и методы.
 * Копии структур всегда уникальны, тогда как копии классов фактически указывают на одни и те же общие данные.
 * У классов есть [деинициализаторы](https://www.youtube.com/watch?v=G7jBlu3-yYo&ab_channel=%D0%A2%D0%9E%D0%9F%D0%9B%D0%95%D0%A1) - методы, вызываемые при уничтожении экземпляра класса, а у структур - нет.
-* [Mutability1](https://www.hackingwithswift.com/sixty/8/7/mutability)/[Why can variable properties in constant classes be changed?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-can-variable-properties-in-constant-classes-be-changed): Свойства переменных в постоянных классах можно свободно изменять, а свойства переменных в постоянных структурах - нет.
+* [Mutability1](https://www.hackingwithswift.com/sixty/8/7/mutability)/[Why can variable properties in constant classes be changed?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-can-variable-properties-in-constant-classes-be-changed) Свойства переменных в постоянных классах можно свободно изменять, а свойства переменных в постоянных структурах - нет.
+* При изменении свойства в структуре - она каждый раз пересоздается, а класс - нет, поэтому структура автоматически подменяет на экраны текста, а в классах нужно помечать изменчивые переменные ключевым словом `@Published`
 
 ## Наследование или подкласс класса
 
