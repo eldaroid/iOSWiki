@@ -241,3 +241,6 @@ print(char1) // b
 
 <img src="https://miro.medium.com/max/1838/1*1HWcxEIbXOS6zCvL57Wqmg.png" alt="alt text" width="600" height="400">
 
+## Camel case
+
+Соглашение о кодировании в Swift, где переменные начинаются с маленькой и каждое новое слово в переменной пишется с большой: `var justForExample: String` - Это называется camel case, потому что немного похоже на горбы верблюда и используется для облегчения чтения слов в именах переменных.
