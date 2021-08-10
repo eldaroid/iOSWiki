@@ -46,11 +46,9 @@ let name: String = "Tanya" - явно указать тип ваших данн�
 
 > var name: String
 
-## Type inference
+## Type inference (аннотация типов)
 
-let name = "Tanya" - полагаться на вывод типа Swift
-
-var score = 1000; print = 1000
+let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
 
 ## **Variadic function**
 
