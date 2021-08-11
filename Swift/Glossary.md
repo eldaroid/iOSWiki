@@ -15,11 +15,11 @@ extension String.StringInterpolation {
 let toggle = true
 ```
 
-1) print("Intepolation: \(if: toggle, "this is true")")
+1) print("Intepolation: \\(if: toggle, "this is true")")
 
 то же самое, что и 
  
-2) print("Intepolation: \(toggle \? "this is true" \: "") ")
+2) print("Intepolation: \\(toggle \? "this is true" \: "") ")
 
 Вывод: 1) Interpolation: this is true
        2) Interpolation: this is true
