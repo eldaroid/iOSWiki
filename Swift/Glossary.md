@@ -247,4 +247,4 @@ print(char1) // b
 
 Placeholder - подсказка, расположенная внутри каждого поля подписной формы:
 
-[placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
+![placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
