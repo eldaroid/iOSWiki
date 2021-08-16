@@ -243,3 +243,8 @@ print(char1) // b
 
 <img src="https://miro.medium.com/max/1838/1*1HWcxEIbXOS6zCvL57Wqmg.png" alt="alt text" width="600" height="400">
 
+## Placeholder
+
+Placeholder - подсказка, расположенная внутри каждого поля подписной формы:
+
+[placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
