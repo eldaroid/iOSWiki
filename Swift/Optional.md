@@ -62,7 +62,8 @@ if let a = x {
   print("x was successfully unwrapped and is = \(a)")
 }
 ```
-> x обязательно должен быть опционалом. x: String - ошибка компиляции, x: String? - корректно
+
+Но это не то же самое, что и:
 
 ```swift
 func yearAlbumReleased(name: String) -> Int? {
@@ -77,6 +78,9 @@ if year == nil {
     print("It was released in \(year)") // "It was released in Optional(2012)", потому что это не то же саме что и if let year = year { print("There wasn't an error") }
 }
 ```
+
+> x обязательно должен быть опционалом. x: String - ошибка компиляции, x: String? - корректно
+
 
 Оператор **Guard** — безопасно.
 
