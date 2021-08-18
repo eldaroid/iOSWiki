@@ -76,6 +76,7 @@ if year == nil {
     print("There was an error")
 } else {
     print("It was released in \(year)") // "It was released in Optional(2012)", потому что это не то же саме что и if let year = year { print("There wasn't an error") }
+    // можно сделать print("It was released in \(year!)"), чтобы вывод был таким, как нам нужно
 }
 ```
 
