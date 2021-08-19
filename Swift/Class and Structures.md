@@ -28,7 +28,6 @@
 ## Final classes
 
 1. :heavy_check_mark: [final](https://www.hackingwithswift.com/sixty/8/4/final-classes)
-2. :heavy_check_mark: [final](https://www.hackingwithswift.com/sixty/8/4/final-classes)
 
 ## This code prints the same output twice – true or false?
 
