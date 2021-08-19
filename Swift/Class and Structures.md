@@ -6,6 +6,7 @@
 2. :heavy_check_mark: [Why do classes have deinitializers and structs don’t?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-do-classes-have-deinitializers-and-structs-dont)
 3. :heavy_check_mark: [Typecasting (as ...)](https://www.hackingwithswift.com/sixty/10/10/typecasting)
 4. :heavy_check_mark: [When is type casting useful in Swift?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-is-type-casting-useful-in-swift)
+5. :heavy_check_mark: [Classes](https://www.hackingwithswift.com/read/0/16/classes)
 
 # Различия struct и class
 
