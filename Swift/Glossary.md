@@ -274,3 +274,14 @@ print(char1) // b
 Placeholder - подсказка, расположенная внутри каждого поля подписной формы:
 
 ![placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
+
+## Атомарность текста
+
+Было: `Text(viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : "")`
+
+Сообщение лучше вынести в отдельный var, что бы поддержать атомарность, например
+```swift
+var warning: String {
+ viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : ""
+}
+```
