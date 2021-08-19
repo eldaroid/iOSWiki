@@ -46,6 +46,32 @@ let name: String = "Tanya" - явно указать тип ваших данн�
 
 > var name: String
 
+## Associated values
+
+1. :heavy_check_mark: [Enum associated values](https://www.hackingwithswift.com/sixty/2/9/enum-associated-values)
+
+Без ассоциативных данных: 
+
+```swift
+enum Activity {
+    case bored
+    case running
+    case talking
+    case singing
+}
+```
+
+С ассоциативными данными:
+
+```swift
+enum Activity {
+    case bored
+    case running(destination: String)
+    case talking(topic: String)
+    case singing(volume: Int)
+}
+```
+
 ## Type inference (аннотация типов)
 
 let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
