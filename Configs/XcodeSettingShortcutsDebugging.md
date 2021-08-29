@@ -2,9 +2,13 @@
 
 Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to Ctrl + K
 
-## 2. Настройка навигации 
+## 2. Настройка навигации и appearance(вида)
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="450" height="250">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="500" height="250">
+
+---
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="500" height="250">
 
 ## 3. Непонятные ошибки при компиляции
 
