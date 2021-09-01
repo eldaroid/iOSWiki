@@ -122,12 +122,15 @@
 2) Появляются рандомные ошибки и рабочий код не компилится: `rm -rf ~/Library/Developer/Xcode/DerivedData` и Clean Builder Forlder (Cmd+Shift+K)
 3) При переборе могут возникать рандомные ошибки. В любом переборе коллекций (for, while...) нужно использовать цикл не по элементам массива, а по его индексам. Н/р: 
    ```swift
-   ForEach(results.indices) { index in
+   ForEach(results.indices, id: \.self) { index in
    ...
    results[index]
    ...
    }
    ```
+   
+   > Также лучше сразу добавить `Identifiable` с помощью `id: \.self`, чтобы когда объект изменялся - сразу все перерисовывалось
+   
    вместо
    ```swift
    ForEach(results) { result in
