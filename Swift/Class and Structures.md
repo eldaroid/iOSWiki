@@ -31,6 +31,8 @@
 
 1. :heavy_check_mark: [final](https://www.hackingwithswift.com/sixty/8/4/final-classes)
 
+Final class меняет метод диспатч на дайрект (оптимизация). Без final он будет думать, что мы можем наследовать и хранить в Table Dispatch.
+
 ## This code prints the same output twice – true or false?
 
 ```swift
