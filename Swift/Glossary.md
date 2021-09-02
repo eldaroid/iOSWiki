@@ -72,6 +72,18 @@ enum Activity {
 }
 ```
 
+## Associated data
+
+Без ассоциативных данных:
+
+`self.count` - Int?
+
+С ассоциативными данными:
+
+`self.count!` - Int 
+
+> Int и Int? - разные данные.
+
 ## Type inference (аннотация типов)
 
 let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
