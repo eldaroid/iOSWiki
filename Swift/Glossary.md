@@ -15,11 +15,11 @@ extension String.StringInterpolation {
 let toggle = true
 ```
 
-1) print("Intepolation: \\(if: toggle, "this is true")")
+1) `print("Intepolation: \\(if: toggle, "this is true")")`
 
 то же самое, что и 
  
-2) print("Intepolation: \\(toggle \? "this is true" \: "") ")
+2) `print("Intepolation: \\(toggle \? "this is true" \: "") ")`
 
 Вывод: 1) Interpolation: this is true
        2) Interpolation: this is true
@@ -116,9 +116,9 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 1. :heavy_check_mark: [When should you use willSet rather than didSet?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-willset-rather-than-didset)
 2. :heavy_check_mark: [Properties](https://www.hackingwithswift.com/read/0/17/properties)
 
-* willSet - вызывается когда свойство собирается быть изменененным. В willSet Swift предоставляет вашему коду специальное значение, называемое newValue, которое содержит новое значение свойства.
+* willSet - вызывается когда свойство собирается быть изменененным (до его изменения). В willSet Swift предоставляет вашему коду специальное значение, называемое newValue, которое содержит новое значение свойства.
 
-* didSet - вызывается когда свойство уже изменено. В didSet вам дается oldValue для представления предыдущего значения.
+* didSet - вызывается когда свойство уже изменено (после его изменения). В didSet вам дается oldValue для представления предыдущего значения.
 
 > Property observers не могут быть назначены константам (let):
 >  ```swift
