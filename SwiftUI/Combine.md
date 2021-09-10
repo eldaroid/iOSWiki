@@ -6,5 +6,5 @@ Combine - это фреймворк функционального [реакти
 
 `.receive(on: DispatchQueue.main)` - все, что влияет на UI, нужно делать в главном потоке. Вызывать перед `.sink`
 
-Just(Bool).setFailureType(to: Error.self) - создается определенный Publisher, чтобы был AnyPublisher нужно добавить в конец `.eraseToAnyPublisher()`
+Just(Bool).setFailureType(to: Error.self)` - создается определенный Publisher, чтобы был AnyPublisher нужно добавить в конец `.eraseToAnyPublisher()`
 
