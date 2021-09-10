@@ -158,6 +158,8 @@ new.fishCount = 10 // capacity changed to 10
 
 ## Computed property
 
+1. :heavy_check_mark: [Properties](https://www.hackingwithswift.com/read/0/17/properties)
+
 Переменная, которая считается во время ее вызова.
 
 ```swift
