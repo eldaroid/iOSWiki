@@ -148,6 +148,8 @@ new.fishCount = 10 // capacity changed to 10
 
 ## Property wrappers
 
+1. :heavy_check_mark: [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
+
 * @State - все то, что изменяется
 
 * @StateObject
