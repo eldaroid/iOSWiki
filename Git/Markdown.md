@@ -17,3 +17,11 @@
 Необходимо писать в таком формате: [Types](#types)
 
 Н/р: https://github.com/airbnb/javascript/blob/master/README.md#types
+
+## Гифка итогового приложения
+
+Обрезать видео можно на маке по дефолту
+[Замедлить или ускорить видео](https://clideo.com/ru/editor/change-video-speed)
+[Переделать в гифку](https://ezgif.com/video-to-gif)
+
+Потом все это грузим в issue и оттуда ссылку берем и вставляет в readme файл 
