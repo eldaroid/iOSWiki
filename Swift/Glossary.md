@@ -296,7 +296,7 @@ Placeholder - подсказка, расположенная внутри каж
 
 Контекстное меню выглядит вот так:
 
-![context](https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png)
+<img src="https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png" alt="alt text" width="200" height="200">
 
 ## Атомарность текста
 
