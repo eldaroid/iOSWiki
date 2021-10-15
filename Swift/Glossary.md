@@ -292,6 +292,12 @@ Placeholder - подсказка, расположенная внутри каж
 
 ![placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
 
+## ContextMenu
+
+Контекстное меню выглядит вот так:
+
+![context](https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png)
+
 ## Атомарность текста
 
 Было: `Text(viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : "")`
