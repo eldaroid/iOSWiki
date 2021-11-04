@@ -1,6 +1,12 @@
-## 1. Удаление строки
+## 1. Settings
+
+### Удаление строки
 
 Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to Ctrl + K
+
+### Лента сворачивания
+
+Settings -> Text Editing -> Display -> Code folding ribbon
 
 ## 2. Настройка навигации и appearance(вида)
 
