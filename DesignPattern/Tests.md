@@ -1,6 +1,7 @@
 # Тестирование ПО
 
-- [x] [Виды тестирования ПО](https://qaevolution.ru/testirovanie-po/vidy-testirovaniya-po/)
+- [x] [Виды тестирования ПО](https://qaevolution.ru/wp-content/uploads/2016/01/bd6dcbbb7d7c44a485b65ae29b4c0ae4.png)
+- [x] [Все, что вы хотите узнать о Driven Development](https://worksolutions.ru/blog/driven-development/)
 
 Каждый программист, который только делает первые шаги в профессии, неизбежно сталкивается с понятием «тестирование кода». 
 Интуитивно понятно, что это процедура, направленная на поиск ошибок, несоответствия заявленных данных и исполняемых, оценку функциональности программы. 
@@ -36,7 +37,20 @@
 
     * [Смок (smoke)](https://qaevolution.ru/testirovanie-po/vidy-testirovaniya-po/smoke-testing/) (встречаются названия дымное тестирование, intake test , build verification test) - маленький тест похожий на интеграционный чтобы быстро прогнать перед выкладкой в продакшн
     
-# iOS Testing
+## Практики разработки Driven Development
 
+TDD (Test Driven Development) — ну, это все знают, сначала пишем тесты, а потом остальной код
 
+BDD (Behaviour Driven Development) - вроде как, тоже тесты, но особенные. Разработка, основанная на описании поведения. Определенный человек(или люди) пишет описания вида "я как пользователь хочу когда нажали кнопку пуск тогда показывалось меню как на картинке".
 
+MDD (Model Driven Development) — cерьезно, на основе диаграмм?
+
+TDD (Type Driven Development) - сокращенно пишется также, как и разработка через тестирование, поэтому обычно пишут полное название. Ваши типы данных и сигнатуры типов являются спецификацией программы. Типы также служат формой документации, которая гарантированно обновляется.
+
+![alt text](https://habrastorage.org/webt/ue/7h/y5/ue7hy5tcox8zmj5hngev707m994.jpeg)
+    
+## iOS Testing
+
+- [x] [iOS Unit Testing and UI Testing Tutorial](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-006)
+
+> Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
