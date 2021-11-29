@@ -1,13 +1,12 @@
 # Тестирование ПО
 
-- [x] [Виды тестирования ПО](https://qaevolution.ru/wp-content/uploads/2016/01/bd6dcbbb7d7c44a485b65ae29b4c0ae4.png)
-- [x] [Все, что вы хотите узнать о Driven Development](https://worksolutions.ru/blog/driven-development/)
-
 Каждый программист, который только делает первые шаги в профессии, неизбежно сталкивается с понятием «тестирование кода». 
 Интуитивно понятно, что это процедура, направленная на поиск ошибок, несоответствия заявленных данных и исполняемых, оценку функциональности программы. 
 Однако, что конкретно подразумевается под тестированием, какие существуют виды и надо ли вам постигать эту непростую науку? 
 
 ## Виды тестирования
+
+- [x] [Виды тестирования ПО](https://qaevolution.ru/wp-content/uploads/2016/01/bd6dcbbb7d7c44a485b65ae29b4c0ae4.png)
 
 На этой фотографии мы можем увидеть все виды тестирования ПО, разделенные по категориям:
 
@@ -39,6 +38,8 @@
     
 ## Практики разработки Driven Development
 
+- [x] [Все, что вы хотите узнать о Driven Development](https://worksolutions.ru/blog/driven-development/)
+
 TDD (Test Driven Development) — ну, это все знают, сначала пишем тесты, а потом остальной код
 
 BDD (Behaviour Driven Development) - вроде как, тоже тесты, но особенные. Разработка, основанная на описании поведения. Определенный человек(или люди) пишет описания вида "я как пользователь хочу когда нажали кнопку пуск тогда показывалось меню как на картинке".
@@ -52,5 +53,6 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 ## iOS Testing
 
 - [x] [iOS Unit Testing and UI Testing Tutorial](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-006)
+- [x] [Туториал По Unit И UI-Тестированию В IOS](https://swiftbook.ru/post/tutorials/ios-unit-testing-and-ui-testing-tutorial/)
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
