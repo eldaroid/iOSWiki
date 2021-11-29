@@ -11,7 +11,7 @@
 
 На этой фотографии мы можем увидеть все виды тестирования ПО, разделенные по категориям:
 
-<img src="https://qaevolution.ru/testirovanie-po/vidy-testirovaniya-po/" alt="alt text" width="750" height="400">
+<img src="https://qaevolution.ru/wp-content/uploads/2016/01/bd6dcbbb7d7c44a485b65ae29b4c0ae4.png" alt="alt text" width="750" height="400">
 
 Остановимся на наиболее популярных: 
 
