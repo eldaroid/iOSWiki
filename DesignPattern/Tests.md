@@ -57,8 +57,46 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
 
+Пример теста:
 
+<details><summary>Open</summary>
+<p>
+
+```
+/// DealsTests
+   
+@testable import Deals
+import XCTest
+   
+class Tests: XCTestCase {
+ var sut: ViewModel?
+   
+ override funx setUp() {
+   super.setUp()
+   sut = ViewMolde()
+}
+   
+ override funx tearDown() {
+   super.tearDown()
+   sut = nil
+ }
+   
+ func testFunction() {
+ }
+```
+   
+</p>
+</details>
+
+Для тестирования асинхронного кода нужно использовать expectations:
 
 `promise.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
 
 `wait (for: timeout :)` : тест продолжается до тех пор, пока не будут выполнены все ожидания или пока timeout не закончится, в зависимости от того, что произойдет раньше.
+
+Создать пустой Publisher:
+
+AnyPublisher<Model, Error>: Just(Model()).setFailureType(to: Error.self).eraseToAnyPublisher()
+
+AnyPublisher<Void, Error>: Empty().eraseToAnyPublisher()
+
