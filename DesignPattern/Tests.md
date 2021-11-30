@@ -56,3 +56,9 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 - [x] [Туториал По Unit И UI-Тестированию В IOS](https://swiftbook.ru/post/tutorials/ios-unit-testing-and-ui-testing-tutorial/)
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
+
+
+
+`promise.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
+
+`wait (for: timeout :)` : тест продолжается до тех пор, пока не будут выполнены все ожидания или пока timeout не закончится, в зависимости от того, что произойдет раньше.
