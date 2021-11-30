@@ -82,6 +82,8 @@ class Tests: XCTestCase {
  }
    
  func testFunction() {
+   sut.callFunction()
+   XCTAssertTrue(true)
  }
 ```
    
