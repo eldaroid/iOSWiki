@@ -90,7 +90,12 @@ class Tests: XCTestCase {
 </p>
 </details>
 
-### Для тестирования асинхронного кода нужно использовать expectations:
+### Тестирование асинхронного кода
+
+<details><summary>Open</summary>
+<p
+
+#### Для тестирования асинхронного кода можно использовать expectations:
 
 - [x] [Testing Asynchronous Operations with Expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
 
@@ -115,7 +120,7 @@ XCTAssertEqual(sut?.items.count, 2)
 
 `wait (for: timeout :)` : тест продолжается до тех пор, пока не будут выполнены все ожидания или пока timeout не закончится, в зависимости от того, что произойдет раньше.
 
-Также можно использовать Sheduler вместо expectation: 
+#### Также можно использовать Sheduler вместо expectation: 
 
 - [x] [ImmediateScheduler](https://pointfreeco.github.io/combine-schedulers/ImmediateScheduler/)
 - [x] [Scheduler](https://pointfreeco.github.io/combine-schedulers/TestScheduler/)
@@ -125,6 +130,9 @@ XCTAssertEqual(sut?.items.count, 2)
 чтобы тесты проходили намного быстрее, так как в перспективе, с увеличением количества тестов, 
 таймауты сыграют неприятную роль в производительности тестов"
 
+</p>
+</details>
+   
 ### Тестирования производительности 
 
 - [x] [Testing Performance](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-016#:~:text=XCTClockMetric)
