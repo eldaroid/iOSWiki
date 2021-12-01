@@ -94,9 +94,36 @@ class Tests: XCTestCase {
 
 - [x] [Testing Asynchronous Operations with Expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
 
-`promise.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
+```
+//given
+let expectation = XCTestExpectation(description: "Download apple.com home page")
+
+//when
+sut?.function()
+
+DispatchQueue.main.asyncAfter(dedline: .now() + 0.3) {
+   expectation.fulfill()
+}
+
+wait(for: [expectation], timeout: 0.5)
+
+//then
+XCTAssertEqual(sut?.items.count, 2)
+```
+
+`expectation.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
 
 `wait (for: timeout :)` : тест продолжается до тех пор, пока не будут выполнены все ожидания или пока timeout не закончится, в зависимости от того, что произойдет раньше.
+
+Также можно использовать Sheduler вместо expectation: 
+
+- [x] [ImmediateScheduler](https://pointfreeco.github.io/combine-schedulers/ImmediateScheduler/)
+- [x] [Scheduler](https://pointfreeco.github.io/combine-schedulers/TestScheduler/)
+- [x] [Scheduler](https://pointfreeco.github.io/combine-schedulers/AnyScheduler/)
+
+> Основная задача при тестировании Combine избавиться от использования expectation, 
+чтобы тесты проходили намного быстрее, так как в перспективе, с увеличением количества тестов, 
+таймауты сыграют неприятную роль в производительности тестов"
 
 ### Тестирования производительности 
 
