@@ -117,6 +117,10 @@ func testScoreIsComputedPerformance() {
 }
 ```
 
+### Тестирование Combine
+
+- [x] [](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
+
 ### Создать пустой Publisher:
 
 AnyPublisher<Model, Error>: Just(Model()).setFailureType(to: Error.self).eraseToAnyPublisher()
