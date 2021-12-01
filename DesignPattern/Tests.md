@@ -92,6 +92,8 @@ class Tests: XCTestCase {
 
 ### Для тестирования асинхронного кода нужно использовать expectations:
 
+- [x] [Testing Asynchronous Operations with Expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
+
 `promise.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
 
 `wait (for: timeout :)` : тест продолжается до тех пор, пока не будут выполнены все ожидания или пока timeout не закончится, в зависимости от того, что произойдет раньше.
@@ -116,10 +118,6 @@ func testScoreIsComputedPerformance() {
   }
 }
 ```
-
-### Тестирование Combine
-
-- [x] [](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
 
 ### Создать пустой Publisher:
 
