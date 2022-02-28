@@ -57,6 +57,17 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
 
+### Правила при написании тестов:
+
+<details><summary>Open</summary>
+<p>
+
+   1. В тестах должна быть 1 логическая проверка. Количество `XCTestAssertions` может быть любым.
+   2. Нейминг теста: `test_whenFilterOneModelWithWrongQuarter_ItReturnNothing()`
+   
+</p>
+</details>
+
 ### Пример теста:
 
 <details><summary>Open</summary>
