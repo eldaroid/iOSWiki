@@ -82,21 +82,48 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 import XCTest
    
 class Tests: XCTestCase {
- var sut: ViewModel?
+ // MARK: - Properties
+ private var sut, sut_withError: ViewModel!
    
+ // MARK: - Test Lifecycle
  override funx setUp() {
    super.setUp()
-   sut = ViewMolde()
+   sut = ViewModel()
+   sut_withError = ViewModel()
 }
    
- override funx tearDown() {
+ override func tearDown() {
    super.tearDown()
    sut = nil
+   sut_withError = nil
  }
    
+ // MARK: - Tests
  func testFunction() {
+   // given
+   sut.property = 1
+   
+   // when
    sut.callFunction()
+   
+   // then
    XCTAssertTrue(true)
+ }
+   
+ func testPublisher() {
+   // given
+   var loadCompleted = false
+   
+   // when
+   cancellable = sut.getResponse()
+      .sink(receiveCompletion: { completion in
+           if case .finished = completion {
+               loadCompleted = true
+           }
+      }, receiveValue: { _ in })
+   
+   // then
+   XCTAssertTrue(loadCompleted)
  }
 ```
    
@@ -113,20 +140,38 @@ class Tests: XCTestCase {
 - [x] [Testing Asynchronous Operations with Expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
 
 ```
-//given
-let expectation = XCTestExpectation(description: "Download apple.com home page")
+    func testAsync() {
+      //given
+      let expectation = XCTestExpectation(description: "Download apple.com home page")
 
-//when
-sut?.function()
+      //when
+      sut?.function()
 
-DispatchQueue.main.asyncAfter(dedline: .now() + 0.3) {
-   expectation.fulfill()
-}
+      DispatchQueue.main.asyncAfter(dedline: .now() + 0.3) {
+         expectation.fulfill()
+      }
 
-wait(for: [expectation], timeout: 0.5)
+      wait(for: [expectation], timeout: 0.5)
 
-//then
-XCTAssertEqual(sut?.items.count, 2)
+      //then
+      XCTAssertEqual(sut?.items.count, 2)
+   }
+   
+   func testPublisher() {
+      // given
+      var loadCompleted = false
+   
+      // when
+      cancellable = sut.getResponse()
+         .sink(receiveCompletion: { completion in
+            if case .finished = completion {
+                loadCompleted = true
+             }
+         }, receiveValue: { _ in })
+   
+      // then
+      XCTAssertTrue(loadCompleted)
+   }
 ```
 
 `expectation.fulfill()` : вызовите это при закрытии условия успеха обработчика завершения асинхронного метода, чтобы отметить, что ожидание было выполнено.
