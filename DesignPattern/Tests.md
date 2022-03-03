@@ -54,6 +54,8 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 
 - [x] [iOS Unit Testing and UI Testing Tutorial](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-006)
 - [x] [Туториал По Unit И UI-Тестированию В IOS](https://swiftbook.ru/post/tutorials/ios-unit-testing-and-ui-testing-tutorial/)
+- [x] [Writing better unit tests in Swift: Part One](https://medium.com/bleeding-edge/writing-better-unit-tests-in-swift-part-one-e4a06fbc682b)
+- [x] [Writing better unit tests in Swift: Part Two](https://medium.com/bleeding-edge/writing-better-unit-tests-in-swift-part-two-d19b69f3d794)
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
 
@@ -134,8 +136,8 @@ XCTAssertEqual(sut?.items.count, 2)
 #### Также можно использовать Sheduler вместо expectation: 
 
 - [x] [ImmediateScheduler](https://pointfreeco.github.io/combine-schedulers/ImmediateScheduler/)
-- [x] [Scheduler](https://pointfreeco.github.io/combine-schedulers/TestScheduler/)
-- [x] [Scheduler](https://pointfreeco.github.io/combine-schedulers/AnyScheduler/)
+- [x] [TestScheduler](https://pointfreeco.github.io/combine-schedulers/TestScheduler/)
+- [x] [AnyScheduler](https://pointfreeco.github.io/combine-schedulers/AnyScheduler/)
 
 > Основная задача при тестировании Combine избавиться от использования expectation, 
 чтобы тесты проходили намного быстрее, так как в перспективе, с увеличением количества тестов, 
