@@ -214,7 +214,4 @@ motions, и т.д.
 * [Vim Screencasts](http://vimcasts.org/)
 * [Practical Vim](https://pragprog.com/titles/dnvim2/) (книга)
 
-
-
-
-
+[Previous Theme](/Common/Terminal/Terminal.md) |[Back To Contents](https://github.com/eldaroid/iosBasics)

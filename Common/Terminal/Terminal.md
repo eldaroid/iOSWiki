@@ -114,10 +114,4 @@ $@ - показать все аргументы
 $# - показать количество аргументов
 $$ - показать PID (process ID)
 
-[Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](/Git%2BTerminal/Git.md)
-
-
-
-
-
-
+[Previous Theme](/Common/Git) |[Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](/Common/Git%2BTerminal/TextEditors.md)

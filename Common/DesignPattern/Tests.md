@@ -62,17 +62,11 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 
 ### Правила при написании тестов:
 
-<details><summary>Open</summary>
-<p>
-
    1. Нейминг теста: `test_whenFilterOneModelWithWrongQuarter_ItReturnNothing()`
    2. `sut` должен называться тестируемый класс. sut (subject under test) означает «испытуемый предмет».
    3. Использовать [Given-When-Then](https://martinfowler.com/bliki/GivenWhenThen.html) подход
    4. В тестах должна быть 1 логическая проверка. Количество `XCTestAssertions` может быть любым.
-   
-</p>
-</details>
-
+  
 ### Пример теста:
 
 <details><summary>Open</summary>
@@ -110,7 +104,7 @@ class Tests: XCTestCase {
    sut.callFunction()
    
    // then
-   XCTAssertTrue(true)
+   XCTAssertEqual(sut.funcInvokedCount, 1)
  }
    
  func testPublisher() {
@@ -128,6 +122,20 @@ class Tests: XCTestCase {
    // then
    XCTAssertTrue(loadCompleted)
  }
+
+ final class ViewModel: ViewModelProtocol {
+   // MARK: - Testing
+   private(set) var funcInvokedCount = 0
+
+   // MARK: - ViewModelProtocol
+  var property = 0
+
+   func callFunction() { funcInvokedCount += 1 }
+
+   func getResponse() -> AnyPublisher<Void, Never> {
+     return Empty().eraseToAnyPublisher()
+   }
+ }
 ```
    
 </p>
@@ -141,6 +149,8 @@ class Tests: XCTestCase {
 #### Для тестирования асинхронного кода можно использовать expectations:
 
 - [x] [Testing Asynchronous Operations with Expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations/testing_asynchronous_operations_with_expectations)
+- [ ] [Combine Testing](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift/v1.0/chapters/19-testing)
+- [ ] [Using Combine Tests](https://github.com/heckj/swiftui-notes/tree/master/UsingCombineTests)
 
 ```
     func testAsync() {
@@ -148,7 +158,7 @@ class Tests: XCTestCase {
       let expectation = XCTestExpectation(description: "Download apple.com home page")
 
       //when
-      sut?.function()
+      sut?.reloadData()
 
       DispatchQueue.main.asyncAfter(dedline: .now() + 0.3) {
          expectation.fulfill()
@@ -174,6 +184,10 @@ class Tests: XCTestCase {
    
       // then
       XCTAssertTrue(loadCompleted)
+   }
+
+   func getResponse() -> AnyPublisher<Void, Never> {
+     return Empty().eraseToAnyPublisher()
    }
 ```
 

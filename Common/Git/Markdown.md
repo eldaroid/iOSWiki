@@ -25,3 +25,5 @@
 [Переделать в гифку](https://ezgif.com/video-to-gif)
 
 Потом все это грузим в issue и оттуда ссылку берем и вставляет в readme файл 
+
+[Previous Theme](/Common/Git/Gitlabflow.md) | [Back To Contents](https://github.com/eldaroid/iOSWiki) |  [Next Theme](/Common/Terminal)
