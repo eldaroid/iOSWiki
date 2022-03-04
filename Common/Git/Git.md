@@ -418,4 +418,4 @@ git config --global http.maxRequestBuffer 100M --depth=1 - также может
 
 [2] **git fetch [remote-name]**
 
-[Previous Theme](/Git%2BTerminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](Git%2BTerminal)
+[Previous Theme](/Common/Terminal/Terminal.md) | [Back To Contents](https://github.com/eldaroid/iOSWiki) |  [Next Theme](/Common/Git/Gitflow.md)
