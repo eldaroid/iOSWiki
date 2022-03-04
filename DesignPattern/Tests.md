@@ -7,6 +7,7 @@
 ## Виды тестирования
 
 - [x] [Виды тестирования ПО](https://qaevolution.ru/wp-content/uploads/2016/01/bd6dcbbb7d7c44a485b65ae29b4c0ae4.png)
+- [x] [GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
 
 На этой фотографии мы можем увидеть все виды тестирования ПО, разделенные по категориям:
 
@@ -42,7 +43,7 @@
 
 TDD (Test Driven Development) — ну, это все знают, сначала пишем тесты, а потом остальной код
 
-BDD (Behaviour Driven Development) - вроде как, тоже тесты, но особенные. Разработка, основанная на описании поведения. Определенный человек(или люди) пишет описания вида "я как пользователь хочу когда нажали кнопку пуск тогда показывалось меню как на картинке".
+[BDD (Behaviour Driven Development)](http://dannorth.net/introducing-bdd/) - вроде как, тоже тесты, но особенные. Разработка, основанная на описании поведения. Определенный человек(или люди) пишет описания вида "я как пользователь хочу когда нажали кнопку пуск тогда показывалось меню как на картинке". [Given-When-Then](https://martinfowler.com/bliki/GivenWhenThen.html) подход, разработанный в рамках Behavior-Driven Development (BDD).
 
 MDD (Model Driven Development) — cерьезно, на основе диаграмм?
 
@@ -64,8 +65,10 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 <details><summary>Open</summary>
 <p>
 
-   1. В тестах должна быть 1 логическая проверка. Количество `XCTestAssertions` может быть любым.
-   2. Нейминг теста: `test_whenFilterOneModelWithWrongQuarter_ItReturnNothing()`
+   1. Нейминг теста: `test_whenFilterOneModelWithWrongQuarter_ItReturnNothing()`
+   2. `sut` должен называться тестируемый класс. sut (subject under test) означает «испытуемый предмет».
+   3. Использовать [Given-When-Then](https://martinfowler.com/bliki/GivenWhenThen.html) подход
+   4. В тестах должна быть 1 логическая проверка. Количество `XCTestAssertions` может быть любым.
    
 </p>
 </details>
