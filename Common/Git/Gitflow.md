@@ -31,4 +31,4 @@
 
 ---
 
-[Previous Theme](/Git%2BTerminal/Git.md) | [Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme]()
+[Previous Theme](/Common/Terminal/Git.md) | [Back To Contents](./) |  [Next Theme](/Common/Git/Githubflow.md)
