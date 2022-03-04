@@ -31,4 +31,4 @@
 
 ---
 
-[Previous Theme](/Common/Terminal/Git.md) | [Back To Contents](./) |  [Next Theme](/Common/Git/Githubflow.md)
+[Previous Theme](/Common/Terminal/Git.md) | [Back To Contents](/) |  [Next Theme](/Common/Git/Githubflow.md)
