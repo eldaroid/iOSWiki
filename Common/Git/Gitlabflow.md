@@ -30,4 +30,5 @@
 
 ---
 
-[Previous Theme](/Git%2BTerminal/Github.md) | [Back To Contents](https://github.com/eldaroid/iosBasics)
+[Previous Theme](/Common/Git/Gitflow.md) | [Back To Contents](https://github.com/eldaroid/iOSWiki) |  [Next Theme](/Common/Git/Markdown.md)
+
