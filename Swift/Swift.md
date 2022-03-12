@@ -143,3 +143,13 @@
 ## ARC vs Garbage collector 
 
 Garbage Collector проверяет утечку памяти в runtime, а в ARC на этапе компиляции.
+
+## Атрибуты 
+
+1. :heavy_check_mark: [Attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html)
+
+Вы указываете атрибут, записывая @символ, за которым следует имя атрибута и любые аргументы, которые атрибут принимает: @attribute name(attribute arguments)
+
+Атрибуты: 
+
+@available - атрибут, чтобы аннотировать API с информацией о доступности, например, устарел ли API в версии. для использования API требуется версия Swift выше 5.4 и т. д. Рассмотрим несколько конкретных аспектов:
