@@ -57,6 +57,7 @@ TDD (Type Driven Development) - сокращенно пишется также, 
 - [x] [Туториал По Unit И UI-Тестированию В IOS](https://swiftbook.ru/post/tutorials/ios-unit-testing-and-ui-testing-tutorial/)
 - [x] [Writing better unit tests in Swift: Part One](https://medium.com/bleeding-edge/writing-better-unit-tests-in-swift-part-one-e4a06fbc682b)
 - [x] [Writing better unit tests in Swift: Part Two](https://medium.com/bleeding-edge/writing-better-unit-tests-in-swift-part-two-d19b69f3d794)
+- [x] [Unit tests best practices in Xcode and Swift](https://www.avanderlee.com/swift/unit-tests-best-practices/)
 
 > Примечание. Чтобы увидеть полный список утверждений XCTestAssertions, [перейдите к утверждениям Apple, перечисленным по категориям](https://developer.apple.com/documentation/xctest#2870839).
 
