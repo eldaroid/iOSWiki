@@ -53,6 +53,7 @@ TDD (Type Driven Development) - сокращенно пишется также, 
     
 ## iOS Testing
 
+- [x] [Getting Started with Swift Unit Testing in Xcode](https://www.swiftdevjournal.com/getting-started-with-swift-unit-testing-in-xcode/)
 - [x] [iOS Unit Testing and UI Testing Tutorial](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-006)
 - [x] [Туториал По Unit И UI-Тестированию В IOS](https://swiftbook.ru/post/tutorials/ios-unit-testing-and-ui-testing-tutorial/)
 - [x] [Writing better unit tests in Swift: Part One](https://medium.com/bleeding-edge/writing-better-unit-tests-in-swift-part-one-e4a06fbc682b)
