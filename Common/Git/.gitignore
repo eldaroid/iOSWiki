@@ -1,0 +1,69 @@
+# macOS
+## Вспомогательные системные файлы.
+.DS_Store
+.AppleDouble
+.LSOverride
+.scannerwork
+
+## Файл "Icon" должен сопровождаться двумя завершающими символами '\r'.
+Icon
+
+
+## Файлы кеша предпросмотра
+._*
+
+## Файлы, которые могут отображаться в корневом томе.
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+## Каталоги, которые могли быть созданы на удаленном AFP-ресурсе.
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# CMake
+cmake-build-debug/
+
+# Xcode
+## Пользовательские настройки.
+xcuserdata/
+HRPlatform.xcworkspace/xcuserdata/
+*.xcworkspace/*
+*.xcodeproj
+.build
+Pods/Pods.xcodeproj/*
+
+## Состояние проверок воркспейса
+IDEWorkspaceChecks.plist
+
+### Оставлено для совместимости с Xcode 8 и более ранними версиями.
+### Начиная с Xcode 9, эти файлы добавлять в .gitignore не требуется.
+*.xcscmblueprint
+*.xccheckout
+
+# AppCode
+## Пользовательские настройки.
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+## Файлы, создаваемые при сборке проекта.
+DerivedData/
+*.hmap
+*.ipa
+
+## Pods
+Pods/*
+Pods/Target*Support*Files/*
+Podfile.lock
