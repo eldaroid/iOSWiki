@@ -1,6 +1,7 @@
 # Xcodegen
 
 1. :heavy_check_mark: [Generating xcodeproj’s with Xcodegen](https://betterprogramming.pub/generating-xcodeprojs-with-xcodegen-7d291cfc2f46)
+2. :heavy_check_mark: [ProjectSpec](https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md#options)
 
 >  Избавьтесь от нечитаемых файлов xcodeproj и поздоровайтесь с читаемыми YAML файлами конфигурации проекта
 
@@ -16,5 +17,7 @@
 * Свойство target - все цели будут указаны в этом свойстве.
 * Свойство type - типы этого таргета. Н/р: application, app-extension, framework, bundle. [Перечень всех типов](https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md#:~:text=This%20will%20provide%20default).
 * Свойство source - место расположения этого таргетаю. Н/р: `source: Extensions/ShareWith`. Но если несколько расположений, то нужно указывать `source: \n\t- path: Extensions/ShareWith`.
+* Свойство include - показывает где еще находятся .yml файлы (где происходит описание спецификаций). Н/р: includes: [Modules/Utils]
+* Свойство targetTemplates - позволяет создать общие настройки таргетов, чтобы их не прописывать несколько раз.
 
 > Не забудьте указать в [gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) файлы xcodeproj, после пользования Xcodegen. Пример: [.gitignore](/Common/Git/.gitignore)
