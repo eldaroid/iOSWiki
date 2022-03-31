@@ -23,7 +23,8 @@ Appearance:
 ### Editor
 
 Editor -> Invisibles :heavy_check_mark:
-Editor -> Wrap Lines - [ ]
+
+Editor -> Wrap Lines :heavy_multiplication_x:
 
 ## 2. Непонятные ошибки при компиляции
 
