@@ -1,26 +1,35 @@
-## 1. Settings
+## 1. Xcode Settings
 
-### Удаление строки
+### Key binding (связка ключей)
 
-Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to Ctrl + K
+Удаление строки: Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to Ctrl + K
 
-### Лента сворачивания
+### Text Editing
 
-Settings -> Text Editing -> Display -> Code folding ribbon
+Лента сворачивания: Settings -> Text Editing -> Display -> Code folding ribbon
 
-## 2. Настройка навигации и appearance(вида)
+Editing: 
+<img src="https://github.com/eldaroid/pictures/blob/master/iOSWiki/TextEditing-Editing.jpeg" alt="alt text" width="420" height="250">
 
+
+### Navigation 
+Настройка навигации:
 <img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="420" height="250">
 
 ---
+Appearance: 
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="420" height="250">
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="500" height="350">
+### Editor
 
-## 3. Непонятные ошибки при компиляции
+Editor -> Invisibles :heavy_check_mark:
+Editor -> Wrap Lines - [ ]
+
+## 2. Непонятные ошибки при компиляции
 
 Исправить ситуацию позволяет `Clean Build Folder` ⇧⌘K и ручное удаление производных данных `rm -rf ~/Library/Developer/Xcode/DerivedData` (в папке DerivedData записываются symbolicate crash logs - расшифровки крэш-логов).
 
-## 4. Debugging
+## 3. Debugging
 
 Стоит знать основы и понимать, что Apple / Xcode пытается сказать вам через logs.
 
@@ -61,8 +70,8 @@ U-Untracked (файл новый или был изменен, но еще не 
 
 `Cmd + Ctrl + Option + Click` - в новом окне
 
-## 5 Время компиляции
+## 5 Terminal
 
-defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+Время компиляции: defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
 Теперь показывается время компиляции: [alt text](https://flexiple.com/ios/xcode-build-optimization-a-definitive-guide/#:~:text=Note%201)
