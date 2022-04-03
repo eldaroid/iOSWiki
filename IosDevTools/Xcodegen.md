@@ -3,6 +3,7 @@
 1. :heavy_check_mark: [Generating xcodeproj’s with Xcodegen](https://betterprogramming.pub/generating-xcodeprojs-with-xcodegen-7d291cfc2f46)
 2. :heavy_check_mark: [ProjectSpec](https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md#options)
 3. :heavy_check_mark: [An example project to test XcodeGen](https://github.com/fbernutz/XcodeGenExample)
+4. :heavy_check_mark: [XcodeGen Tips and Tricks](https://medium.com/udemy-engineering/xcodegen-tips-and-tricks-3ad10728d8d0)
 
 >  Избавьтесь от нечитаемых файлов xcodeproj и поздоровайтесь с читаемыми YAML файлами конфигурации проекта
 
