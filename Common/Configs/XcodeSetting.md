@@ -18,7 +18,7 @@ Editing:
 
 ---
 Appearance: 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="420" height="250">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="420" height="350">
 
 ### Editor
 
@@ -26,11 +26,7 @@ Editor -> Invisibles :heavy_check_mark:
 
 Editor -> Wrap Lines :heavy_multiplication_x:
 
-## 2. Непонятные ошибки при компиляции
-
-Исправить ситуацию позволяет `Clean Build Folder` ⇧⌘K и ручное удаление производных данных `rm -rf ~/Library/Developer/Xcode/DerivedData` (в папке DerivedData записываются symbolicate crash logs - расшифровки крэш-логов).
-
-## 3. Debugging
+## 2. Debugging
 
 Стоит знать основы и понимать, что Apple / Xcode пытается сказать вам через logs.
 
@@ -63,7 +59,7 @@ R-переименован (файл был переименован)
 
 U-Untracked (файл новый или был изменен, но еще не добавлен в репозиторий)
 
-## 4 Открывать файлы
+## 3. Открывать файлы
 
 Открывать класс в новой вкладке: 
 
@@ -71,7 +67,7 @@ U-Untracked (файл новый или был изменен, но еще не 
 
 `Cmd + Ctrl + Option + Click` - в новом окне
 
-## 5 Terminal
+## 4. Terminal
 
 Время компиляции: defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
