@@ -280,7 +280,7 @@ Merge при конфликтах становится опасной утили
 <details><summary>Open</summary>
 <p>
 
-#### I Ребейз на новую ветку
+1. Ребейз на новую ветку
 
 Куда: [1]/release
 Откуда: bugfix
@@ -299,7 +299,7 @@ Merge при конфликтах становится опасной утили
 	
 	branch1 rebased to branch2
 
-#### II squash
+2. squash
 
 `git rebase -i HEAD~4` - в интерактивном режиме выбирает 4 коммита(включая головной), чтобы с ними что-то делать. Открывается вим и снизу вверх показаны коммиты по новизне (снизу последний).
 
@@ -327,7 +327,7 @@ r 7ae83e1 added third text
 * bdb22e5 3 hours ago [eldaroid]  | file1
 ```
 
-#### III Pull --rebase
+3. Pull --rebase
 
 Удаленная ветка: A--B--C. Вы работаете: A--B--C--(D) - D еще не на удаленной репе. Кто то в вашей ветке делает удаленный коммит: А--В--С--Е. Теперь вы не можете запушить (D), появляется ошибка: 
 
@@ -344,7 +344,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Решение: `git pull --rebase` = делает `git fetch` + `git rebase`. Получается у нас следующая картина: А--В--С--Е--(D). Теперь пушим изменения `git push`. Получается следующяя картина: А--В--С--Е--D.
 
 	
-#### IV Подсчет коммитов до develop
+4. Подсчет коммитов до develop
 	
 `git cherry -v develop | wc -l`
 	
@@ -377,6 +377,25 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
  	untracked = red bold
  ```
   
+</p>
+</details>
+
+#### Количество коммитов по авторам
+
+<details><summary>Open</summary>
+<p>
+
+Количество коммитов по авторам с 22 июня 2021 г. по 9 сентября 2021 г.:
+```console
+➜ git shortlog -s -n --since="22-06-2021" --before="2022-09-01"	
+```
+
+С определенной даты до сегодня:
+
+```console
+➜ git shortlog -s -n --since="22-06-2021"
+```	
+
 </p>
 </details>
 
