@@ -15,7 +15,7 @@
 
 Иллюстрация чистой архитектуры, предложенная Робертом Мартином:
 
-<img src="https://hsto.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" alt="alt text" width="250" height="250">
+<img src="https://hsto.org/r/w1560/files/23a/0de/4d9/23a0de4d93d747c89f1e216077c2d604.jpg" alt="alt text" width="350" height="250">
 
 Схематично стек архитектуры представлен четырьмя уровнями: синий, зеленый, красный и желтый.
 
@@ -36,6 +36,9 @@ SOLID и [ООП](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D
 
 #### Single Responsibility Principle (SRP) — принцип единственной ответственности
 
+<details><summary>Open</summary>
+<p>
+
 Принцип единственной ответственности можно считать этакой инструкцией к инкапсуляции. Давайте на секундочку вернёмся к её определению.
 
 > Упаковка данных и функций в единый компонент
@@ -48,19 +51,25 @@ SOLID и [ООП](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D
 
 Разделение ответственности в самой радикальной форме.
 
-
-
+</p>
+</details>
 
 #### Open-Closed Principle — принцип открытости/закрытости
+
+<details><summary>Open</summary>
+<p>
 
 Принцип открытости/закрытости отличается от остальной пятёрки тем, что не объясняет, как использовать инкапсуляцию и полиморфизм отдельно. Он накрывает все три кита сразу. Смотрите сами:
 
 > Программные сущности должны быть открыты для расширения и закрыты для модификации
 
-
-
+</p>
+</details>
 
 #### Liskov Substitution Principle — принцип подстановки Барбары Лисков
+
+<details><summary>Open</summary>
+<p>
 
 Формулировка Роберта Мартина:
 
@@ -72,14 +81,21 @@ SOLID и [ООП](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D
 2. Мощь полиморфизма
 3. Чтобы нашу программу было проще понимать и читать
 
-
-
+</p>
+</details>
 
 #### Interface Segregation Principle — принцип разделения интерфейсов
 
+<details><summary>Open</summary>
+<p>
 
+</p>
+</details>
 
 #### Dependency Inversion Principle — принцип инверсии зависимости
+
+<details><summary>Open</summary>
+<p>
 
 > Модули верхних уровней не должны зависеть от модулей нижних уровней. Оба типа модулей должны зависеть от абстракций.
 
@@ -87,16 +103,17 @@ SOLID и [ООП](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D
 
 «Вот! Вот с этого класса начну.» — решаете вы и начинаете радостно продумывать тест-кейсы для вашего ImportantClass. Когда приходит пора писать тесты, выясняется, что вам для тестирования класса и его методов нужен рабочий объект этого класса. Дальше выясняется, что классу ImportantClass требуется для работы экземпляр класса VeryImportantClass, которому требуется ещё с пять объектов разных классов, из разных частей приложения, и экземпляр класса EvenMoreImportantClass, которому для работы вообще необходимо соединение с базой данных, доступ к файлам конфигурации и жабья лапка с кровью девственницы. Быстро становится ясно, что следом за тем, что мы хотим протестировать поднимается очень много вещей, которые мы тестировать не хотим. По крайней мере, не одним тестом. И процедура начинает казаться столь противной, что мы тяжко вздыхаем и возвращаемся к прошлой жизни.
 
-<img src="https://hsto.org/r/w1560/webt/pi/oa/me/pioameabdye9htqneqjttb8kczy.png" alt="alt text" width="300" height="300">
+<img src="https://hsto.org/r/w1560/webt/pi/oa/me/pioameabdye9htqneqjttb8kczy.png" alt="alt text" width="350" height="300">
 
 Проблема тут в зависимости ImportantClass от VeryImportantClass и EvenMoreImportantClass. И решить нашу проблему с нетестируемостью ImportantClass можно через инверсию этой зависимости. Это делается с помощью абстракций, которые вклиниваются между вещами, которые надо разделить. Например, можно создать интерфейсы IVeryImportantClass и IEvenMoreImportantClass, где будут только методы необходимые ImportantClass.
 
 
 Таким образом зависимость между ImportantClass и VeryImportantClass исчезает. И мы теперь можем тестировать наш ImportantClass в «сферическом ваакуме», дав ему вместо полноценных реализаций IVeryImportantClass тестовые заглушки.
 
-<img src="https://hsto.org/r/w1560/webt/r0/qr/sw/r0qrsw49qxggfr0s7maojfmscmo.png" alt="alt text" width="300" height="300">
+<img src="https://hsto.org/r/w1560/webt/r0/qr/sw/r0qrsw49qxggfr0s7maojfmscmo.png" alt="alt text" width="350" height="300">
 
-
+</p>
+</details>
 
 
 
