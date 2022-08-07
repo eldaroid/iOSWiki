@@ -17,7 +17,7 @@
 1. :heavy_check_mark: [Protocol extensions](https://www.hackingwithswift.com/sixty/9/4/protocol-extensions)
 2. :heavy_check_mark: [When are protocol extensions useful in Swift?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-are-protocol-extensions-useful-in-swift)
 
-* array (массив) - сохраняют свой порядок и могут содержать дубликаты
+* array (массив) - сохраняют свой порядок и могут содержать дубликаты. Массивы в свифте реализованы как структура.
 
     <details><summary>Open</summary>
     <p>
