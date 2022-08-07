@@ -1,6 +1,6 @@
 ## Markdown
 
-Все о [Markdown](https://github.com/eldaroid/Markdown-Cheatsheet)
+Все о [Markdown](https://itnext.io/github-markdown-cheatsheet-50642835effa)
 
 ## Ссылка на определенный абзац на любой странице
 
