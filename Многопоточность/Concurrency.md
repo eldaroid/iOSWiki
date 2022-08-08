@@ -1,7 +1,7 @@
  # Многопоточность
  
 1. [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
-2. []()
+2. [Углубленный анализ оптимизации производительности Swift](https://russianblogs.com/article/764556451/)
  
 ## Диспетчеризация
 
@@ -21,17 +21,35 @@
 
 <img src="https://habrastorage.org/getpro/habr/upload_files/a12/221/b3c/a12221b3cd7f8d47cd3345d6d313bdfb.png" alt="alt text" width="350" height="250">
 
+## Виды диспетчеризации
+
+* Статическая диспетчеризация (Static dispatch)
+
+> Статическая диспетчеризация менее затратная по сравнению с динамической
+
+* Динамическая диспетчиризация (Dynamic dispatch)
+
+Для повышения производительности, задача компилятора и разработчика заключается в том, чтобы, как можно больше методов использовали статическую диспетчеризацию, в этом нам поможет следующие ключевые слова:
+
+    * final  не позволяет наследоваться классам, а методам переопределяться, что приводит к статической диспетчеризации
+
+    * private ограничивает видимость метода или всего класса. Отсутствие каких-либо переопределений позволяет компилятору автоматически добавлять ключевое слово final
+
+    * Whole Module Optimization позволяет компилятору просматривать все исходные файлы в едином модуле. Это позволяет компилятору использовать final для всех методов без переопределений.
+
+[Данная статья Apple](https://developer.apple.com/swift/blog/?id=27) более подробно рассказывает про способы повышения производительности, уменьшая использование табличной диспетчеризации.
+
 
 ## Типы диспетчеризации
 
 Перейдем к типам диспетчеризации на языке Swift. Существует три вида: 
 
 * Direct Dispatch (статическая);
-* Table Dispatch (динамическая, в свою очередь, делится на Virtual Table и Witness Table)
-* Message Dispatch (самая динамическая диспетчеризация).
+* Table Dispatch (динамическая, в свою очередь, делится на Virtual Table и Witness Table);
+* Message Dispatch (самая динамическая диспетчеризация);
 
+<img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="350" height="250">
 
-![Dispatch](https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png)
 
 
 
