@@ -22,3 +22,19 @@
 <img src="https://habrastorage.org/getpro/habr/upload_files/a12/221/b3c/a12221b3cd7f8d47cd3345d6d313bdfb.png" alt="alt text" width="350" height="250">
 
 
+## Типы диспетчеризации
+
+Перейдем к типам диспетчеризации на языке Swift. Существует три вида: 
+
+* Direct Dispatch (статическая);
+* Table Dispatch (динамическая, в свою очередь, делится на Virtual Table и Witness Table)
+* Message Dispatch (самая динамическая диспетчеризация).
+
+
+![Dispatch](https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png)
+
+
+
+
+
+
