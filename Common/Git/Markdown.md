@@ -2,7 +2,7 @@
 
 Все о [Markdown](https://itnext.io/github-markdown-cheatsheet-50642835effa)
 
-## Полезности для меня
+## Полезности для оформление текста
 
 <details><summary>Раскрыть</summary>
 <p>
