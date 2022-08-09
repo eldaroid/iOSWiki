@@ -2,6 +2,41 @@
 
 Все о [Markdown](https://itnext.io/github-markdown-cheatsheet-50642835effa)
 
+## Полезности для меня
+
+1. Вставка фотографий
+
+Можно использовать два варианта:
+
+* С заданными параметрами высоты и ширины
+
+```
+<img src="ссылка на картинку" alt="alt text" width="250" height="250">
+```
+
+* С дефолтными параметрами высоты и ширины
+
+```
+![DATA](https://github.com/eldaroid/pictures/blob/master/other/git_data.png)
+```
+2. Раскрывающийся список
+
+```
+<details><summary>Open</summary>
+<p>
+  
+</p>
+</details>
+```
+
+Пример:
+
+<details><summary>Раскрыть</summary>
+<p>
+  
+</p>
+</details>
+
 ## Ссылка на определенный абзац на любой странице
 
 Добавление фрагмента текста в url.
