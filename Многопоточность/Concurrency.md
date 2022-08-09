@@ -63,7 +63,7 @@ final class MyClass() {
 * Table Dispatch (динамическая, в свою очередь, делится на Virtual Table и Witness Table);
 * Message Dispatch (самая динамическая диспетчеризация);
 
-<img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="400" height="250">
+<img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="550" height="250">
 
 
 
