@@ -13,7 +13,7 @@
         4. [Vim](/Common/Configs/vimrc.md)
         5. [Gitconfig](/Common/Configs/gitconfig.md)
         6. [Скрипт очистки памяти macOS](/Common/Configs/CleanUpMac.sh)
-        7. [Настройка Xcode](/Common/Configs/XcodeSettingShortcutsDebugging.md)
+        7. [Настройка и изучение Xcode](/Common/Configs/XcodeSetting.md)
     2. [Terminal Folder](/Common/Terminal)
         1. [Terminal](/Common/Terminal/Terminal.md) 
         2. [Редактор кода: Vim](/Common/Terminal/TextEditors.md)
