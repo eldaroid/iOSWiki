@@ -3,7 +3,8 @@
 ### Материалы для изучения
 
 1. - [x] [Принципы SOLID в картинках](https://habr.com/ru/company/productivity_inside/blog/505430/)
-2. - [x] [Чистая архитектура: руководство для начинающих](https://nuancesprog.ru/p/15255/)
+2. - [x] [ООП, «святая троица» и SOLID: некоторый минимум знаний о них](https://habr.com/ru/post/446816/)
+3. - [x] [Чистая архитектура: руководство для начинающих](https://nuancesprog.ru/p/15255/)
 
 #### Первоисточники
 
@@ -104,7 +105,7 @@ SOLID и [ООП](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D
   
 > Программные сущности не должны зависеть от частей интерфейса, которые они не используют (и знать о них тоже не должны).
 
-<img src="https://hsto.org/r/w1560/webt/v8/co/dn/v8codny8xpy355zcqvfro-7ep8a.png" alt="alt text" width="650" height="450">
+<img src="https://hsto.org/r/w1560/webt/v8/co/dn/v8codny8xpy355zcqvfro-7ep8a.png" alt="alt text" width="850" height="450">
  
 Грубо говоря, давайте тем, кто пользуется вашей программной сущностью всё необходимое, но не более того.
   
