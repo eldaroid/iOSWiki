@@ -5,7 +5,6 @@
 1. - [x] [Принципы SOLID в картинках](https://habr.com/ru/company/productivity_inside/blog/505430/)
 2. - [x] [ООП, «святая троица» и SOLID: некоторый минимум знаний о них](https://habr.com/ru/post/446816/)
 3. - [x] [Чистая архитектура: руководство для начинающих](https://nuancesprog.ru/p/15255/)
-4. - [x] [Чистая архитектура](https://habr.com/ru/post/269589/)
 
 #### Происхождение ООП
 
