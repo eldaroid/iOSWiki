@@ -178,6 +178,7 @@ po Thread.main
 ## Grand Central Dispatch (GCD)
 
 1. - [x] [!!! GCD queues: serial and concurrent](https://www.hapq.me/gcd-queues/)
+2. - [x] [Про многопоточность 2. GCD](https://habr.com/ru/post/578752/)
 
 GCD - технология управления многопоточность на базе паттерна пулл потоков. Вместо того чтобы программист сам создавал и управлял потоками за него это делает система. GCD вводит понятие очередь исполнения, представлена классом `DispatchQueue`, где очередь - список задач, которые необходимо выполнить.
 
@@ -194,7 +195,7 @@ queue.async {
 
 Если мы хотим дождаться выполнение блока кода, то нужно выполнить задачу в основном потоке (sync), используя `sync { }`.
 
-Наглядны пример sync и async:
+Наглядный пример sync и async:
 
 <details><summary>Open</summary>
 <p>
@@ -287,6 +288,30 @@ task7()
 <p> 
  
 **async** – метод, позволяющий выполнять задачи асинхронно по отношению к текущей очереди
+ 
+Декларация async метода:
+ 
+`public func async(group: DispatchGroup? = nil, qos: DispatchQoS = .unspecified, flags: DispatchWorkItemFlags = [], execute work: @escaping @convention(block) () -> Void)`
+
+Как мы можем видеть, метод async требует передать большее количество аргументов, но сейчас нас интересует лишь execute work
+
+Мы воспользуемся примером с семью задачами, но заменим вызов метода sync на async:
+ 
+```swift
+task1()
+task2()
+serialQueue.async(execute: task3)
+task4()
+task5()
+task6()
+task7()
+```
+ 
+И снова визуализируем:
+
+<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/9d9/33c/7dd/9d933c7dd1c9d9afa0c6c82d0a6963b9.png" alt="alt text" width="700" height="600">
+ 
+Как мы можем видеть, задача task3 все так же выполняется на очереди serialQueue, но при этом main не дожидается ее выполнения и продолжает свою работу асинхронно. В этом и заключется суть метода async, вызывающая очередь (в нашем случае main) не будет ожидать выполнения задач на выполняющей очереди (в нашем случае serialQueue), а сразу же приступит к выполнения стоящих в очереди задач.
  
 </p>
 </details>
