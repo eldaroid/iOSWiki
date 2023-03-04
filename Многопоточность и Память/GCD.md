@@ -2,6 +2,7 @@
 
 1. - [x] [!!! GCD queues: serial and concurrent](https://www.hapq.me/gcd-queues/)
 2. - [x] [Про многопоточность 2. GCD](https://habr.com/ru/post/578752/)
+3. - [x] [002. Дмитрий Галимзянов «GCD»](https://www.youtube.com/watch?v=6zx7N-6U6P4&list=PLQC2_0cDcSKAcuWNsWAwF8GT_lCU9QZNs&index=2)
 
 GCD - технология управления многопоточность на базе паттерна пулл потоков. Вместо того чтобы программист сам создавал и управлял потоками за него это делает система. GCD вводит понятие очередь исполнения, представлена классом `DispatchQueue`, где очередь - список задач, которые необходимо выполнить.
 
@@ -152,6 +153,8 @@ task7()
 
 <img src="http://www.hapq.me/content/images/2019/12/Screen-Shot-2019-12-25-at-12.03.26-PM.png" alt="alt text" width="750" height="800">
 
+[Примеры с задачами на понимание](https://habr.com/ru/post/578752/#:~:text=Задача%201)
+
 ### Context switch in concurrent
 
 Поговорим немного про ресурсозатратность. Concurrent очередь достигает возможность параллить задачи благодаря множеству потоков, на которых она выполняет эти самые задачи. У всего есть своя цена и concurrent queue не исключение, процесс переключения между потоками является одним из самых ресурсозатратных в многопоточной среде, а имя ему context switch.
@@ -184,7 +187,10 @@ task7()
 
 ### Пример создания очереди
 
-Создание main serial очереди: `let demoSerialQueue = DispatchQueue(label: "ru.popov.serial-queue", qos: .utility)`.
+<details><summary>Open</summary>
+<p> 
+
+Создание **serial** очереди: `let demoSerialQueue = DispatchQueue(label: "ru.popov.serial-queue", qos: .utility)`.
 
 В качестве единственного аргумента для вызова метода global() требует передать уже знакомый нам QoS. Таким образом мы можем использовать очередь с учетом приоритета текущей задачи. Освежим память и еще раз взглянем на [qos](https://developer.apple.com/documentation/dispatch/dispatchqos/qosclass), только уже через призму GCD. Фреймворк Dispatch имеет собственное перечисление приоритетов. 
 
@@ -219,9 +225,136 @@ public enum QoSClass {
 }
 ```
 
+</p>
+</details>
+    
+## Semaphore
+
+<details><summary>Open</summary>
+<p> 
+    
+Semaphore – базовый инструмент синхронизации в GCD. Semaphore позволяет нам ограничить количество потоков, которые могут единовременно обращаться к очереди. Для этого необходимо передать количество потоков в инициализатор класса DispatchSemaphore `public init(value: Int)`.
+
+> Semaphore то же самое что и [мьютех](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/Concurrency.md#:~:text=Мьютекс), только с возможностью использовать счетчик > 1
+
+Помимо ограничения количества потоков, семафор позволяет блокировать очередь до тех пор, пока не будет вызван метод signal. Пример:
+
+```swift
+// Создаем очередь
+let serialQueue = DispatchQueue(label: "ru.popov.serial-queue")
+
+// Создаем семафор
+let semaphore = DispatchSemaphore(value: 0)
+
+// Усыпляем serialQueue на 5 секунд, после вызываем метод signal тем самым
+serialQueue.async {
+    sleep(5)
+    print("async method Queue")
+    
+    // Разблокировавыем семафор
+    semaphore.signal() // увеличивает счетчик value на 1
+}
+
+print("semaphore wait")
+// Блокируем очередь
+semaphore.wait() // уменьшает счетчик value на 1
+print("semaphore waited")
+
+// Print:
+// semaphore wait
+// async method Queue
+// semaphore waited
+```
+
+Методы signal и wait работают по принципу инкрементирования / декрементирования внутреннего каунтера семафора (аналогично рекурсивному mutex). Это означает, что поток будет разблокирован только тогда, когда каунтер равен значению value, которое мы передаем в инициализатор.
+
+</p>
+</details>
+
+## Dispatch work item
+
+<details><summary>Open</summary>
+<p> 
+
+Фреймворк Dispatch позволяет ставить в очередь на выполнение не только замыкания, но и объекты типа `DispatchWorkItem`
+    
+DispatchWorkItem – класс, являющийся абстракцией над выполняемой задачей, который предоставляет нам ряд полезных методов. Например метод notify, позволяющий уведомить какую-либо очередь о выполнении задачи и следом выполнить какую-либо работу на уведомленной очереди. Рассмотрим пример реализации DispatchWorkItem:
+    
+```swift
+// Создаем очередь
+let serialQueue = DispatchQueue(label: "ru.denisegaluev.serial-queue")
+
+// Создаем DispatchWorkItem и передаем в него замыкание (задачу)
+let workItem = DispatchWorkItem {
+    print("DispatchWorkItem task")
+}
+
+// Реализуем метод notify, передаем в него очередь, на которой необходимо будет выполнить задачу после завершения выполнения этого DispatchWorkItem
+workItem.notify(queue: DispatchQueue.main) {
+    print("DispatchWorkItem completed")
+}
+
+// Выполняем DispatchWorkItem на очереди serialQueue
+serialQueue.async(execute: workItem)
+```
+
+Попробуем реализовать данную логику без использования DispatchWorkItem:
+
+```swift
+let serialQueue = DispatchQueue(label: "ru.denisegaluev.serial-queue")
+
+serialQueue.async {
+    print("task")
+    
+    DispatchQueue.main.sync {
+        print("completed")
+    }
+}
+
+```
+
+Сравнивая данные примеры видно, что DispatchWorkItem позволяет нам более явно задать логику, без использования вложенных друг в друга замыканий и хаотичных вызовов методов `async/sync`
+    
+Помимо notify, DispatchWorkItem дает нам возможность отменять задачу с помощью метода cancel. Важно понимать, что задачу можно отменить только в том случае, если она на момент отмены ожидает в очереди. Если поток уже начал выполнять задачу, она не будет отменена. Рассмотрим пример реализации метода cancel
+   
+```swift
+// Создаем очередь
+let serialQueue = DispatchQueue(label: "ru.denisegaluev.serial-queue")
+
+// Создаем DispatchWorkItem и передаем в него замыкание (задачу)
+let workItem = DispatchWorkItem {
+    print("DispatchWorkItem task")
+}
+
+// Усыпляем serialQueue на 1 секунду и сразу возвращаем управление
+serialQueue.async {
+    print("zzzZZZZ")
+    sleep(1)
+    print("Awaked")
+}
+
+// Ставим workItem в очередь serialQueue и сразу возвращаем управление
+serialQueue.async(execute: workItem)
+
+// Отменяем workItem
+workItem.cancel()
+```
+    
+Пока serialQueue будет спать, мы успеем отменить workItem, тем самым удалив его из очереди serialQueue
+
+</p>
+</details>
+
+## Dispatch Group
+
+<details><summary>Open</summary>
+<p> 
+
+Dispatch Group позволяет реализовать ожидание, которое можно увеличивать и уменьшать с разных потоков. 
 
 
+DispatchGroup – объект, позволяющий объединить задачи в группу и синхронизировать их поведение. Группа позволяет присоединить к ней несколько задачь или DispatchWorkItem и запланировать их асинхронное выполнение на одной или нескольких очередях. Когда все задачи в группе будут выполнены, группа уведомит об этом какую-либо очередь и выполнит на ней completion handler. Так же группа позволяет нам дождаться выполнения задач в группе синхронно, без использования уведомления.
 
-
-
+</p>
+</details>
 
