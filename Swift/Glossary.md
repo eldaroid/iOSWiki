@@ -308,3 +308,7 @@ var warning: String {
  viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : ""
 }
 ```
+
+## Гейзенбаг
+
+Плавающий баг (гейзенбаг) - ошибка, которая в одних и тех же условиях то воспроизводится, то нет
