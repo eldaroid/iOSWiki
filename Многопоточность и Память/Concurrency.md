@@ -61,7 +61,7 @@ final class MyClass() {
 * Table Dispatch (динамическая, в свою очередь, делится на Virtual Table и Witness Table);
 * Message Dispatch (самая динамическая диспетчеризация);
 
-<img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="550" height="250">
+<img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="600" height="250">
 
 
 ## История
@@ -83,7 +83,7 @@ let thread = Thread {
 thread.start()
 ```
 
-При написании многопоточных приложений требуется работать с общими данными из разных потоков и синхронизировать их. Для синхронизации потоков существуют объекты синхронизации - мьютекс (в iOS SDK они реализуются в виде [NSLock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/Concurrency.md#:~:text=NSLock пример) и NSRecursiveLock).
+При написании многопоточных приложений требуется работать с общими данными из разных потоков и синхронизировать их. Для синхронизации потоков существуют объекты синхронизации - мьютекс (в iOS SDK они реализуются в виде [NSLock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/Concurrency.md#:~:text=NSLock%20пример) и NSRecursiveLock).
 
 ## Многопоточность
 
@@ -154,7 +154,7 @@ thread2.start()
 
 Участок кода между `lock()` и `unlock()` называется критическая секция. NSLock позволяет вызывать `unlock()` только тому потоку с которого был вызван `lock()`.
 
-[Deadlock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность и Память/ProblemsOfConcurrency.md#:~:text=deadlock):
+[Deadlock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/ProblemsOfConcurrency.md#:~:text=deadlock):
 
 ```swift
 let lock = NSLock()
@@ -166,7 +166,7 @@ lock.lock() // deadlock()
 
 Во время отладки существуют встроенные команды упрощющие понимание деталей текущего потока. 
 
-<img src="https://codeswift.ru/wp-content/uploads/2022/02/12.png" alt="alt text" width="750" height="350">
+<img src="https://codeswift.ru/wp-content/uploads/2022/02/12.png" alt="alt text" width="1000" height="350">
 
 ```swift
 // команды для печати
@@ -181,7 +181,7 @@ po Thread.main
 
 GCD - технология управления многопоточность на базе паттерна пулл потоков. Вместо того чтобы программист сам создавал и управлял потоками за него это делает система. GCD вводит понятие очередь исполнения, представлена классом `DispatchQueue`, где очередь - список задач, которые необходимо выполнить.
 
-> DispatchQueue - объект, который управляет выполнением задач последовательно (serial) или одновременно (concurrent) методов FIFO в основном потоке (sync) вашего приложения или в фоновом потоке (async). 
+> DispatchQueue - объект, который управляет выполнением задач последовательно (serial) или одновременно (concurrent) методом FIFO в основном потоке (sync) вашего приложения или в фоновом потоке (async). 
 
 Пример фонового потока (async): 
 
@@ -194,12 +194,62 @@ queue.async {
 
 Если мы хотим дождаться выполнение блока кода, то нужно выполнить задачу в основном потоке (sync), используя `sync { }`.
 
-Очереди в GCD бывают serial и concurrent. Есть две системные очереди по умолчанию: main queue (serial) и global queue (concurrent). В то время как основная очередь является последовательной, глобальная очередь является параллельной.
+## Очереди в GCD бывают serial и concurrent.
 
-Concurrent (системная очередь global):
+Задачи в Serial (системная очередь main) очереди выполняются в очереди **одна за другой** в **одном поток**:
 
-<img src="http://www.hapq.me/content/images/2019/12/Screen-Shot-2019-12-25-at-12.03.26-PM.png" alt="alt text" width="550" height="750">
+<img src="http://www.hapq.me/content/images/2019/12/queue2-serial.png" alt="alt text" width="850" height="650">
 
-Serial (системная очередь main):
-<img src="http://www.hapq.me/content/images/2019/12/queue2-serial.png" alt="alt text" width="750" height="650">
+Задачи в Concurrent (системная очередь global) очереди выполняются **параллельно** в **нескольких потоках**:
+
+<img src="http://www.hapq.me/content/images/2019/12/Screen-Shot-2019-12-25-at-12.03.26-PM.png" alt="alt text" width="750" height="800">
+
+> Существует две системные очереди по умолчанию: main queue (serial - последовательная) и global queue (concurrent - параллельная с [label](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность и Память/Concurrency.md#:~:text=строка,%20необходимая%20для%20идентификации%20очереди.) глобальной очереди "com.apple.root.default-qos"). В то время как основная очередь является последовательной, глобальная очередь является параллельной.
+
+В main очереди работает весь UI приложения, все анимации и реакции на ввод пользователя. Получая данных из базы данных или из сети необходимо перключаться на главный поток, чтобы отобразить их в UI. Лейблом главной очереди является строка com.apple.main-thread.
+
+Помимо системных очередений, мы можем создавать собственные очереди, для этого нам необходимо создать объект типа DispatchQueue. Взглянем на декларацию инициализатора данного типа:
+
+`convenience init(label: String, qos: DispatchQoS = .unspecified, attributes: DispatchQueue.Attributes = [], autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency = .inherit, target: DispatchQueue? = nil)`
+
+Аргументы инициализатора:
+
+* label – строка, необходимая для идентификации очереди. Так как приложение, библиотеки и фреймворки могут создавать свои собственные очереди, необходимо придерживаться DNS стиля, например ru.popov.queue для достижения уникальности. Так же идентификатор поможет определить очередь во время отладки.
+
+* qos – необходим для приоритизации очереди уже знакомым нам [Quality Of Service](https://developer.apple.com/documentation/dispatch/dispatchqos/qosclass).
+
+* attributes – [атрибуты](https://developer.apple.com/documentation/dispatch/dispatchqueue/attributes), определяющие поведение очереди. Такими атрибутами могут быть .concurrent, определяющий очередь, как параллельную или .initiallyInactive, определяющий очередь неактивной, до тех пор, пока не будет вызван метод очереди activate().
+
+* autoreleaseFrequency – частота автоосвобождения объебктов очереди. (см. [DispatchQueue.AutoreleaseFrequency](https://developer.apple.com/documentation/dispatch/dispatchqueue/autoreleasefrequency))
+
+* target – таргет очереди, в которой будут выполняться задачи. Таким образом возможно перенаправить выполнение задач на очередь, переданную в данный аргумент.
+
+Создание serial очереди: `let serialQueue = DispatchQueue(label: "ru.popov.serial-queue")`.
+
+В качестве единственного аргумента для вызова метода global() требует передать уже знакомый нам QoS. Таким образом мы можем использовать очередь с учетом приоритета текущей задачи. Освежим память и еще раз взглянем на [qos](https://developer.apple.com/documentation/dispatch/dispatchqos/qosclass), только уже через призму GCD. Фреймворк Dispatch имеет собственное перечисление приоритетов. Названия и задачи приоритетов совпадают с qos из Thread и pthread api:
+
+```swift
+public enum QoSClass {
+    // наивысший приоритет
+    // Для задач взаимодействия с пользователем в данный момент и результат выполнения необходимо получить как можно скорее
+    // Откладывать эти задачи приведет к видимым лагам
+    // Н/р: обработка изображений с камеры в реальном времени
+    case userInteractive
+    
+    // ниже приорите
+    
+    case userInitiated
+    
+    // самый низкий приоритет
+    case background
+    case utility
+    case `default`
+}
+```
+
+
+
+
+
+
 
