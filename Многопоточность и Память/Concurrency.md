@@ -164,9 +164,7 @@ lock.lock() // deadlock()
 
 ## Threads in Xcode
 
-Во время отладки существуют встроенные команды упрощющие понимание деталей текущего потока. 
-
-<img src="https://codeswift.ru/wp-content/uploads/2022/02/12.png" alt="alt text" width="1400" height="300">
+Во время отладки существуют [встроенные команды](https://codeswift.ru/wp-content/uploads/2022/02/12.png) упрощающие понимание деталей текущего потока. 
 
 ```swift
 // команды для печати
