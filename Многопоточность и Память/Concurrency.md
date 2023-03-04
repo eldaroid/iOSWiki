@@ -162,6 +162,16 @@ lock.lock()
 lock.lock() // deadlock()
 ```
 
+Исправление deadlock:
+
+```swift
+let lock = NSRecursiveLock()
+lock.lock()
+lock.lock()
+lock.unlock()
+lock.unlock()
+```
+
 ## Threads in Xcode
 
 Во время отладки существуют [встроенные команды](https://codeswift.ru/wp-content/uploads/2022/02/12.png) упрощающие понимание деталей текущего потока. 
