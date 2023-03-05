@@ -19,11 +19,10 @@ queue.async {
 
 Если мы хотим дождаться выполнение блока кода, то нужно выполнить задачу в основном потоке (sync), используя `sync { }`.
 
-Наглядный пример sync и async:
 
-<details><summary>Open</summary>
-<p>
- 
+
+## Методы sync и async наглядно
+
 Существует два основных способа взаимодействия с очередями - sync и async. Данные способы подразумевают под собой методы, в которые мы будем передавать наши задачи в виде замыканий.
 
 <details><summary>Sync</summary>
@@ -139,21 +138,22 @@ task7()
  
 </p>
 </details>
- 
-</p>
-</details>
+
+
 
 ## Типы очередей - serial/concurrent
 
 Задачи в Serial (системная очередь main) очереди выполняются в очереди **одна за другой** в **одном поток**:
 
-<img src="http://www.hapq.me/content/images/2019/12/queue2-serial.png" alt="alt text" width="850" height="650">
+<img src="http://www.hapq.me/content/images/2019/12/queue2-serial.png" alt="alt text" width="850" height="550">
 
 Задачи в Concurrent (системная очередь global) очереди выполняются **параллельно** в **нескольких потоках**:
 
-<img src="http://www.hapq.me/content/images/2019/12/Screen-Shot-2019-12-25-at-12.03.26-PM.png" alt="alt text" width="750" height="800">
+<img src="http://www.hapq.me/content/images/2019/12/Screen-Shot-2019-12-25-at-12.03.26-PM.png" alt="alt text" width="850" height="800">
 
 [Примеры с задачами на понимание](https://habr.com/ru/post/578752/#:~:text=Задача%201)
+
+
 
 ### Context switch in concurrent
 
@@ -163,7 +163,12 @@ task7()
 
 Не смотря на то, что context switch оптимизирован на уровне ОС, он все равно требует больших вычислительных ресурсов. Эти ресурсы в основном тратятся на сохранение контекста текущего процесса (что на самом деле задействовано в переключении контекста, зависит от архитектуры, операционной системы и количества совместно используемых ресурсов). В отличии от concurrent, serial очередь использует единственный поток, таким образом выполнение задач в очереди не приводит к context switch.
 
+
+
 ## Создание очередей
+
+<details><summary>Open</summary>
+<p> 
 
 > Существует две системные очереди по умолчанию: main queue (serial - последовательная) и global queue (concurrent - параллельная с [label](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/Concurrency.md#:~:text=строка,%20необходимая%20для%20идентификации%20очереди.) глобальной очереди "com.apple.root.default-qos"). В то время как основная очередь является последовательной, глобальная очередь является параллельной.
 
@@ -184,6 +189,9 @@ task7()
 * autoreleaseFrequency – частота автоосвобождения объебктов очереди. (см. [DispatchQueue.AutoreleaseFrequency](https://developer.apple.com/documentation/dispatch/dispatchqueue/autoreleasefrequency))
 
 * target – таргет очереди, в которой будут выполняться задачи. Таким образом возможно перенаправить выполнение задач на очередь, переданную в данный аргумент.
+
+</p>
+</details>
 
 ### Пример создания очереди
 
@@ -498,6 +506,9 @@ group.notify(queue: .main) {
 
 ## Dispatch barrier
 
+<details><summary>Open</summary>
+<p> 
+
 Dispatch barrier – механизм синхронизации задач в очереди. Для того, чтобы добавить барьер, необходимо передать соответствующий флаг в метода async:
 
 ```swift
@@ -512,7 +523,7 @@ concurrentQueue.async(flags: .barrier) {
 
 Когда мы добавляем барьер в параллельную очередь, она откладывает выполнение задачи, помеченной барьером (и все остальные, которые поступят в очередь во время выполнения такой задачи), до тех пор, пока все предыдущие задачи не будут выполнены. После того, как все предудщие задачи будут выполнены, очередь выполнит задачу, помеченную барьером самостоятельно. Как только задача с барьером будет выполнена, очередь вернется к своему нормальному режиму работы.
 
-<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/203/414/217/203414217a2aab50f8c96be9e291283a.png" alt="alt text" width="800" height="500">
+<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/e96/1ce/728/e961ce728d13e031a8bd49f5de402b35.png" alt="alt text" width="800" height="350">
 
 Разберемся, как работать с барьером на примере реализации read write lock:
 
@@ -547,5 +558,6 @@ class DispatchBarrierTesting {
 
 Данная реализация позволяет гарантировать, что в момент чтения, свойство value не будет изменено из другой очереди.
 
-##
+</p>
+</details>
 
