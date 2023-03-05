@@ -13,14 +13,21 @@
 
 * ***взаимная блокировка (`deadlock`)*** — ситуация в многопоточной системе, при которой несколько потоков находятся в состоянии бесконечного ожидания ресурсов, занятых самими этими потоками;
   
-    То есть следующий код вызовет `deadlock`:
-    ```
-    let queue = DispatchQueue(label: "com.tursunov.app.exampleQueue")
-    queue.async {
+Примеры кода, вызывающие `deadlock`:
+
+```swift
+let queue = DispatchQueue(label: "com.popov.app.exampleQueue")
+queue.async {
+    // ...
+    queue.sync { // deadlock
         // ...
-        queue.sync { // deadlock
-            // ...
-        }
     }
-    ```
-    > НИКОГДА НЕ вызывайте метод sync на main queue, потому что это приведет к взаимной блокировке (deadlock) вашего приложения!
+}
+```
+
+```swift
+// на главной очереди
+DispatchQueue.main.sync { // deadlock
+}
+```
+> НИКОГДА НЕ вызывайте метод sync на main queue, потому что это приведет к взаимной блокировке (deadlock) вашего приложения!
