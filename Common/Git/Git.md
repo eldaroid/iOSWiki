@@ -4,7 +4,7 @@
 
 1. - [x] [Визуализация происходящего в гите](http://git-school.github.io/visualizing-git/)
 2. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
-3. - [ ] [Git: курс](https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb)
+3. - [x] [Git: курс](https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb)
 4. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
 5. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
 6. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
@@ -166,7 +166,8 @@
 >   * --decorate — покажет “головы” (HEAD);
 >   * --all — покажет все ветки;
 >   * -- oneline - выводит сокращённые данные коммита (в виде одной строки);
-	
+
+  * `[git reflog](https://git-scm.com/book/ru/v2/Git-изнутри-Обслуживание-репозитория-и-восстановление-данных)` -  
 </p>
 </details>
 
