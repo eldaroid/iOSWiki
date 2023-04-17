@@ -25,7 +25,7 @@ Editing:
 ---
 Appearance: 
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="600" height="350">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="650" height="580">
 
 ### Editor
 
