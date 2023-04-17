@@ -2,12 +2,12 @@
 
 ### Как изучать?
 
-1. - [x] [Визуализация происходящего в гите](http://git-school.github.io/visualizing-git/)
-2. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
-3. - [x] [Git: курс](https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb)
-4. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
-5. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
-6. - [ ] [Про гит от Atlassian](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+1. - [x] [Pro Git book](https://git-scm.com/book/en/v2)
+2. - [x] [Визуализация происходящего в гите](http://git-school.github.io/visualizing-git/)
+3. - [x] [Git для начинающих](https://monsterlessons.com/project/categories/git?page=1)
+4. - [x] [Git: курс](https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb)
+5. - [x] [Интерактивный курс по гиту](https://githowto.com/ru)
+6. - [x] [база git, mercurial и svn, основные идеи](https://www.youtube.com/watch?v=ZGmSavvT8yk&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
 7. - [x] Сбер: "Инструменты DevOps: Git"
 8. - [ ] [Как работает Git](https://habr.com/ru/post/313890/)
 9. - [x] [19 советов по повседневной работе с Git](https://habr.com/ru/company/mailru/blog/267595/#10)
@@ -177,6 +177,14 @@
 </details>
 
 ### 4) Практика
+
+#### Рекурсивный возврат к предыдущей ветке
+
+По аналогии с `cd -` в терминале:
+
+`git: (develop) git checkout -` - возвращает на предыдущую переключенную ветку.
+
+`git: (bugfix/popov/) git checkout -` - повторный ввод команды вовзравит в ветку `develop`.
   
 #### Создание, удаление, переименовывание веток: 
 
