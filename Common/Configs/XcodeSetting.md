@@ -1,5 +1,9 @@
 ## 1. Xcode Settings
 
+### Download
+
+[Ссылка на скачивание Xcode](https://xcodereleases.com/)
+
 ### Key binding (связка ключей)
 
 Удаление строки: Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to Ctrl + K
@@ -21,7 +25,7 @@ Editing:
 ---
 Appearance: 
 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="600" height="400">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="600" height="350">
 
 ### Editor
 
