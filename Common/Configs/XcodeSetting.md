@@ -8,17 +8,18 @@
 
 Лента сворачивания: Settings -> Text Editing -> Display -> Code folding ribbon
 
-Editing: 
-<img src="https://github.com/eldaroid/pictures/blob/master/iOSWiki/TextEditing-Editing.jpeg" alt="alt text" width="420" height="250">
+Editing:
+
+<img src="https://github.com/eldaroid/pictures/blob/master/iOSWiki/TextEditing-Editing.jpeg" alt="alt text" width="420" height="350">
 
 
 ### Navigation 
 Настройка навигации:
-<img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="420" height="250">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="500" height="350">
 
 ---
 Appearance: 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="420" height="350">
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="520" height="350">
 
 ### Editor
 
@@ -85,6 +86,6 @@ U-Untracked (файл новый или был изменен, но еще не 
 
 ## 4. Terminal
 
-Время компиляции: defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+Время компиляции: `defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES`
 
-Теперь показывается время компиляции: [alt text](https://flexiple.com/ios/xcode-build-optimization-a-definitive-guide/#:~:text=Note%201)
+Теперь показывается время компиляции. [Статья](https://flexiple.com/ios/xcode-build-optimization-a-definitive-guide/#:~:text=Note%201)
