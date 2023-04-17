@@ -15,11 +15,13 @@ Editing:
 
 ### Navigation 
 Настройка навигации:
+
 <img src="https://github.com/eldaroid/pictures/blob/master/other/navigation_Xcode.png" alt="alt text" width="500" height="350">
 
 ---
 Appearance: 
-<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="520" height="350">
+
+<img src="https://github.com/eldaroid/pictures/blob/master/other/settings.jpg" alt="alt text" width="600" height="400">
 
 ### Editor
 
