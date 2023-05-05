@@ -1,5 +1,5 @@
 # Text Editors
----
+
 ## Что выбрать?
 
 Да что угодно, Вы [будете](https://en.wikipedia.org/wiki/Editor_war) продолжать
