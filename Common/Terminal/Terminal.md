@@ -59,11 +59,11 @@
 Пример скрипта в терминале:
 
 ```console
-➜  Desktop mcd() {
-function> mkdir -p "$1"
-function> cd "$1"
-function> }
-➜  Desktop mcd testFolder
+➜  mcd() {
+mkdir -p "$1"
+cd "$1"
+}
+➜  mcd testFolder
 ➜  testFolder 
 ```
 
@@ -72,18 +72,18 @@ function> }
 `vim python.sh` 
 
 ```console
-➜  Desktop vim python.py
-➜  Desktop which python 
+➜  vim python.py
+➜  which python 
 /usr/bin/python
 ➜  Desktop chmod +x python.py 
-➜  Desktop ./python.py 
+➜  ./python.py 
 hello
 ```
 
 -> `chmod +x python.sh` -> `./python.sh`
 
 ```console
-➜  Desktop cat python.py 
+➜  cat python.py 
 #!/usr/bin/python3
 print("hello")
 ```
@@ -96,13 +96,13 @@ print("hello")
 $:
 
 ```console
-➜  Desktop print_args() {
+➜  print_args() {
 echo $1
 echo $@
 echo $#
 echo $$
 }
-➜  Desktop print_args 1 2 3 4 helloWorld!
+➜  print_args 1 2 3 4 helloWorld!
 1
 1 2 3 4 helloWorld!
 5
