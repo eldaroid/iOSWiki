@@ -45,73 +45,12 @@
 `Cmd+T` - открыть новую вкладку. Перемещение: `Cmd+1..n`. Закрыть: `Cmd+W`
 `Cmd+D` - открыть новое окно, разделив экран вертикально. Перемещение: `Cmd+[/]`. Закрыть: `Cmd+W`
 
-### Скрипты и алиасы
+### Алиасы
 
-#### Алиасы
 Задаются следующим образом: 
 
 `alias ll='ls -alF'`
 
 Чтобы алиасы работали всегда их нужно закинуть в файл .bashrc или .zshrc: вписываем `alias ll="ls -alF"`, после перезапуска терминала алиасы вступают в силу. 
-
-#### Базовые скрипты
-
-Пример скрипта в терминале:
-
-```console
-➜  mcd() {
-mkdir -p "$1"
-cd "$1"
-}
-➜  mcd testFolder
-➜  testFolder 
-```
-
-Создать исполняемый файл:
-
-`vim python.sh` 
-
-```console
-➜  vim python.py
-➜  which python 
-/usr/bin/python
-➜  Desktop chmod +x python.py 
-➜  ./python.py 
-hello
-```
-
--> `chmod +x python.sh` -> `./python.sh`
-
-```console
-➜  cat python.py 
-#!/usr/bin/python3
-print("hello")
-```
-
-
-> #! - [Шебанг](https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D0%B1%D0%B0%D0%BD%D0%B3_(Unix)) означает, что нужно взять бинарник (/bin) из этой директории и начать его исполнять
-Для проверки где происходит исполнение скрипта на нужном нам языке, пишем `which (название языка/команды)`
-Для того, чтобы дать права на исполнение созданному файлу нужно написать команду `chmod +x (название файла)`
-
-$:
-
-```console
-➜  print_args() {
-echo $1
-echo $@
-echo $#
-echo $$
-}
-➜  print_args 1 2 3 4 helloWorld!
-1
-1 2 3 4 helloWorld!
-5
-877
-```
-
-> $1 - первый переданный аргумент функции
-$@ - показать все аргументы
-$# - показать количество аргументов
-$$ - показать PID (process ID)
 
 [Previous Theme](/Common/Git) |[Back To Contents](https://github.com/eldaroid/iosBasics) |  [Next Theme](/Common/Git%2BTerminal/TextEditors.md)
