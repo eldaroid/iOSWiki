@@ -73,3 +73,34 @@ $$ - показать PID (process ID)
 ![Photo](https://miro.medium.com/v2/resize:fit:640/format:webp/1*aYsht2NilmpKze9NWnK7UA.png)
 
 `[20 -eq 20]` = true
+
+#### Переменные
+
+```bash
+NAME=${1}
+echo "Hello to $NAME"
+```
+
+# Output_1: Hello to 
+
+```bash
+NAME=${1?Error: no name given}
+echo "Hello to $NAME"
+```
+
+# Output_2: Error: no name given
+
+```bash
+NAME=${1:-ME}
+echo "Hello to $NAME"
+```
+
+# Output_3: Hello to ME
+
+
+
+
+
+
+
+
