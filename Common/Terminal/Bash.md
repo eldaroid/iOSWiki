@@ -76,31 +76,41 @@ $$ - показать PID (process ID)
 
 #### Переменные
 
+Output_1: Hello to 
+
 ```bash
 NAME=${1}
 echo "Hello to $NAME"
 ```
 
-# Output_1: Hello to 
+---
+
+Output_2: Error: no name given
 
 ```bash
 NAME=${1?Error: no name given}
 echo "Hello to $NAME"
 ```
 
-# Output_2: Error: no name given
+---
+
+Output_3: Hello to ME
 
 ```bash
 NAME=${1:-ME}
 echo "Hello to $NAME"
 ```
 
-# Output_3: Hello to ME
+---
 
+#### Ввод с консоли
 
+```bash
+echo "Enter your name"
+read name
+echo "Hello, $name"
+```
 
-
-
-
+name - переменная присваемая введенном тексту из консоли после исполнения файла и вывода "Enter your name".
 
 
