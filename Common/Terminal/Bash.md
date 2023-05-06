@@ -1,3 +1,5 @@
+[Special Characters and Quoting](https://www.oreilly.com/library/view/learning-the-bash/1565923472/ch01s09.html)
+
 ## Bash
 
 Bash: “Bourne again shell”. Есть много оболочек, которые могут выполнять команды UNIX, и та, которая используется в терминале Mac - Bash .
