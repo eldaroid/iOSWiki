@@ -1,6 +1,5 @@
-Поместить эту строчку в `vim ~/.bashrc` для дуфолтного терминал или `vim ~/.zshrc` для iTerm:
+Поместить эту строчку в `vim ~/.bashrc` для дефолтного терминал или `vim ~/.zshrc` для iTerm:
 
 `(echo "your_password" | sudo -S purge); clear; cd Desktop`
 
-sudo -S purge - очищает ненужные процессы.
-
+`sudo -S purge` - очищает ненужные процессы.
