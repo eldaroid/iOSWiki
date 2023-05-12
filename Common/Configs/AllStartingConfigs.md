@@ -6,6 +6,8 @@
 
 Конфиг файл [gitignore](../.gitignore)
 
+Конфиг файл для [очистки мака](./CleanUpMac.sh) от мусора
+
 Визуальная настройка для [iTerm2](./Terminal+iTerm2/CustomEldarProfileiTerm2.json), [дефолтного терминала](./Terminal+iTerm2/CustomProfileEldarTerminal.terminal) и как их [установить](./Terminal%2BiTerm2/HowToUseCustomProfileFiles.md)
 
 Настройки [Xcode](https://github.com/eldaroid/iosBasics/blob/master/Configs/XcodeSettingShortcutsDebugging.md)
