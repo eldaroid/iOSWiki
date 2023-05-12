@@ -65,6 +65,8 @@ xcodebuild -alltargets clean &>/dev/null
 rm -rf ~/Library/Preferences/com.apple.Xcode.plist/* &>/dev/null
 rm -rf ~/Library/Developer/Xcode/DerivedData &>/dev/null
 rm -rf ~/Library/Developer/CoreSimulator &>/dev/null
+rm -rf ~/Library/Developer/Xcode/Archives &>/dev/null
+rm -rf ~/Library/Developer/Xcode/iOS DeviceSupport &>/dev/nul
 rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache" &>/dev/null
 echo "${Green}done cleaning Xcode"
 # Удалите неиспользуемые пакеты и кеши anaconda
