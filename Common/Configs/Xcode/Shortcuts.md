@@ -1,0 +1,35 @@
+## Установка собственных Shortcuts / Key binding (связка ключей)
+
+Удаление строки: Settings -> Key binding (связка ключей) -> Delete Line (Delitions). Sets to `Ctrl + K`
+
+Схлопывание функции: Settings -> Key binding (связка ключей) -> Fold `Cmd + Option + ↑`
+
+Рыскрытие схлопнутой функции: Settings -> Key binding (связка ключей) -> Unfold `Cmd + Option + ↓`
+
+Переключение на предыдущую вкладку: Settings -> Key binding (связка ключей) -> Show Previous Window Tab `Cmd + Option + ←`
+
+Переключение на следующую вкладку: Settings -> Key binding (связка ключей) -> Show Previous Window Tab `Cmd + Option + →`
+
+## ShortCuts
+
+Свернуть функцию: ⌘ ⌥ ←/→ (Cmd + Option + ←/→)
+
+Поиск по файлу: ⌘F (Cmd + F)
+
+Поиск по проекту: ⌘ ⌥ F (Cmd + Option + F)
+
+Закомментировать строка: ⌘ / (Cmd + /)
+
+Описать функцию/переменную/объект: ⌘ ⌥ / (Cmd + Option + /)
+
+Двигать строку вверх/вниз:  ⌘ ⌥ ] или [ (Cmd + Option + ] или [)
+
+Добавить окно редактора: ⌘ ⌃ T (Cmd + Ctrl + T)
+
+Закрыть окно редактора: ⌘ W (Cmd + W)x2
+
+Переключение между окнами редакторами (editors): ⌘ J (Cmd + J) + ←/→
+
+Открывать функцию/переменную/объект в новом окне редактора: ⌘ ⌥ ⌃ (Cmd + Option + Ctrl + Click)
+
+Открывать функцию/переменную/объект в вкладке вкладке: ⌘ ⌃ (Cmd + Ctrl + Click)

@@ -2,7 +2,6 @@
 
 1. :heavy_check_mark: [100 Days of SwiftUI. Day 12](https://www.hackingwithswift.com/100/swiftui/12)
 2. :heavy_check_mark: [Unwrapping optionals](https://www.hackingwithswift.com/sixty/10/2/unwrapping-optionals)
-3. 
 
 ## Что такое optional и какие проблемы они решают?
 
