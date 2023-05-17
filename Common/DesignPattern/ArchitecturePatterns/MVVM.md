@@ -1,0 +1,22 @@
+# MVVM [Model-View-ViewModel](https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm#:~:text=MVVM%20To%20the%20Rescue) (представлен Microsoft в 2005г.)
+
+1. :negative_squared_cross_mark: [Modern MVVM iOS App Architecture with Combine and SwiftUI](https://www.vadimbulavin.com/modern-mvvm-ios-app-architecture-with-combine-and-swiftui/)
+2. https://daddycoding.com/2021/06/10/model-view-viewmodel-mvvm/
+
+Наверняка вы уже успели столкнуться с тем, что ViewController в паттерне MVC принимает много обязанностей и начинает "разбухать", так как на него взваливается слишком много работы. Паттерн MVVM, который пришла на помощь "разбухающему" MVC.
+
+Наш Controller присоединяется к View:
+
+![alt text](https://github.com/eldaroid/pictures/blob/master/Swift/MVVM.jpg)
+
+Появляется ViewModel:
+
+![alt text](https://github.com/eldaroid/pictures/blob/master/Swift/MVVM2.jpg)
+
+Наш Controller становится единым центром с View:
+
+![alt text](https://github.com/eldaroid/pictures/blob/master/Swift/MVVM3.jpg)
+
+Таким образом, View (controller) содержит ViewModel, а ViewModel содержит Model.
+
+[Previous Lecture](./MVC.md) | [Back To Contents](https://github.com/eldaroid/iOSWiki)

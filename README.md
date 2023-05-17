@@ -49,3 +49,5 @@
 На будущее:
 
 [Курсы по ios от pointfree](https://www.pointfree.co/pricing)
+
+!! Изучить и записать - associated type в Protocol, и associated value в enum

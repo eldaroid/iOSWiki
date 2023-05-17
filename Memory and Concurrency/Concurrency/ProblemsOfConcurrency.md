@@ -3,7 +3,7 @@
 1. :heavy_check_mark: [Многопоточность (concurrency) в Swift 3. GCD и Dispatch Queues](https://habr.com/ru/post/320152/#:~:text=race%20condition)
 2. :heavy_check_mark: [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
 3. :heavy_check_mark: [Многопоточность: Runloop, Многопоточность в iOS и macOS, Deadlock, Livelock, DispatchGroup, Синхронные и асинхронные задачи, @synchronized, Мьютекс, Семафор](https://github.com/dashvlas/awesome-ios-interview/blob/master/Resources/Russian.md#Способы-достижения-многопоточности-в-ios-и-macos)
-4. :heavy_check_mark: [Problem%20Of%20Concurrency]https://www.kodeco.com/books/concurrency-by-tutorials/v2.0/chapters/5-concurrency-problems#toc-chapter-008-anchor-001
+4. :heavy_check_mark: [Problem Of Concurrency](https://www.kodeco.com/books/concurrency-by-tutorials/v2.0/chapters/5-concurrency-problems#toc-chapter-008-anchor-001)
 
 Как только мы позволяем задачам (tasks) работать параллельно, появляются проблемы, связанные с тем, что разные задачи захотят получить доступ к одним и тем же ресурсам.
 Основных проблемы три:
@@ -42,7 +42,7 @@ serialQueue.sync {
 }
 
 // 8
-print(value)
+print(value) // 12
 ```
   
 1. Создаем свойство value и последовательную очередь serialQueue
@@ -63,8 +63,9 @@ print(value)
 
 Попробуем визуализировать пример:
 
-<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/d85/a5a/bf2/d85a5abf2b488e80d925d650e446d115.png" alt="alt text" width="900" height="800">
-  
+<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/d85/a5a/bf2/d85a5abf2b488e80d925d650e446d115.png" alt="alt text" width="700" height="550">
+
+
 Чтобы решить нашу, достаточно синхронизировать вызывающую очередь и serialQueue, тогда мы сможем гарантировать работу с актуальным значением value:
   
 ```swift
@@ -86,12 +87,12 @@ serialQueue.sync {
     increment()
 }
 
-print(value)
+print(value) // 11
 ```
   
 И снова визуализируем:
  
-<img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/d85/a5a/bf2/d85a5abf2b488e80d925d650e446d115.png" alt="alt text" width="900" height="800">
+<img src="https://habrastorage.org/getpro/habr/upload_files/203/414/217/203414217a2aab50f8c96be9e291283a.png" alt="alt text" width="700" height="550">
   
 </p>
 </details>
