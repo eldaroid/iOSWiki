@@ -40,7 +40,7 @@
 5. [Frameworks](/Frameworks)
     1. [SwiftUI](/Frameworks/SwiftUI.md)
     2. [Combine](/Frameworks/Combine.md)
-6. [Memory%20and%20Concurrency](/Memory%20and%20Concurrency)
+6. [Memory and Concurrency](/Memory%20and%20Concurrency)
     1. [Concurrency](/Memory%20and%20Concurrency/Concurrency/Concurrency.md)
     2. [GCD](/Memory%20and%20Concurrency/Concurrency/GCD.md)
     3. [ProblemsOfConcurrency](/Memory%20and%20Concurrency/Concurrency/ProblemsOfConcurrency.md)
