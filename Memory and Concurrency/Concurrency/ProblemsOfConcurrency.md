@@ -1,8 +1,9 @@
 # Проблемы многопоточности
 
 1. :heavy_check_mark: [Многопоточность (concurrency) в Swift 3. GCD и Dispatch Queues](https://habr.com/ru/post/320152/#:~:text=race%20condition)
-2. [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
-3. [Многопоточность: Runloop, Многопоточность в iOS и macOS, Deadlock, Livelock, DispatchGroup, Синхронные и асинхронные задачи, @synchronized, Мьютекс, Семафор](https://github.com/dashvlas/awesome-ios-interview/blob/master/Resources/Russian.md#Способы-достижения-многопоточности-в-ios-и-macos)
+2. :heavy_check_mark: [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
+3. :heavy_check_mark: [Многопоточность: Runloop, Многопоточность в iOS и macOS, Deadlock, Livelock, DispatchGroup, Синхронные и асинхронные задачи, @synchronized, Мьютекс, Семафор](https://github.com/dashvlas/awesome-ios-interview/blob/master/Resources/Russian.md#Способы-достижения-многопоточности-в-ios-и-macos)
+4. :heavy_check_mark: [Problem%20Of%20Concurrency]https://www.kodeco.com/books/concurrency-by-tutorials/v2.0/chapters/5-concurrency-problems#toc-chapter-008-anchor-001
 
 Как только мы позволяем задачам (tasks) работать параллельно, появляются проблемы, связанные с тем, что разные задачи захотят получить доступ к одним и тем же ресурсам.
 Основных проблемы три:
