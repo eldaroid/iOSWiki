@@ -1,6 +1,7 @@
 ## Function
 
-1. :heavy_check_mark: [100 Days of SwiftUI. Day 6](https://www.hackingwithswift.com/100/swiftui/6)
+1. [100 Days of SwiftUI. Day 6](https://www.hackingwithswift.com/100/swiftui/6)
+2. [ARC в замыканиях](https://www.youtube.com/watch?v=-oPDbicto7k&list=PLtovLaW_R9-N-KECYTUWqQaVtBXhufJfw&index=34&ab_channel=SwiftBook)
 
 Swift позволяет нам использовать функции, как и любой другой тип, например строки и целые числа. Это означает, что вы можете создать функцию и присвоить ее переменной, вызвать эту функцию, используя эту переменную, и даже передать эту функцию другим функциям в качестве параметров. Функции, используемые таким образом, называются замыканиями
 

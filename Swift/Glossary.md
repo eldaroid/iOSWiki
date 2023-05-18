@@ -88,7 +88,7 @@ enum Activity {
 
 let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
 
-## **Variadic function**
+## Variadic function
 
 1. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
 2. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
@@ -309,6 +309,12 @@ var warning: String {
 }
 ```
 
+Рискуя на себя навлечь обвинения в сексизме, таки не удержусь и приведу пример атомарной операции: беременность - операция строго атомарная, всегда есть один и только один отец (всякие генные ухищрения вынесем за скобки).
+
+И наоборот пример неатомарной операции: воспитание ребенка - увы операция неатомарная, ребенок есть к сожалению субъект множества различных несинхронизированных операций над неокрепшей душой ребенка: мама, папа, бабушка, дедушка, зомбоящик, детсад, школа, друзья, подруги и т.д. по списку.
+
 ## Гейзенбаг
 
 Плавающий баг (гейзенбаг) - ошибка, которая в одних и тех же условиях то воспроизводится, то нет
+
+

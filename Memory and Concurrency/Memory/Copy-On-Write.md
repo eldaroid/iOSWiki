@@ -4,7 +4,7 @@
 
 ### Зачем Cow нужна
 
-|Value Types | Referene Types|
+|Value Types (хранятся в стеке) | Referene Types (хранятся в куче)|
 |------------|------------|
 |Struct | Class|
 |Enum | Function|

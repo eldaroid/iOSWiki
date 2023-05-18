@@ -5,6 +5,7 @@
 3. - [002. Дмитрий Галимзянов «GCD»](https://www.youtube.com/watch?v=6zx7N-6U6P4&list=PLQC2_0cDcSKAcuWNsWAwF8GT_lCU9QZNs&index=2)
 4. - [Atomic properties and Thread-safe data structure in Swift](https://benoitpasquier.com/atomic-properties-thread-safe-data-structure-swift/)\
 5. - [Grand Central Dispatch (GCD) by Kelvin Tan](https://daddycoding.com/2023/04/27/grand-central-dispatch-gcd/)
+6. - [Queues & Threads](https://www.kodeco.com/books/concurrency-by-tutorials/v2.0/chapters/3-queues-threads)
 
 GCD - технология управления многопоточность на базе паттерна пулл потоков. Вместо того чтобы программист сам создавал и управлял потоками за него это делает система. GCD вводит понятие очередь исполнения, представлена классом `DispatchQueue`, где очередь - список задач, которые необходимо выполнить.
 
