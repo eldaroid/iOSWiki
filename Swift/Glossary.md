@@ -72,6 +72,12 @@ enum Activity {
 }
 ```
 
+## [Associated types](./Protocol/AssoatedTypes.md) (Связанные типы)
+
+Красивый термин для протокола, принимающий дженерики
+
+> PATs - protocol with ssociated types
+
 ## Associated data
 
 Без ассоциативных данных:
