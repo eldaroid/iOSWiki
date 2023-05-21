@@ -10,8 +10,6 @@
     7. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
     8. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
    
-   
-   
 ## Коллекции (набор значений)
 
 1. :heavy_check_mark: [Protocol extensions](https://www.hackingwithswift.com/sixty/9/4/protocol-extensions)
@@ -139,10 +137,6 @@
    ...
    }
    ```
-
-## ARC vs Garbage collector 
-
-Garbage Collector проверяет утечку памяти в runtime, а в ARC на этапе компиляции.
 
 ## Атрибуты 
 
