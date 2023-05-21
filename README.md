@@ -1,6 +1,8 @@
 # iOS Wiki
 
 [![Language](https://img.shields.io/badge/Language-Swift-green&logo=Swift.svg)]()
+[![Repo Size](https://img.shields.io/github/repo-size/eldaroid/iOSWiki)]()
+[![Last Commit](https://img.shields.io/github/last-commit/eldaroid/iOSWiki)]()
 
 # 📝 Structure of Content
 
