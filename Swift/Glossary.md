@@ -28,9 +28,9 @@ let toggle = true
 
 Соглашение о кодировании в Swift, где переменные начинаются с маленькой и каждое новое слово в переменной пишется с большой: `var justForExample: String` - Это называется camel case, потому что немного похоже на горбы верблюда и используется для облегчения чтения слов в именах переменных.
 
-## Аннотация типов
+## Type inference (аннотация типов)
 
-let name: String = "Tanya" - явно указать тип ваших данных
+let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
 
 Когда следует использовать аннотации типов в Swift?
 
@@ -89,10 +89,6 @@ enum Activity {
 `self.count!` - Int 
 
 > Int и Int? - разные данные.
-
-## Type inference (аннотация типов)
-
-let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
 
 ## Variadic function
 
