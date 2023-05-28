@@ -63,7 +63,6 @@ final class MyClass() {
 
 <img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="600" height="250">
 
-
 Общие правила диспетчеризации на рисунке:
 
 ![alt text](https://habrastorage.org/getpro/habr/upload_files/21e/9c1/138/21e9c1138c6b0eb862d264ce5fb1b221.png)

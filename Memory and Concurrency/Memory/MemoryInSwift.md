@@ -1,6 +1,7 @@
  # Память
  
 1. [Память в Swift от 0 до 1](https://habr.com/ru/company/hh/blog/546856/)
+2. [Memory Management in Swift: Heaps & Stacks](https://heartbeat.comet.ml/memory-management-in-swift-heaps-stacks-baa755abe16a)
 
 ### Что такое память?
 
