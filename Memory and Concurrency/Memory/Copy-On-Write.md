@@ -2,9 +2,9 @@
 
 1. :heavy_check_mark: [Understanding Swift Copy-on-Write mechanisms](https://medium.com/@lucianoalmeida1/understanding-swift-copy-on-write-mechanisms-52ac31d68f2f)
 
-### Зачем Cow нужна
+### Зачем CoW нужна
 
-|Value Types (хранятся в стеке) | Referene Types (хранятся в куче)|
+|Value Types (хранятся в [стеке](./RandomAccessMemory/Stack.md)) | Referene Types (хранятся в [куче](./RandomAccessMemory/Heap.md))|
 |------------|------------|
 |Struct | Class|
 |Enum | Function|

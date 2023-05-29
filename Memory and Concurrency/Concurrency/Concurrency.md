@@ -1,15 +1,18 @@
  # Многопоточность
  
-1. [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
-2. [Углубленный анализ оптимизации производительности Swift](https://russianblogs.com/article/764556451/)
-3. [iOS Concurrency — Underlying Truth](https://chetan-aggarwal.medium.com/ios-concurrency-underlying-truth-1021a0bb2a98)
-4. [Concurrent Programming](https://www.oreilly.com/library/view/high-performance-ios/9781491910993/ch04.html)
+1. [Углубленный анализ оптимизации производительности Swift](https://russianblogs.com/article/764556451/)
+2. [iOS Concurrency — Underlying Truth](https://chetan-aggarwal.medium.com/ios-concurrency-underlying-truth-1021a0bb2a98)
+3. [Concurrent Programming](https://www.oreilly.com/library/view/high-performance-ios/9781491910993/ch04.html)
+4. [Process, Threads and Queues in iOS](https://www.tirupatibalan.com/2019/04/01/process-threads-queues-in-ios.html)
+5. [Multithreading and Concurrency](https://github.com/sashakid/ios-guide/blob/master/Main/10_multithreading_concurrency.md)
 
 ## Многопоточность
 
 В мире операционных систем существуют две сущности, где запускаются наши программы (некие капсулы запуска прогармм) - **процессы (изолированы друг от друга)**,**потоки (thread) (обмениваются данными почти бесплатно)**. Каждое приложение состоит как минимум из 1 процесс - чаще всего только один. А процесс состоит хотя бы из 1 потока (main). 
 
 ![](https://www.w3.org/People/Frystyk/thesis/MultiStackThread.gif)
+
+> Процесс — это исполняемый **экземпляр приложения (path of execution. Н/р: main())**, создается автоматически вызывая метод fork(). Важно отметить, что поток может делать все то же, что и процесс. Но поскольку процесс может состоять из нескольких потоков, поток можно считать «облегченным» процессом.
 
 Все потоки разделяют общие ресурсы потока (память, файловые дескрипторы, процессорное время). У каждого потока есть свой стэк (областья память, куда сохраняются локальные переменные функции, пока эта функция сохраняется). 
 
@@ -70,6 +73,8 @@ thread.start()
 
 
 ## Что такое мьютекс (mutex)?
+
+> Мьютекс — это семафор, работающий с системой блокировки
 
 При написании многопоточных приложений требуется работать с общими данными из разных потоков и синхронизировать их. Для синхронизации потоков существуют объекты синхронизации - мьютекс (в iOS SDK они реализуются в виде [NSLock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/Concurrency.md#:~:text=Мьютекс%20-%20NSlock) и NSRecursiveLock).
 
