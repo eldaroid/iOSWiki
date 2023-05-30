@@ -58,7 +58,7 @@ protocol CollectionType : SequenceType {
     </p>
     </details>
 
-* **Dictionaries (словари)** - неупорядоченная структура данных, которая позволяет хранить пары «ключ — значение». 
+* **Dictionaries (словари) (Hash Map)** - неупорядоченная структура данных, которая позволяет хранить пары «ключ — значение». 
 
 
     <details><summary>Open</summary>

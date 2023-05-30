@@ -8,6 +8,7 @@
 * cat - act;
 * save - vase;
 * stressed - desserts;
+* aa - a
 
 Примеры: не являющиеся анаграммами:
 
@@ -26,3 +27,19 @@
 №1 - отсортировать сроки и потом их сравнить. Мы не тратим дополнительной памяти, но модифицируем входные данные.
 №2 - скопировать в новые структуры, отсортировать их и сравнить. Тогда мы не модифицируем, но нам понадобится дополнительная память.
 №3 - положить содержимое строк в [ассоциативный массив/словарь](../../../Swift/DataStructures/AssociatedArray.md) и сравнить содержимое массивов для двух строк. Время выполнения алгоритма [линейная](../ListOfAlgoritms.md), поскольку нам не требую тся дополнительные вычисления в виде сортировки.
+
+```swift
+func countSequence(_ s: String, _ t: String) -> Bool {
+    let cortageOfS = s.map { ($0, 1)}
+    let cortageOfT = t.map { ($0, 1)}
+    
+    let setOfS = Dictionary(cortageOfS) { key, char in key + 1 }
+    let setOfT = Dictionary(cortageOfT) { key, char in key + 1 }
+    return setOfS == setOfT
+}
+```
+
+[**Более лаконичное решение**](https://github.com/TerryHuangHD/LeetCode-Swift/blob/master/String/ValidAnagram.swift)
+
+
+
