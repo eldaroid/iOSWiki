@@ -1,5 +1,7 @@
 ## Анаграм
 
+1. [Yandex Contest](https://contest.yandex.ru/contest/8458/problems/E/)
+
 Одна строка является анаграммой другой строки, если из первой можно получить вторую путём перестановки символов
 
 Примеры анаграмм:
@@ -29,7 +31,7 @@
 №3 - положить содержимое строк в [ассоциативный массив/словарь](../../../Swift/DataStructures/AssociatedArray.md) и сравнить содержимое массивов для двух строк. Время выполнения алгоритма [линейная](../ListOfAlgoritms.md), поскольку нам не требую тся дополнительные вычисления в виде сортировки.
 
 ```swift
-func countSequence(_ s: String, _ t: String) -> Bool {
+func isAnagram(_ s: String, _ t: String) -> Bool {
     let cortageOfS = s.map { ($0, 1)}
     let cortageOfT = t.map { ($0, 1)}
     
@@ -40,6 +42,4 @@ func countSequence(_ s: String, _ t: String) -> Bool {
 ```
 
 [**Более лаконичное решение**](https://github.com/TerryHuangHD/LeetCode-Swift/blob/master/String/ValidAnagram.swift)
-
-
 
