@@ -19,4 +19,3 @@ func generateBrackets(_ str: String, l countOfOpen: Int, r countOfClosed: Int, p
 generateBrackets("", l: 0, r: 0, pairsOfBrackets: 4)
 ```
 
-

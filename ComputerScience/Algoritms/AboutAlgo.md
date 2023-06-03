@@ -1,7 +1,9 @@
 ## Алгоритмы
 
 1. [LeetCode Swift](https://github.com/TerryHuangHD/LeetCode-Swift#google)
-2. [Алгоритмы](https://github.com/sashakid/ios-guide/blob/master/Main/3_algorithms.md)
+2. [Видеолекции курса «Алгоритмы и структуры данных»](https://www.coursera.org/specializations/data-structures-algorithms/?utm_medium=institutions&utm_source=yandex&utm_campaign=yacademy)
+3. [Алгоритмы на swift](https://github.com/sashakid/ios-guide/blob/master/Main/3_algorithms.md)
+4. [Тренировки по алгоритмам от Яндекса](https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5)
 
 ### Различают три основных вида алгоритмов:
 
