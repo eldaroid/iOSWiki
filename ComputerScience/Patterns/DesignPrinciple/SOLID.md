@@ -1,10 +1,10 @@
-## S.O.L.I.D принципы
+## S.O.L.I.D Design principle
 
 ### Материалы для изучения
 
-1. - [x] [Принципы SOLID в картинках](https://habr.com/ru/company/productivity_inside/blog/505430/)
-2. - [x] [ООП, «святая троица» и SOLID: некоторый минимум знаний о них](https://habr.com/ru/post/446816/)
-3. - [x] [Чистая архитектура: руководство для начинающих](https://nuancesprog.ru/p/15255/)
+1. [Принципы SOLID в картинках](https://habr.com/ru/company/productivity_inside/blog/505430/)
+2. [ООП, «святая троица» и SOLID: некоторый минимум знаний о них](https://habr.com/ru/post/446816/)
+3. [Чистая архитектура: руководство для начинающих](https://nuancesprog.ru/p/15255/)
 4. [Кто подставил Барбару Лисков, или кто кого SOLID](https://www.youtube.com/watch?v=h2EKBLTRpi4&ab_channel=CodeFestRussia)
 
 #### Происхождение ООП

@@ -1,9 +1,9 @@
 ## Types of programming languagees
 
 
-* Функциональные
+* [Функциональные](../Patterns/ProgrammingParadigm/FunctionalProgramming(FP).md)
 
-Lisp, Erlang, Haskell, Scala
+Lisp, Erlang, Haskell, Scala, Clojure
 
 На основе достаточно строгих абстрактных понятий и методов символьной обработки данных. Тексты программ на функциональных языках программирования описывают «как решить задачу», но не предписывают последовательность действий для решения.
 
