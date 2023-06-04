@@ -1,11 +1,58 @@
-[!!!Design Pattern](https://daddycoding.com/design-pattern/)
 
-[Паттерны проектирования на swift](https://refactoring.guru/ru/design-patterns/swift)
+### Architecture Pattern
 
-[MVP + Coordinators in SwiftUI (part 1)](https://lascorbe.com/posts/2020-04-27-MVPCoordinators-SwiftUI-part1/)
+* [UI Pattern](./ArchitecturePattern/UIPattern/)
+    * [MVC](./ArchitecturePattern/UIPattern/MVC.md)
+    * [MVVM](./ArchitecturePattern/UIPattern/MVVM.md)
+    * [VIP](./ArchitecturePattern/UIPattern/VIP.md)
+    * [VIPER](./ArchitecturePattern/UIPattern/VIPER.md)
+* [Clean Architecure](./ArchitecturePattern/CleanArchitecture.md)
 
-[Combine](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
+### Design Pattern
 
-[Singleton](https://cocoacasts.com/what-is-a-singleton-and-how-to-create-one-in-swift)
+1. [!!!Design Pattern](https://daddycoding.com/design-pattern/)
 
-[Шаблоны проектирования: 5 самых известных](https://apptractor.ru/info/articles/shablony-proektirovanija-5-samyh-izvestnyh.html)
+* [Behaviorail](./DesignPattern/Behavioral/)
+    * [State](./DesignPattern/Behavioral/State.md)
+* [Creational](./DesignPattern/Creational/)
+    * Singleton
+* [Structural](./DesignPattern/Structural/)
+    * Decorator
+
+### Design Principle
+
+1. [Principle of Software Development Principles](https://medium.com/@bartoszkrajka/principle-of-software-development-principles-f0143d6f405)
+
+* [YAGNI](./DesignPrinciple/YAGNI.md) - You aren't gonna need it
+
+* [KISS](./DesignPrinciple/KISS.md) - Keep it simple, stupid или Keep it stupid simple
+
+* [DRY](./DesignPrinciple/DRY.md) - Don`t repeat yourself
+
+* [SOLID](./DesignPrinciple/SOLID.md) - (Single Responsibility Principle).(Open-Closed Principle).(Liskov Substitution Principle).(Interface Segregation Principle).(Dependency Inversion Principle)
+
+* [Dependency injection and Dependency inversion?](./DesignPrinciple/DI.md)
+
+Идея пирамиды (как у [Маслоу](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs)) заключается в том, что вы не должны подрывать нижние слои за счет более высоких:
+
+![Design Principles Pyramide](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*WZmVF9vJAyn8tO1g3lVa9w.png)
+
+### Programming Paradigm
+
+* [Functional Programming](./ProgrammingParadigm/FunctionalProgramming(FP).md)
+
+* [OOP](./ProgrammingParadigm/OOP.md)
+
+* [Reactive Programming](./ProgrammingParadigm/ReactiveProgramming.md)
+
+### Tests
+
+* [iOS Tests](./Tests/iOSTests.md)
+
+* [About Tests](./Tests/AboutTests.md)
+
+
+
+
+
+

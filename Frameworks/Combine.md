@@ -25,8 +25,13 @@ Combine - это фреймворк функционального [реакти
 
 `.eraseToAnyPublisher()` - чтобы был AnyPublisher<>, добавлять в конец
 
+### Combine в SwiftUI
+
+Например, и @Published оболочка свойств, и ObservableObject протоколы исходят из Combine, но нам не нужно было знать об этом, потому что при импорте SwiftUI мы также неявно импортируем части Combine.
+
 ### На будущее:
 
 [Combine (в DesignPatterns):](https://heckj.github.io/swiftui-notes/#download-the-project)
 
 [Swift Combine Framework Tutorial](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
+
