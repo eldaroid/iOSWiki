@@ -1,7 +1,41 @@
 ## Types of programming languagees
 
+![Paradigms](https://github.com/eldaroid/pictures/blob/master/iOSWiki/DesignPatterns/Paradigms.png?raw=true)
 
-* [Функциональные](../Patterns/ProgrammingParadigm/FunctionalProgramming(FP).md)
+## Императивное (процедурное) программирование
+
+> Как делать?
+
+Императивные языки:
+
+* C/C++/C#;
+
+* Java;
+
+* JavaScript;
+
+* Python; 
+
+* Swift, а SwiftUI уже декларативный;
+
+* Ruby, Basic, Pascal;
+
+## Декларативное программирование
+
+> Что делать?
+
+* HTML;
+
+* Lisp, Erlang, Haskell, Scala, Clojure;
+
+Самый популярный язык СУБД SQL так же является декларативным. На нём описывается конечный результат, а способ его получения генерируется сервером СУБД исходя из множества факторов.
+
+---
+
+// TODO: дописать
+---
+
+* [Функциональные](./Paradigm/FunctionalProgramming(FP).md)
 
 Lisp, Erlang, Haskell, Scala, Clojure
 
