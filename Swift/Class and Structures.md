@@ -68,7 +68,7 @@ print(enterprise.maxWarp)
 
 final enables direct dispatch on a method defined in a class. This keyword removes the possibility of any dynamic behavior. It can be used on any method, even in an extension where the dispatch would already be direct. This will also hide the method from the Objective-C runtime, and will not generate a selector.
 
-!!!Прочитать про 3 метода Dispatch
+!!!Прочитать про 3 метода [Dispatch](/Swift/MethodDispatch/MethodDispatch.md)
 
 ---
 
