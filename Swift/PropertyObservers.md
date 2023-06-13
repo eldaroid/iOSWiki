@@ -10,7 +10,8 @@
 ! Property observers не могут быть назначены константам (let):
 ```swift
  let awayTeamScore: Int {
-     didSet { print("Boo - they scored!") }}
+     didSet { print("Boo - they scored!") }
+}
 ```
 
 Пример для понимания:

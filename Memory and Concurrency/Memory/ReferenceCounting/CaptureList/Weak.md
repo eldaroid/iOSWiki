@@ -2,8 +2,12 @@
 
 Ссылается на объект в [куче](../../RandomAccessMemory/Heap.md), но эта ссылка не учитывается при подсчет ссылок, когда объект освобождается из памяти weak ссылка установливается в nil (обозначая что объект уже освободился из памяти). Соответственно weak ссылки принадлежит к типу Optional так как могут установлены в nil. 
 
-
-
+```swift
+//Captures a weak reference to self
+var myLazyVariable = { [ weak self ]
+     return self.myProp * 3
+}()
+```
 
 ---
 
