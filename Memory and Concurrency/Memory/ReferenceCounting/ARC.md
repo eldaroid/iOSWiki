@@ -4,10 +4,11 @@
 
 "Automatic Reference Counting (ARC) is a memory-management implementation in the Clang compiler for the Objective-C and Swift programming languages"
 
-> Работа ARC - на этапе компиляции приложения в компилируемый код за программиста автоматически расставляет в нужных местах release (декремент - уменьшает счетчика ссылок)/retain (инкрементирует - увеличивает счетчик ссылок)/autorelease (декрементирует - уменьшает счетчик ссылок). Этот механизм работает только для объектов, которые хранятся в куче (ссылочные типы).
+> Работа ARC - на этапе компиляции приложения в компилируемый код за программиста автоматически расставляет в нужных местах release (декремент - уменьшает счетчика ссылок)/retain (инкрементирует - увеличивает счетчик ссылок)/autorelease (декрементирует - уменьшает счетчик ссылок). Этот механизм работает только для объектов, которые хранятся в [куче](/Memory%20and%20Concurrency/Memory/RandomAccessMemory/Heap.md) ([ссылочные типы](/Swift/DataStructures/ListValueAndReferenceTypes.md)).
 
+!! ARC РАБОТАЕТ ПРИ КОМПИЛЯЦИИ, А ПОДСЧЕТ ССЫЛОК В РАНТАЙМЕ
 
-#### ARC vs [Garbage collector](./GarbageCollector.md)
+### ARC vs [Garbage collector](./GarbageCollector.md)
 
 ARC не занимается автоматическим освобождением не запускает никаких фоновых процессов. 
 
