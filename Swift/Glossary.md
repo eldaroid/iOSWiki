@@ -1,4 +1,5 @@
-[Glossary of Common Swift Terms](https://www.hackingwithswift.com/glossary)
+1. [Glossary of Common Swift Terms](https://www.hackingwithswift.com/glossary)
+2. [Lexicon Swift Docs](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table)
 
 ## Инквалидация
 
@@ -316,4 +317,6 @@ var warning: String {
 
 Плавающий баг (гейзенбаг) - ошибка, которая в одних и тех же условиях то воспроизводится, то нет
 
+## Witness
 
+Значение или тип, удовлетворяющий требованию протокола. Отсюда и название [Witness Table](/Swift/MethodDispatch/MethodDispatch.md).
