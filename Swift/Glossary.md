@@ -83,7 +83,7 @@ enum Activity {
 
 Красивый термин для протокола, принимающий дженерики
 
-> PATs - protocol with ssociated types
+> PATs - protocol with associated types
 
 ## Associated data
 

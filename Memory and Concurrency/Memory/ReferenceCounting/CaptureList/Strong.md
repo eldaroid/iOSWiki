@@ -9,8 +9,9 @@
 var myLazyVariable = { [ self ]
      return self.myProp * 3
 }()
-
 ```
+
+Не путать с [lazy var closure](./LazyClosure.md)
 
 ---
 
