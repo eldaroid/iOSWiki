@@ -11,11 +11,11 @@
 | Array | |
 | Dictionary | |
 
-Компилятор Swift может упаковывать **типы значений** и размещать их в [куче](/Memory%20and%20Concurrency/Memory/RandomAccessMemory/Heap.md):
+### Компилятор Swift может упаковывать **типы значений** или [протоколы](/Swift/Protocol/Protocol.md) и [generic](/Swift//AbstractMechanism/Generics.md), размещая их в [куче](/Memory%20and%20Concurrency/Memory/RandomAccessMemory/Heap.md):
 
-1) При соблюдении протокола. Помимо затрат на выделение ресурсов, возникают дополнительные накладные расходы, когда тип значения хранится в экзистенциальном контейнере и превышает длину 3 машинных слов.
+1) При соблюдении [протокола](/Swift/Protocol/Protocol.md). Помимо затрат на выделение ресурсов, возникают дополнительные накладные расходы, когда тип значения хранится в [экзистенциальном контейнере](/Swift/AbstractMechanism/ExistentialTypes.md) и превышает длину 3 машинных слов.
 2) При смешивании value и reference типов.
-3) Generic с value типом:
+3) [Generic](/Swift//AbstractMechanism/Generics.md) с value типом:
 
 ```swift
 struct Bas<T> {
@@ -26,10 +26,16 @@ struct Bas<T> {
 }
 ```
 
-Компилятор Swift может [продвигать](https://github.com/apple/swift/blob/62ccf81f7748e3e2c8626354d1ecb3adbd26b063/lib/SILOptimizer/Transforms/StackPromotion.cpp) **ссылочные типы** для размещения в [стеке](/Memory%20and%20Concurrency/Memory/RandomAccessMemory/Stack.md):
+4) capture list, который [захватыет](https://shantaram-kokate-swift.medium.com/capture-list-in-swift-a7d7d1328c84) value type как [strong ссылку](/Memory%20and%20Concurrency/Memory/ReferenceCounting/CaptureList/Strong.md)
+
+> Если размер вашего типа значения не может быть определен во время компиляции, или если ваш тип значения рекурсивно содержит/содержится ссылочным типом.
+
+### Компилятор Swift может [продвигать](https://github.com/apple/swift/blob/62ccf81f7748e3e2c8626354d1ecb3adbd26b063/lib/SILOptimizer/Transforms/StackPromotion.cpp) **ссылочные типы** для размещения в [стеке](/Memory%20and%20Concurrency/Memory/RandomAccessMemory/Stack.md):
 
 1) Когда их размер фиксирован;
 2) Когда время жизни может быть предсказано;
+
+> Если размер вашего типа значения может быть определен во время компиляции, или если ваш тип значения не содержит рекурсию / не содержится ссылочным типом
 
 Эта оптимизация происходит на этапе генерации [SIL](https://github.com/apple/swift/blob/main/docs/SIL.rst).
 
