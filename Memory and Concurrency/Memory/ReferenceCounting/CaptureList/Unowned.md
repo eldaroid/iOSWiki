@@ -17,6 +17,12 @@ var myLazyVariable = { [ unowned self ]
 
 2) Легкость дебаггинга.
 
+### Производительность
+
+Использование `unowned` вводит меньше накладных расходов, чем использование [weak](./Weak.md). Это потому, что [weak](./Weak.md) переменные ссылаются на объект через [side tables](./SideTables.md). Это означает, что есть еще один переход указателя для достижения объекта.
+
+`unowned` ссылки указывают непосредственно на объект, поэтому у них нет таких накладных расходов.
+
 ---
 
 [Previous Theme Strong](./Strong.md) | [Back To Github Contents](https://github.com/eldaroid/iOSWiki) |  [Next Theme Weak](./Weak.md)
