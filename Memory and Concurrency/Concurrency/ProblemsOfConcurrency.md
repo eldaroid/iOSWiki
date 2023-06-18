@@ -1,7 +1,7 @@
 # Проблемы многопоточности
 
 1. [Многопоточность (concurrency) в Swift 3. GCD и Dispatch Queues](https://habr.com/ru/post/320152/#:~:text=race%20condition)
-2. Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
+2. [Dispatch Queues](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html#//apple_ref/doc/uid/TP40008091-CH102-SW28)
 3. [Многопоточность: Runloop, Многопоточность в iOS и macOS, Deadlock, Livelock, DispatchGroup, Синхронные и асинхронные задачи, @synchronized, Мьютекс, Семафор](https://github.com/dashvlas/awesome-ios-interview/blob/master/Resources/Russian.md#Способы-достижения-многопоточности-в-ios-и-macos)
 4. [Problem Of Concurrency](https://www.kodeco.com/books/concurrency-by-tutorials/v2.0/chapters/5-concurrency-problems#toc-chapter-008-anchor-001)
 5. [Race Conditions and Critical Sections
@@ -104,11 +104,22 @@ print(value) // 11
 </p>
 </details>
 
+
+
 > Race condition является одной из самых сложно отлавливаемых (но не самых страшных) проблем. Проще избежать, чем исправлять, поэтому к проектированию многопоточного кода нужно подходить ответственно и с умом.
 
-## ***Инверсия приоритетов (`priority inversion`)*** - логическое несоответствие с правилами планирования — задача с более высоким приоритетом находится в ожидании в то время как низкоприоритетная задача выполняется;
+Решение проблемы:
 
-## ***Взаимная блокировка (`deadlock`)*** — ситуация в многопоточной системе, при которой несколько потоков находятся в состоянии бесконечного ожидания ресурсов, занятых самими этими потоками;
+1) Actor;
+2) примитивы [мьютекса](./Concurrency.md)
+
+## ***Инверсия приоритетов (`priority inversion`)*** 
+
+Логическое несоответствие с правилами планирования — задача с более высоким приоритетом находится в ожидании в то время как низкоприоритетная задача выполняется;
+
+## ***Взаимная блокировка (`deadlock`)*** 
+
+Ситуация в многопоточной системе, при которой несколько потоков находятся в состоянии бесконечного ожидания ресурсов, занятых самими этими потоками;
   
 <details><summary>Пример</summary>
 <p>  

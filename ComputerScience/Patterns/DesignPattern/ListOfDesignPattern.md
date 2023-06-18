@@ -4,6 +4,7 @@
 2. [Computer Science Шаблоны Проектирования](https://www.youtube.com/watch?v=7tXC5ReNRAQ&t=216s&ab_channel=Winderton)
 3. [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift)
 4. [Шпаргалка](https://habr.com/ru/articles/210288/)
+5. [Видео про шаблоны проектирования на python](https://www.youtube.com/watch?v=7tXC5ReNRAQ&t=216s)
 
 Design pattern is a reusable solution to commonly occurring problems in software design, offering proven approaches and templates to help developers solve issues and improve code quality, maintainability, and scalability.
 
