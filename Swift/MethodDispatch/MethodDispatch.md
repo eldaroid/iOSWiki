@@ -31,8 +31,9 @@
 
   2. [Witness](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table) - в SIL (и во время runtime) представление соответствия протоколу; по сути [virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table), но для протокола вместо класса.
 
-### Message Dispatch (самая динамическая диспетчеризация);
+### Message Dispatch (самая динамическая диспетчеризация)
 
+В Obj-C используется message Dispatch. У каждого объекта есть ссылка issa (объект класса, не экзампляр), где хранится словарь с ключами в виде selector`а и значениями в виде ссылки на функции. Когда вызывается метод туда передается селектор и сам объект (который этот мтеод вызывает), которому придет это сообщение.
 
 ## Оптимизация диспетчеризации вызовов
 
