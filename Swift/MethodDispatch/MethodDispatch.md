@@ -23,13 +23,17 @@
 
 > Примечание. Методы расширения всегда используют статическую диспетчеризацию.
 
+Обход принципа [полиморфизма](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
+
 ### Table Dispatch (динамическая, в свою очередь, делится на [Virtual Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table) и [Witness Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness))
 
 Во время выполнения программы на основании типа объекта система решает, какую именно реализацию метода вызывать. В одной стороны, это нам дает ряд преимуществ - мы можем работать с объектом производного типа как с объектом базового типа и использовать его везде, где требуется объект базового типа. Но с другой стороны, поскольку решение о выборе реализации принимается во время выполнения, то это несколько замедляет общий ход работы программы.
 
-  1. [Virtual tabl](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table). Карта, прикрепленная к классу, реализацию которой следует использовать для каждого переопределяемого метода в классе. В отличие от таблицы методов Objective-C, ключи виртуальной таблицы представляют собой просто смещения, что значительно упрощает поиск за счет динамизма и дублирования информации о непереопределенных методах.
+  1. [Virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table). Карта, прикрепленная к классу, реализацию которой следует использовать для каждого переопределяемого метода в классе. В отличие от таблицы методов Objective-C, ключи виртуальной таблицы представляют собой просто смещения, что значительно упрощает поиск за счет динамизма и дублирования информации о непереопределенных методах.
 
-  2. [Witness](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table) - в SIL (и во время runtime) представление соответствия протоколу; по сути [virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table), но для протокола вместо класса.
+  2. [Witness table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table) - в SIL (и во время runtime) представление соответствия протоколу; по сути [virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table), но для протокола вместо класса.
+
+Позволяет реализовать принцип [полиморфизма  ](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
 
 ### Message Dispatch (самая динамическая диспетчеризация)
 
