@@ -126,9 +126,11 @@ print(value) // 11
 <details><summary>Пример</summary>
 <p>  
   
+Первое закрытие не может быть завершено до тех пор, пока не будет запущено второе закрытие:
+
 ```swift
 let queue = DispatchQueue(label: "com.popov.app.exampleQueue")
-queue.async {
+queue.sync {
     // ...
     queue.sync { // deadlock
         // ...

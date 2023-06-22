@@ -15,9 +15,9 @@ protocol CollectionType : SequenceType {
 }
 ```
 
-Всего в swift есть
+Всего в swift есть коллекции:
 
-* **Array (массив)** - сохраняют свой порядок и могут содержать дубликаты. Массивы в свифте реализованы как структура.
+* **Array (массив)** - сохраняют свой порядок и могут содержать дубликаты. Массивы в свифте реализованы как структура;
 
 1. [Вся правда о массивах](https://www.youtube.com/watch?v=47_LhSf-ago)
 
@@ -39,7 +39,7 @@ protocol CollectionType : SequenceType {
     </p>
     </details>
 
-* **Set (множество)** - неупорядочены и не могут содержать дубликатов
+* **Set (множество)** - неупорядочены и не могут содержать дубликатов. Все объекты внутри `Set` должны конфортить протокол Hashable. Set в Swift реализованы как структуры;
 
 
     <details><summary>Open</summary>
@@ -60,7 +60,7 @@ protocol CollectionType : SequenceType {
     </p>
     </details>
 
-* **Dictionaries (словари) (Hash Map)** - неупорядоченная структура данных, которая позволяет хранить пары «ключ — значение». 
+* **Dictionaries (словари) (Hash Map)** - неупорядоченная структура данных, которая позволяет хранить пары «ключ — значение». Dictionary в Swift реализованы как структуры;
 
 
     <details><summary>Open</summary>
@@ -79,3 +79,13 @@ protocol CollectionType : SequenceType {
     </details>
 
 * **String** [снова являются](https://developer.apple.com/documentation/swift/string) являются коллекциями. Это означает, что вы можете переворачивать их, циклически перебирать их посимвольно, использовать map() и flatMap() и многое другое.
+
+Новые невстроенные коллекции swift:
+
+* **[OrderedSet](https://github.com/apple/swift-collections/blob/main/Documentation/OrderedSet.md)** - тот же уникальный Set, только значения в нем упорядочены;
+
+* **[OrderedDictionary](https://github.com/apple/swift-collections/blob/main/Documentation/OrderedDictionary.md)** - упорядоченный набор пар ключ-значение;
+
+* **[Deque](https://github.com/apple/swift-collections/blob/main/Documentation/Deque.md)** - реализует упорядоченную коллекцию с произвольным доступом, которая поддерживает эффективные вставки и удаления с обоих концов. По сути тот же массив;
+
+> To use OrderedSet, first add the swift-collections Swift package to your project. Then, import the OrderedCollections module: `import OrderedCollections`

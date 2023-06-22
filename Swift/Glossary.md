@@ -320,3 +320,7 @@ var warning: String {
 ## Witness
 
 Значение или тип, удовлетворяющий требованию протокола. Отсюда и название [Witness Table](/Swift/MethodDispatch/MethodDispatch.md).
+
+## Сабскрипт subscript
+
+Array[] - `[]` это сабскрипт
