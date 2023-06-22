@@ -1,2 +1,30 @@
 ## UIView
 
+1. [Публичное Собеседование iOS. Layout/UIView](https://youtu.be/a_z4U0RvQgQ?t=4563)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
