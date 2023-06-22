@@ -182,17 +182,7 @@ for _ in 1...150 {
 Навигатор отладки, показывающий взрыв потока:
 ![Навигатор отладки, показывающий взрыв потока](https://i0.wp.com/swiftsenpai.com/wp-content/uploads/2022/11/sc-prevent-explosion-gcd-debug-nav.png?resize=1024%2C663&ssl=1) 
 
+</p>
+</details>
 
-
-
-
-
-
-
-
-
-
-
-
-тьбть
 
