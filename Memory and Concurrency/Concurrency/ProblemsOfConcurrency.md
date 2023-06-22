@@ -122,17 +122,19 @@ print(value) // 11
 ## ***Взаимная блокировка (`deadlock`)*** 
 
 Ситуация в многопоточной системе, при которой несколько потоков находятся в состоянии бесконечного ожидания ресурсов, занятых самими этими потоками.
+
+> В swift возникает, когда очередь вызывает sync внутри самой себя
   
 <details><summary>Пример</summary>
 <p>  
-  
+
 Первое закрытие не может быть завершено до тех пор, пока не будет запущено второе закрытие:
 
 ```swift
-let queue = DispatchQueue(label: "com.popov.app.exampleQueue")
-queue.sync {
+let serialQueue = DispatchQueue(label: "com.popov.app.exampleQueue")
+serialQueue.sync {
     // ...
-    queue.sync { // deadlock
+    serialQueue.sync { // deadlock
         // ...
     }
 }
@@ -148,3 +150,51 @@ DispatchQueue.main.sync { // deadlock
 </details>
 
 > НИКОГДА НЕ вызывайте метод sync на main queue, потому что это приведет к взаимной блокировке (deadlock) вашего приложения!
+
+## Thread Explosion
+
+1. [Understanding Thread Explosion](https://swiftsenpai.com/swift/swift-concurrency-prevent-thread-explosion/)
+
+В качестве общего эталона мы можем сослаться на пример, приведенный в этом видео [WWDC](https://developer.apple.com/videos/play/wwdc2021/10254/?time=514), согласно которому система, которая выполняет в 16 раз больше потоков, чем ее ядра ЦП, считается подверженной взрывному росту потоков.
+
+Поскольку Grand Central Dispatch (GCD) не имеет встроенного механизма, предотвращающего взрыв потока, его довольно легко создать с помощью очереди отправки.
+
+<details><summary>Рассмотрим следующий код:</summary>
+<p>
+
+```swift
+final class HeavyWork {
+    static func dispatchGlobal(seconds: UInt32) {
+        DispatchQueue.global(qos: .background).async {
+            sleep(seconds)
+        }
+    }
+}
+
+// Execution:
+for _ in 1...150 {
+    HeavyWork.dispatchGlobal(seconds: 3)
+}
+```
+
+После выполнения приведенный выше код создаст в общей сложности 150 потоков, что приведет к взрыву потоков. В этом можно убедиться, приостановив выполнение и проверив навигатор отладки.
+
+Навигатор отладки, показывающий взрыв потока:
+![Навигатор отладки, показывающий взрыв потока](https://i0.wp.com/swiftsenpai.com/wp-content/uploads/2022/11/sc-prevent-explosion-gcd-debug-nav.png?resize=1024%2C663&ssl=1) 
+
+<p>
+<details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
