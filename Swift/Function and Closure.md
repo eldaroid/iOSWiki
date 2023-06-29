@@ -311,34 +311,64 @@ member = nil
 Они захватывают окружающие их переменные, если у меня есть замыкание, то это просто функция, встроенная прямо в мой код.
 Это может создать цикл памяти, потому что можно перехватить класс, в котором находится массив операций. Если вы это сделаете, то это замыкание перехватит этот класс в кучу. И этот класс через свой массив перехватил замыкание в куче. Они указывают друг на друга через массив. That closure is keeping the class, the class is keeping the closure.
 
-### 6. Что выведет этот код и почему?
+### 6. Capture List
 
-var thing = "cars"
-
-```swift
-let closure = { [thing] in
-  print("I love \(thing)")
+1)
+```swift  
+struct Cars {
+    var name = "Tesla"
 }
 
-thing = "airplanes"
+var namedCars = Cars()
+
+let closure = { [namedCars] in
+  print("I love \(namedCars.name)")
+}
+
+namedCars.name = "mercedes"
 
 closure()
 ```
 
-ответ
-Будет напечатано: I love cars. Список захвата создаст копию переменной в момент объявления замыкания. 
-Это означает, что захваченная переменная не изменит своего значения, даже после присвоения нового значения.
+Будет напечатано: I love Tesla. Список захвата создаст копию переменной в момент объявления замыкания. Это означает, что захваченная переменная не изменит своего значения, даже после присвоения нового значения.
 
 Если вы опустите список захвата в замыкании, то компилятор будет использовать ссылку, а не копию. Вызов замыкания отразит изменение в переменной:
 
 ```swift
-var thing = "cars"
-
-let closure = {    
-  print("I love \(thing)")
+struct Cars {
+    var name = "Tesla"
 }
 
-thing = "airplanes"
+var namedCars = Cars()
 
-closure() // Prints: "I love airplanes"
+let closure = { in
+  print("I love \(namedCars.name)")
+}
+
+namedCars.name = "mercedes"
+
+closure() // I love mercedes
+```
+
+2) Ситуация другая с классами:  
+
+```swift
+class Cars {
+    var name = "Tesla"
+}
+
+var namedCars = Cars()
+
+let closure1 = { [namedCars] in
+  print("I love \(namedCars.name)")
+}
+
+let closure2 = {
+  print("I love \(namedCars.name)")
+}
+
+namedCars.name = "mercedes"
+
+closure1() // I love mercedes
+closure2() // I love mercedes
 ```

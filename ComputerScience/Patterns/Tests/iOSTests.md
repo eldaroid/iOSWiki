@@ -159,6 +159,9 @@ class Tests: XCTestCase {
    
 ### Тестирования производительности 
 
+<details><summary>Open</summary>
+<p
+
 - [x] [Testing Performance](https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial#toc-anchor-016#:~:text=XCTClockMetric)
 
 Для тестирования произодительности необходимо добавить `measure` перед вызовом функции с метриками, которые нужно измерить:
@@ -177,6 +180,9 @@ func testScoreIsComputedPerformance() {
   }
 }
 ```
+
+</p>
+</details>
 
 ### Создать пустой Publisher:
 

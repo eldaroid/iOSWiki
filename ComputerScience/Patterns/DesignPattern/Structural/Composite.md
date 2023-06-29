@@ -41,3 +41,36 @@ var array = square(even(unique(integerArray))) // it returns [4, 16, 36, 64]
 ```swift
 Array.compactMap { $0 }.filter { $0.count > 0 }
 ```
+
+### Composite в Протоколах
+
+```swift
+protocol WalkingAnimal {
+    func walk()
+}
+
+protocol SwimmingAnimal {
+    func swim()
+}
+
+typealias WalkingAndSwimming = WalkingAnimal & SwimmingAnimal
+```
+
+Пример:
+
+```swift
+final class Capibara: WalkingAndSwimming {
+    func walk() { print("walk") }
+    
+    func swim() { print("swim") }
+}
+
+let instance1: WalkingAndSwimming = Capibara()
+let instance2: WalkingAnimal & SwimmingAnimal = Capibara() 
+```
+
+
+
+
+
+

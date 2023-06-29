@@ -7,13 +7,13 @@ Those who encounter Massive View Controller problems should switch to Model-View
 
 MVC:
 
-* **Model** - *What* your application is, but not *how* it's displayed
+* **Model/Domains** - *What* your application is, but not *how* it's displayed
 * **Controller** - *How* your Model is presented to the user. (UI Logic). More properly, Controllers interpret/format the Model's information for the View.
 * **View** - The controller's "minions". Typically very generic elements. It is important to note that views **do not own the data they display**.
 
 MVC is about managing the communications between these different types. The keys are:
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/Swift/MVC.jpg)
+![alt text](https://github.com/eldaroid/pictures/blob/master/Swift/MVC.jpg?raw=true)
 
 * The **controller** can talk to both the model and the view directly.
 * The **model** and the **view** should *NEVER* talk to each other. They handle entirely different parts of the application

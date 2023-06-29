@@ -55,6 +55,8 @@ Behavioral:
 
 * [Observer](https://daddycoding.com/2023/04/21/observer/)
 
+* [Delegate](./Behavioral/Delegate.md)
+
 * [State](./Behavioral/State.md)
 
 * [Strategy](https://daddycoding.com/2023/04/23/strategy/)
