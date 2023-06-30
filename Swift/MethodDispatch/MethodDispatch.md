@@ -17,15 +17,15 @@
 
 <img src="https://hsto.org/getpro/habr/upload_files/17e/f12/078/17ef120789f74352f33c617df5996a4b.png" alt="alt text" width="600" height="250">
 
-### Статическая диспетчеризация (Static dispatch) - все value type (структуры, массивы).
+### 1) Статическая диспетчеризация (Static dispatch) - все value type (структуры, массивы).
 
 Статическая диспетчеризация — это **самый быстрый стиль диспетчеризации методов**. Это не только приводит к наименьшему количеству ассемблерных инструкций, но и компилятор может выполнять всевозможные умные трюки, такие как встраивание кода. Уже во время сборки компилятор знает, что вызывать и когда. Static Dispatch ускоряет работу вашего приложения, но вы не можете использовать его с подклассами. Этот тип используется в языке C и является самым быстрым.
 
-> Примечание. Методы расширения всегда используют статическую диспетчеризацию.
+> Примечание. [Методы расширения всегда используют статическую диспетчеризацию](../Protocol/Protocol.md)
 
 Обход принципа [полиморфизма](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
 
-### Table Dispatch (динамическая, в свою очередь, делится на [Virtual Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table) и [Witness Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness))
+### 2) Table Dispatch (динамическая, в свою очередь, делится на [Virtual Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table) и [Witness Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness))
 
 Во время выполнения программы на основании типа объекта система решает, какую именно реализацию метода вызывать. В одной стороны, это нам дает ряд преимуществ - мы можем работать с объектом производного типа как с объектом базового типа и использовать его везде, где требуется объект базового типа. Но с другой стороны, поскольку решение о выборе реализации принимается во время выполнения, то это несколько замедляет общий ход работы программы.
 
@@ -33,11 +33,13 @@
 
   2. [Witness table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table) - в SIL (и во время runtime) представление соответствия протоколу; по сути [virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table), но для протокола вместо класса.
 
-Позволяет реализовать принцип [полиморфизма  ](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
+Позволяет реализовать принцип [полиморфизма](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
 
-### Message Dispatch (самая динамическая диспетчеризация)
+### 3) Message Dispatch (самая динамическая диспетчеризация)
 
-В Obj-C используется message Dispatch. У каждого объекта есть ссылка issa (объект класса, не экзампляр), где хранится словарь с ключами в виде selector`а и значениями в виде ссылки на функции. Когда вызывается метод туда передается селектор и сам объект (который этот мтеод вызывает), которому придет это сообщение.
+В Obj-C используется message Dispatch. У каждого объекта есть ссылка issa (объект класса, не экзампляр), где хранится словарь с ключами в виде selector`а и значениями в виде ссылки на функции. Когда вызывается метод туда передается селектор и сам объект (который этот метод вызывает), которому придет это сообщение.
+
+![messageDispatch](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/messageDispatch.png?raw=true)
 
 ## Оптимизация диспетчеризации вызовов
 

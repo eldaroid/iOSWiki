@@ -38,7 +38,7 @@ Property Wrapper (“Обертка Свойства”) — это просто
 
 * [@SceneStorage](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-scenestorage-property-wrapper) позволяет сохранять и восстанавливать небольшие объемы данных для восстановления состояния;
 
-* [@State](./State.md) позволяет нам манипулировать небольшими объемами данных типа значения локально в представлении. Это владеет его данными. Больше информации.
+* [@State](./State.md) позволяет нам манипулировать небольшими объемами данных типа значения локально в представлении. @State заставляет переменную var “жить” в “куче” (heap), делая её writable в View, то есть дает возможность “писать” в нее новые значения в противоположность обычным переменным var в View, которые являются unwritable (только для чтения).
 
 * [@StateObject](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-stateobject-property-wrapper) используется для хранения новых экземпляров данных ссылочного типа, которые соответствуют протоколу ObservableObject;
 

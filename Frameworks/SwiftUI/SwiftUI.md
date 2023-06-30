@@ -8,7 +8,7 @@
 
 [Using UIKit views in SwiftUI](https://swiftwithmajid.com/2020/01/29/using-uikit-views-in-swiftui/)
 
-[property wrappers](https://purple.telstra.com/blog/swiftui---state-vs--stateobject-vs--observedobject-vs--environme)
+[Property wrappers](https://purple.telstra.com/blog/swiftui---state-vs--stateobject-vs--observedobject-vs--environme)
 
 [Формируем View в SwiftUI, исходя из условий](https://habr.com/ru/post/495746/)
 
@@ -19,3 +19,5 @@
 [SwiftUI](https://swiftui-lab.com/frame-behaviors/)
 
 [SwiftUI](https://daddycoding.com/swiftui/)
+
+[var body: some View](https://www.youtube.com/live/x_B6aiglbc8?feature=share&t=4469)
