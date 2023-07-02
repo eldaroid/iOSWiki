@@ -340,7 +340,7 @@ Array[] - `[]` это сабскрипт
 
 #### WIP - work in progress
 
-#### TDB - to be determined (еще будет дописываться)
+#### TBD - to be determined (еще будет дописываться)
 
 #### ASAP - as soon as possible (как можно быстрее)
 
