@@ -21,3 +21,5 @@
 [SwiftUI](https://daddycoding.com/swiftui/)
 
 [var body: some View](https://www.youtube.com/live/x_B6aiglbc8?feature=share&t=4469)
+
+!!![Понимание жизненных циклов вью SwiftUI](https://vc.ru/dev/573105-ponimanie-zhiznennyh-ciklov-vyu-swiftui)
