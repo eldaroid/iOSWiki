@@ -1,6 +1,310 @@
 1. [Glossary of Common Swift Terms](https://www.hackingwithswift.com/glossary)
 2. [Lexicon Swift Docs](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table)
 
+# A
+
+## Access control 
+
+1. :heavy_check_mark: [Access control](https://www.hackingwithswift.com/read/0/19/access-control)
+2. :heavy_check_mark: [What’s the point of access control?](https://www.hackingwithswift.com/quick-start/understanding-swift/whats-the-point-of-access-control)
+3. :negative_squared_cross_mark: [документация Apple по access control](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html)
+
+Контроль доступа позволяет вам указать, какие данные внутри структур и классов должны быть доступны внешнему миру, и вы можете выбрать четыре модификатора:
+
+* public -  это означает, что каждый может читать и писать свойство
+* internal - это означает, что только ваш код Swift может читать и записывать свойство. Если вы отправляете свой код в качестве фреймворка для использования другими, они не смогут прочитать свойство
+* fileprivate - это означает, что только код Swift в том же файле, что и тип, может читать и записывать свойство
+* private - это наиболее строгий вариант, означающий, что свойство доступно только внутри методов, принадлежащих типу или его расширениям
+
+> при использовании внутренних модификаторов (internal, fileprivate, private) membership initializer перестает работать, поэтому в структуре обязательно нужно использовать init(var1...) или задавать дефолтное значение
+
+<img src="https://miro.medium.com/max/1838/1*1HWcxEIbXOS6zCvL57Wqmg.png" alt="alt text" width="600" height="400">
+
+## [Associated types](./Protocol/AssoatedTypes.md) (Связанные типы)
+
+Красивый термин для протокола, принимающий дженерики
+
+> PATs - protocol with associated types
+
+## Associated data
+
+Без ассоциативных данных:
+
+`self.count` - Int?
+
+С ассоциативными данными:
+
+`self.count!` - Int 
+
+> Int и Int? - разные данные.
+
+
+# B 
+
+# C 
+
+## Camel case
+
+Соглашение о кодировании в Swift, где переменные начинаются с маленькой и каждое новое слово в переменной пишется с большой: `var justForExample: String` - Это называется camel case, потому что немного похоже на горбы верблюда и используется для облегчения чтения слов в именах переменных.
+
+## Computed property
+
+1. :heavy_check_mark: [Properties](https://www.hackingwithswift.com/read/0/17/properties)
+
+Переменная, которая считается во время ее вызова.
+
+```swift
+    var investmentPlan: String {
+        if age < 30 {
+            return "Shares"
+        } else {
+            return "Bonds"
+        }
+    }
+```
+
+> ! Всегда должна быть var
+> ! Всегда после переменной должен быть указан тип
+> ! Всегда должна возвращать это указанный тип
+
+## ContextMenu
+
+Контекстное меню выглядит вот так:
+
+<img src="https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png" alt="alt text" width="200" height="200">
+
+# D
+
+## *data buinding* 
+
+решает проблему обновления данных, которую решает SwiftUI. То есть data buinding - это имплементация 
+
+# E
+
+# F
+
+# G
+
+# H
+
+# I
+
+## inout
+
+1. :heavy_check_mark: [When should you use inout parameters?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-inout-parameters)
+2. :heavy_check_mark: [inout parameters](https://www.hackingwithswift.com/sixty/5/10/inout-parameters)
+
+Параметры функции изменять нельзя, и, чтобы обойти это ограничение, добавим inout-параметр, который допускает изменение. Это тот же указатель в си (*), для передачи переменной в качестве inout необходимо добавить &.
+
+```
+var num1: Int = 1
+var char1 = "a"
+
+func changeNumber(num: Int) {
+    var num = num
+    num = 2
+}
+changeNumber(num: num1)
+print(num1) // 1
+
+func changeChar(char: inout String) {
+    char = "b"
+}
+changeChar(char: &char1)
+print(char1) // b
+```
+
+> нельзя передавать константы (let) как inout параметр (&my_let)
+
+# J
+
+# K
+
+# L 
+
+## lazy property
+
+1. :heavy_check_mark: [When should properties be lazy?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-properties-be-lazy)
+2. :heavy_check_mark: [Swift Lazy Property Initialization](https://useyourloaf.com/blog/swift-lazy-property-initialization/)
+
+`lazy` свойства Swift позволяют нам отложить создание свойства до его фактического использования, что делает их похожими на вычисляемое свойство. Однако, в отличие от вычисляемого свойства, они сохраняют результат, который вычисляется, так что последующие обращения к свойству не повторяют работу. Это позволяет им обеспечивать дополнительную производительность, когда они не используются (потому что их код никогда не запускается), и дополнительную производительность, когда они используются повторно (поскольку их значение кэшируется).
+
+> ленивые свойства всегда объявляются с помощью var
+
+# M 
+
+## (Modal Popups) Модальные всплывающие окна
+
+- Модальным называется такое представление, при котором ничего нельзя выполнить, пока оно не будет удалено с экрана (всплывающие окна). Как например всплывающее окно при нажатии на edit в Landmarks
+
+When you present a view modally, the destination view covers the source view and replaces the current navigation stack.
+
+You present a view modally when you want to break out of your app’s normal flow.
+
+## (Non-modal view) Не Модальные окна
+
+- это просто карта например в приложениие Landmarks
+
+# N
+
+# O
+
+# P
+
+## Placeholder
+
+Placeholder - подсказка, расположенная внутри каждого поля подписной формы:
+
+![placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
+
+## Property wrappers
+
+1. :heavy_check_mark: [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
+
+* @State - все то, что изменяется
+
+* @StateObject
+
+* @ObservedObject
+
+* @Publishers
+
+## *Parameter*
+
+```
+func square(number: Int) {
+    print(number * number)
+}
+```
+
+number - это параметр функции
+
+## [Property observers](./PropertyObservers.md)
+
+* willSet - вызывается когда свойство собирается быть изменененным (до его изменения). В willSet Swift предоставляет вашему коду специальное значение, называемое newValue, которое содержит новое значение свойства.
+
+* didSet - вызывается когда свойство уже изменено (после его изменения). В didSet вам дается oldValue для представления предыдущего значения.
+
+Пример правильного использования:
+
+```swift
+struct FishTank {
+    var capacity: Int
+    var fishCount: Int {
+        didSet {
+            if fishCount >= self.capacity {
+                capacity = fishCount
+                print("capacity changed to \(capacity)")
+            }
+        }
+    }
+}
+
+var new = FishTank(capacity: 1, fishCount: 2)
+
+new.fishCount = 10 // capacity changed to 10
+```
+
+# Q 
+# R 
+# S 
+# T
+
+## Type inference (аннотация типов)
+
+let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
+
+Когда следует использовать аннотации типов в Swift?
+
+* Swift не может понять, какой тип следует использовать
+
+> Обычно такое происходит в более сложном коде. Например, если вы загружали какие-то данные из Интернета и вы знаете их тип, а Swift может не знать это заранее.
+
+* Вы хотите, чтобы Swift использовал тип, отличный от стандартного
+
+> var score: Double = 1000; print = 1000.0
+
+* Вы пока не хотите присваивать значение
+
+> var name: String
+
+# U
+
+# V
+
+## Variadic function
+
+1. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
+2. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
+
+Вариативные функции Swift позволяют нам принимать любое количество параметров одного типа, разделенных запятыми, для этого достаточно написать `...` после его типа. Внутри функции они передаются нам в виде массива, который мы можем индексировать, перебирать и т. Д.
+
+Итак, `Int` параметр - это одно целое число, тогда как `Int...` это ноль или более целых чисел - потенциально сотни.
+
+Внутри функции Swift преобразует значения, которые были переданы в массив целых чисел, так что вы можете перебирать их по мере необходимости.
+
+```
+func square(numbers: Int...) {
+    for number in numbers {
+        print("\(number) squared is \(number * number)")
+    }
+}
+
+square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared is 9 \n 4 squared is 16 \n 5 squared is 25
+```
+
+`print("Haters", "gonna", "hate")` - print() also variadic function
+
+# W
+
+## Witness
+
+Значение или тип, удовлетворяющий требованию протокола. Отсюда и название [Witness Table](/Swift/MethodDispatch/MethodDispatch.md).
+
+# X
+
+# Y
+
+# Z
+
+---
+---
+
+# А
+
+## Атомарность текста
+
+Было: `Text(viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : "")`
+
+Сообщение лучше вынести в отдельный var, что бы поддержать атомарность, например
+```swift
+var warning: String {
+ viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : ""
+}
+```
+
+Рискуя на себя навлечь обвинения в сексизме, таки не удержусь и приведу пример атомарной операции: беременность - операция строго атомарная, всегда есть один и только один отец (всякие генные ухищрения вынесем за скобки).
+
+И наоборот пример неатомарной операции: воспитание ребенка - увы операция неатомарная, ребенок есть к сожалению субъект множества различных несинхронизированных операций над неокрепшей душой ребенка: мама, папа, бабушка, дедушка, зомбоящик, детсад, школа, друзья, подруги и т.д. по списку.
+
+# Б
+
+# В
+
+# Г
+
+## Гейзенбаг
+
+Плавающий баг (гейзенбаг) - ошибка, которая в одних и тех же условиях то воспроизводится, то нет
+
+# Д
+
+# Е/Ё
+
+# Ж/З
+
+# И
+
 ## Инвалидация
 
 Аннулирование/удаление старого.
@@ -30,28 +334,107 @@ let toggle = true
 
 Вывод: 1) Interpolation: this is true
        2) Interpolation: this is true
-       
-## Camel case
 
-Соглашение о кодировании в Swift, где переменные начинаются с маленькой и каждое новое слово в переменной пишется с большой: `var justForExample: String` - Это называется camel case, потому что немного похоже на горбы верблюда и используется для облегчения чтения слов в именах переменных.
+## Интерфейс
 
-## Type inference (аннотация типов)
+Интерфейс - это совокупность способов, средств, правил и возможностей взаимодействия кого-либо или чего-либо с кем-либо или чем-либо.
 
-let name = "Tanya" - полагаться на вывод типа Swift. Без аннотации типов: `let name: String = "Tanya"`
+# К
 
-Когда следует использовать аннотации типов в Swift?
+# Л
 
-* Swift не может понять, какой тип следует использовать
+# М
 
-> Обычно такое происходит в более сложном коде. Например, если вы загружали какие-то данные из Интернета и вы знаете их тип, а Swift может не знать это заранее.
+## *Метод* - numberOfRow:
 
-* Вы хотите, чтобы Swift использовал тип, отличный от стандартного
+1. :heavy_check_mark: [What’s the difference between a function and a method?](https://www.hackingwithswift.com/quick-start/understanding-swift/whats-the-difference-between-a-function-and-a-method)
 
-> var score: Double = 1000; print = 1000.0
+Функции внутри типов (структур, протоколов, классов) называются методами.
 
-* Вы пока не хотите присваивать значение
+```
+protocol TableViewViewModelType {
+    func numberOfRow() -> Int
+}
+```
 
-> var name: String
+Отличия метода от функции:
+    
+  * Методы могут ссылаться на другие свойства и методы внутри этого типа, что означает, что вы можете написать describe() метод для User типа, который печатает имя пользователя, возраст и город.
+  * Методы избегают загрязнения пространства имен. Всякий раз, когда мы создаем функцию, имя этой функции начинает иметь значение в нашем коде - мы можем написать wakeUp(). Добавляя функции в методы, мы ограничиваем доступность этих имен - wakeUp()это больше не зарезервированное имя, если мы специально не напишем someUser.wakeUp()
+
+
+# Н
+
+# О
+
+# П
+
+## Пространство имен (Namespace)
+
+Пространства имен используются для организации кода в логические группы и для предотвращения конфликтов имен, которые могут возникнуть, особенно если ваша база кода включает несколько библиотек.
+
+## Пагинация
+
+Таблица - элемент UI, способный отображать большое количество данных используя вертикальный скролл (прокрутку).
+
+Пагинация - механизм постраничного отображения данных, позволяющий подгружать и добавлять в таблицу следующую "порцию" данных при достижении заданого критерия.
+
+# Р
+
+# С 
+
+## *Свойство* - numberOfRow: 
+```
+protocol TableViewViewModelType {
+    var numberOfRow: Int { get }
+}
+```
+
+## Сабскрипт subscript
+
+Array[] - `[]` это сабскрипт
+
+## Сленг
+
+#### TL;DR - too long; don`t read (ниасилил, многабукаф)
+
+1) слишком долгий текст не хочу его читать;
+2) лучше полный текст не читать, а достаточно прочитать то, что под пометкой TL;DR
+
+#### WIP - work in progress
+
+#### TBD - to be determined (еще будет дописываться)
+
+#### ASAP - as soon as possible (как можно быстрее)
+
+#### FYI - for your information, «к вашему сведению»
+1) Наличие этой аббревиатуры в письме означает, что информация может быть вам интересна, но не требуется никаких конкретных действий
+
+#### nit - nitpicking (придирка)
+
+#### RTFM - read the fuckin manual (прочитай документацию)
+
+# Т
+
+# У
+
+# Ф/Х/Ц
+
+# Ш/Щ/Э/Ю/Я
+
+## *Экзмепляр класса*
+
+Давайте создадим класс и назовем его `классом Person`. Затем вы создаете `экземпляр класса Person`. Давайте назовем его `Боб`. Итак `bob = Person()`. Дело в том, что и `bob`, и `Person` являются `объектами`. Когда вы делаете `Person()`, вы фактически вызываете конструктор `объекта класса Person`, который дает вам `объект экземпляра`, а именно `bob`.
+
+
+
+
+
+
+
+
+
+
 
 ## Associated values
 
@@ -79,278 +462,8 @@ enum Activity {
 }
 ```
 
-## [Associated types](./Protocol/AssoatedTypes.md) (Связанные типы)
 
-Красивый термин для протокола, принимающий дженерики
 
-> PATs - protocol with associated types
 
-## Associated data
 
-Без ассоциативных данных:
 
-`self.count` - Int?
-
-С ассоциативными данными:
-
-`self.count!` - Int 
-
-> Int и Int? - разные данные.
-
-## Variadic function
-
-1. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
-2. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
-
-Вариативные функции Swift позволяют нам принимать любое количество параметров одного типа, разделенных запятыми, для этого достаточно написать `...` после его типа. Внутри функции они передаются нам в виде массива, который мы можем индексировать, перебирать и т. Д.
-
-Итак, `Int` параметр - это одно целое число, тогда как `Int...` это ноль или более целых чисел - потенциально сотни.
-
-Внутри функции Swift преобразует значения, которые были переданы в массив целых чисел, так что вы можете перебирать их по мере необходимости.
-
-```
-func square(numbers: Int...) {
-    for number in numbers {
-        print("\(number) squared is \(number * number)")
-    }
-}
-
-square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared is 9 \n 4 squared is 16 \n 5 squared is 25
-```
-
-`print("Haters", "gonna", "hate")` - print() also variadic function
-
-## [Property observers](./PropertyObservers.md)
-
-* willSet - вызывается когда свойство собирается быть изменененным (до его изменения). В willSet Swift предоставляет вашему коду специальное значение, называемое newValue, которое содержит новое значение свойства.
-
-* didSet - вызывается когда свойство уже изменено (после его изменения). В didSet вам дается oldValue для представления предыдущего значения.
-
-Пример правильного использования:
-
-```swift
-struct FishTank {
-    var capacity: Int
-    var fishCount: Int {
-        didSet {
-            if fishCount >= self.capacity {
-                capacity = fishCount
-                print("capacity changed to \(capacity)")
-            }
-        }
-    }
-}
-
-var new = FishTank(capacity: 1, fishCount: 2)
-
-new.fishCount = 10 // capacity changed to 10
-```
-
-## Property wrappers
-
-1. :heavy_check_mark: [Modifying program state](https://www.hackingwithswift.com/books/ios-swiftui/modifying-program-state)
-
-* @State - все то, что изменяется
-
-* @StateObject
-
-* @ObservedObject
-
-* @Publishers
-
-## Computed property
-
-1. :heavy_check_mark: [Properties](https://www.hackingwithswift.com/read/0/17/properties)
-
-Переменная, которая считается во время ее вызова.
-
-```swift
-    var investmentPlan: String {
-        if age < 30 {
-            return "Shares"
-        } else {
-            return "Bonds"
-        }
-    }
-```
-
-> ! Всегда должна быть var
-> ! Всегда после переменной должен быть указан тип
-> ! Всегда должна возвращать это указанный тип
-
-
-## *Свойство* - numberOfRow: 
-```
-protocol TableViewViewModelType {
-    var numberOfRow: Int { get }
-}
-```
-
-## *Метод* - numberOfRow:
-
-1. :heavy_check_mark: [What’s the difference between a function and a method?](https://www.hackingwithswift.com/quick-start/understanding-swift/whats-the-difference-between-a-function-and-a-method)
-
-Функции внутри типов (структур, протоколов, классов) называются методами.
-
-```
-protocol TableViewViewModelType {
-    func numberOfRow() -> Int
-}
-```
-
-Отличия метода от функции:
-    
-  * Методы могут ссылаться на другие свойства и методы внутри этого типа, что означает, что вы можете написать describe() метод для User типа, который печатает имя пользователя, возраст и город.
-  * Методы избегают загрязнения пространства имен. Всякий раз, когда мы создаем функцию, имя этой функции начинает иметь значение в нашем коде - мы можем написать wakeUp(). Добавляя функции в методы, мы ограничиваем доступность этих имен - wakeUp()это больше не зарезервированное имя, если мы специально не напишем someUser.wakeUp()
-
-## *Экзмепляр класса*
-
-Давайте создадим класс и назовем его `классом Person`. Затем вы создаете `экземпляр класса Person`. Давайте назовем его `Боб`. Итак `bob = Person()`. Дело в том, что и `bob`, и `Person` являются `объектами`. Когда вы делаете `Person()`, вы фактически вызываете конструктор `объекта класса Person`, который дает вам `объект экземпляра`, а именно `bob`.
-
-## *Parameter*
-
-```
-func square(number: Int) {
-    print(number * number)
-}
-```
-
-number - это параметр функции
-
-## *data buinding* 
-
-решает проблему обновления данных, которую решает SwiftUI. То есть data buinding - это имплементация 
-
-## (Non-modal view) Не Модальные окна
-
-- это просто карта например в приложениие Landmarks
-
-## (Modal Popups) Модальные всплывающие окна
-
-- Модальным называется такое представление, при котором ничего нельзя выполнить, пока оно не будет удалено с экрана (всплывающие окна). Как например всплывающее окно при нажатии на edit в Landmarks
-
-When you present a view modally, the destination view covers the source view and replaces the current navigation stack.
-
-You present a view modally when you want to break out of your app’s normal flow.
-
-## inout
-
-1. :heavy_check_mark: [When should you use inout parameters?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-inout-parameters)
-2. :heavy_check_mark: [inout parameters](https://www.hackingwithswift.com/sixty/5/10/inout-parameters)
-
-Параметры функции изменять нельзя, и, чтобы обойти это ограничение, добавим inout-параметр, который допускает изменение. Это тот же указатель в си (*), для передачи переменной в качестве inout необходимо добавить &.
-
-```
-var num1: Int = 1
-var char1 = "a"
-
-func changeNumber(num: Int) {
-    var num = num
-    num = 2
-}
-changeNumber(num: num1)
-print(num1) // 1
-
-func changeChar(char: inout String) {
-    char = "b"
-}
-changeChar(char: &char1)
-print(char1) // b
-```
-
-> нельзя передавать константы (let) как inout параметр (&my_let)
-
-## lazy property
-
-1. :heavy_check_mark: [When should properties be lazy?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-properties-be-lazy)
-2. :heavy_check_mark: [Swift Lazy Property Initialization](https://useyourloaf.com/blog/swift-lazy-property-initialization/)
-
-`lazy` свойства Swift позволяют нам отложить создание свойства до его фактического использования, что делает их похожими на вычисляемое свойство. Однако, в отличие от вычисляемого свойства, они сохраняют результат, который вычисляется, так что последующие обращения к свойству не повторяют работу. Это позволяет им обеспечивать дополнительную производительность, когда они не используются (потому что их код никогда не запускается), и дополнительную производительность, когда они используются повторно (поскольку их значение кэшируется).
-
-> ленивые свойства всегда объявляются с помощью var
-
-## Access control 
-
-1. :heavy_check_mark: [Access control](https://www.hackingwithswift.com/read/0/19/access-control)
-2. :heavy_check_mark: [What’s the point of access control?](https://www.hackingwithswift.com/quick-start/understanding-swift/whats-the-point-of-access-control)
-3. :negative_squared_cross_mark: [документация Apple по access control](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html)
-
-Контроль доступа позволяет вам указать, какие данные внутри структур и классов должны быть доступны внешнему миру, и вы можете выбрать четыре модификатора:
-
-* public -  это означает, что каждый может читать и писать свойство
-* internal - это означает, что только ваш код Swift может читать и записывать свойство. Если вы отправляете свой код в качестве фреймворка для использования другими, они не смогут прочитать свойство
-* fileprivate - это означает, что только код Swift в том же файле, что и тип, может читать и записывать свойство
-* private - это наиболее строгий вариант, означающий, что свойство доступно только внутри методов, принадлежащих типу или его расширениям
-
-> при использовании внутренних модификаторов (internal, fileprivate, private) membership initializer перестает работать, поэтому в структуре обязательно нужно использовать init(var1...) или задавать дефолтное значение
-
-<img src="https://miro.medium.com/max/1838/1*1HWcxEIbXOS6zCvL57Wqmg.png" alt="alt text" width="600" height="400">
-
-## Placeholder
-
-Placeholder - подсказка, расположенная внутри каждого поля подписной формы:
-
-![placeholder](https://blog.calltouch.ru/wp-content/uploads/2020/12/image2-3.png)
-
-## ContextMenu
-
-Контекстное меню выглядит вот так:
-
-<img src="https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png" alt="alt text" width="200" height="200">
-
-## Атомарность текста
-
-Было: `Text(viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : "")`
-
-Сообщение лучше вынести в отдельный var, что бы поддержать атомарность, например
-```swift
-var warning: String {
- viewModel.showWarning ? AssessmentStrings.totalAssessmentCommentWarning : ""
-}
-```
-
-Рискуя на себя навлечь обвинения в сексизме, таки не удержусь и приведу пример атомарной операции: беременность - операция строго атомарная, всегда есть один и только один отец (всякие генные ухищрения вынесем за скобки).
-
-И наоборот пример неатомарной операции: воспитание ребенка - увы операция неатомарная, ребенок есть к сожалению субъект множества различных несинхронизированных операций над неокрепшей душой ребенка: мама, папа, бабушка, дедушка, зомбоящик, детсад, школа, друзья, подруги и т.д. по списку.
-
-## Гейзенбаг
-
-Плавающий баг (гейзенбаг) - ошибка, которая в одних и тех же условиях то воспроизводится, то нет
-
-## Witness
-
-Значение или тип, удовлетворяющий требованию протокола. Отсюда и название [Witness Table](/Swift/MethodDispatch/MethodDispatch.md).
-
-## Сабскрипт subscript
-
-Array[] - `[]` это сабскрипт
-
-## Пространство имен (Namespace)
-
-Пространства имен используются для организации кода в логические группы и для предотвращения конфликтов имен, которые могут возникнуть, особенно если ваша база кода включает несколько библиотек.
-
-## Пагинация
-
-Таблица - элемент UI, способный отображать большое количество данных используя вертикальный скролл (прокрутку).
-
-Пагинация - механизм постраничного отображения данных, позволяющий подгружать и добавлять в таблицу следующую "порцию" данных при достижении заданого критерия.
-
-## Сленг
-
-#### TL;DR - too long; don`t read (ниасилил, многабукаф)
-
-1) слишком долгий текст не хочу его читать;
-2) лучше полный текст не читать, а достаточно прочитать то, что под пометкой TL;DR
-
-#### WIP - work in progress
-
-#### TBD - to be determined (еще будет дописываться)
-
-#### ASAP - as soon as possible (как можно быстрее)
-
-#### FYI - for your information, «к вашему сведению»
-1) Наличие этой аббревиатуры в письме означает, что информация может быть вам интересна, но не требуется никаких конкретных действий
-
-#### nit - nitpicking (придирка)
-
-#### RTFM - read the fuckin manual (прочитай документацию)
