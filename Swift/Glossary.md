@@ -1,7 +1,11 @@
+# Глоссарий Программиста
+
 1. [Glossary of Common Swift Terms](https://www.hackingwithswift.com/glossary)
 2. [Lexicon Swift Docs](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table)
 
 # A
+
+## [API](/ComputerScience/Networking/API/API.md) - Application Programming Interface – интерфейс программирования приложений, интерфейс прикладного программирования
 
 ## Access control 
 
@@ -18,7 +22,7 @@
 
 > при использовании внутренних модификаторов (internal, fileprivate, private) membership initializer перестает работать, поэтому в структуре обязательно нужно использовать init(var1...) или задавать дефолтное значение
 
-<img src="https://miro.medium.com/max/1838/1*1HWcxEIbXOS6zCvL57Wqmg.png" alt="alt text" width="600" height="400">
+<img src="https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/AccessControl.png?raw=true" alt="alt text" width="600" height="400">
 
 ## [Associated types](./Protocol/AssoatedTypes.md) (Связанные типы)
 
@@ -73,6 +77,10 @@
 
 <img src="https://useyourloaf.com/blog/adding-context-menus-in-ios-13/002.png" alt="alt text" width="200" height="200">
 
+## CLI
+
+**CLI (Command Line Interface)**: еще один пример — с командной строкой в Windows или с терминалом для Linux-систем и MacOS. Когда мы вызываем командную строку и пишем в ней различные команды, мы взаимодействуем с операционной системой.
+
 # D
 
 ## *data buinding* 
@@ -84,6 +92,10 @@
 # F
 
 # G
+
+## GUI
+
+**GUI (Graphical User Interface)**: Когда самый обычный пользователь взаимодействует с сайтом или приложением, он пользуется GUI. Все формочки, кнопочки, иконочки, звуки и т.д., которые мы видим или слышим на сайте - это и есть GUI. Т. е. GUI - это графический способ взаимодействия пользователя с сайтом или приложением. Так как пользователи как правило не используют иные способы взаимодействия с программами, у большинства людей есть четкое представление о том, что интерфейс это обязательно что-то про дизайн или графическое отображение. Но как мы только что выяснили, интерфейс - это способ взаимодействия чего-либо с чем-либо.
 
 # H
 
@@ -267,8 +279,10 @@ square(numbers: 1, 2, 3, 4, 5) // 1 squared is 1 \n 2 squared is 4 \n 3 squared 
 
 # Z
 
+
 ---
----
+
+# Русский алфавит
 
 # А
 
