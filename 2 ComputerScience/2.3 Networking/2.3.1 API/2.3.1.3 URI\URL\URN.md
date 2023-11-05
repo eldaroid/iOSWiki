@@ -10,14 +10,14 @@
 
 **Endpoint** - часть адреса, идущая после доменного имени (например, после .com/). Пример: /watch?v=e_atyw0IDqg
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/2%20ComputerScience/URI.jpg?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URI.jpg?raw=true)
 
 **Query-параметры** - часть URI, следующая после ?. Пример: ?v=e_atyw0IDqg
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/2%20ComputerScience/QueryStructure.png?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/QueryStructure.png?raw=true)
 
 Существуют варианты использования параметров URL:
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/2%20ComputerScience/Query.png?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/Query.png?raw=true)
 
 [2.3.1.2 Rest API Theme](./2.3.1.2%20RestAPI.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.3.1.4 HTTP Methods Theme](./2.3.1.4%20HTTP_Methods.md)
