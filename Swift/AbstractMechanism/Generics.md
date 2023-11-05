@@ -36,9 +36,9 @@ areTheyEqual(1, 1)
 
 Так как вы тестируете равенство, вы ограничиваете типы теми, которые отвечают протоколу Equatable. Этот код обеспечивает требуемый результат и препятствует передаче параметров неподходящего типа.
 
-## [Полиморфизм](/ComputerScience/Languages/Paradigm/Imperative/OOP.md)
+## [Полиморфизм](/2%20ComputerScience/Languages/Paradigm/Imperative/OOP.md)
 
-С точки зрения языка программирования Swift, шаблоны являются абстракцией над типами (type-level abstraction), позволяющей использовать [полиморфизм](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) для работы с разными типами данных:
+С точки зрения языка программирования Swift, шаблоны являются абстракцией над типами (type-level abstraction), позволяющей использовать [полиморфизм](/2%20ComputerScience/Languages/Paradigm/Imperative/OOP.md) для работы с разными типами данных:
 
 ```swift
 func collect<T: AnyClass>(value: T, and anotherValue: T) -> [T] {

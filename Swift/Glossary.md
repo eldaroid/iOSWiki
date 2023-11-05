@@ -5,7 +5,7 @@
 
 # A
 
-## [API](/ComputerScience/Networking/API/API.md) - Application Programming Interface – интерфейс программирования приложений, интерфейс прикладного программирования
+## [API](/2%20ComputerScience/Networking/API/API.md) - Application Programming Interface – интерфейс программирования приложений, интерфейс прикладного программирования
 
 ## Access control 
 

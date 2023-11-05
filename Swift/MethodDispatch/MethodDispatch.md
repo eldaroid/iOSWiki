@@ -23,7 +23,7 @@
 
 > Примечание. [Методы расширения всегда используют статическую диспетчеризацию](../Protocol/Protocol.md)
 
-Обход принципа [полиморфизма](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
+Обход принципа [полиморфизма](/2%20ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
 
 ### 2) Table Dispatch (динамическая, в свою очередь, делится на [Virtual Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table) и [Witness Table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness))
 
@@ -33,7 +33,7 @@
 
   2. [Witness table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#witness-table) - в SIL (и во время runtime) представление соответствия протоколу; по сути [virtual table](https://github.com/apple/swift/blob/main/docs/Lexicon.md#vtable-virtual-dispatch-table), но для протокола вместо класса.
 
-Позволяет реализовать принцип [полиморфизма](/ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
+Позволяет реализовать принцип [полиморфизма](/2%20ComputerScience/Languages/Paradigm/Imperative/OOP.md) в ООП.
 
 ### 3) Message Dispatch (самая динамическая диспетчеризация)
 

@@ -17,7 +17,7 @@ let vehicles: [any Vehicle] = [
 
 ### Зачем нужны экзистенциальные типы?
 
-Идея экзистенциальных типов в Swift пришла из [Haskell](/ComputerScience/Languages/Paradigm/Declarative/FunctionalProgramming(FP).md), в документации которого они описаны как следующий [предикат](https://ru.wikipedia.org/wiki/Предикат):
+Идея экзистенциальных типов в Swift пришла из [Haskell](/2%20ComputerScience/Languages/Paradigm/Declarative/FunctionalProgramming(FP).md), в документации которого они описаны как следующий [предикат](https://ru.wikipedia.org/wiki/Предикат):
 
 ```swift
 ∀x Q(x)⇒ P = ∃x Q(x) ⇒ P

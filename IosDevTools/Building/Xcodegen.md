@@ -25,5 +25,5 @@
 
 * Свойство targetTemplates - позволяет создать общие настройки таргетов, чтобы их не прописывать несколько раз.
 
-> Не забудьте указать в [gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) файлы xcodeproj, после пользования Xcodegen. Пример: [.gitignore](/Common/Git/.gitignore)
+> Не забудьте указать в [gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) файлы xcodeproj, после пользования Xcodegen. Пример: [.gitignore](/1%20Common/Git/.gitignore)
 
