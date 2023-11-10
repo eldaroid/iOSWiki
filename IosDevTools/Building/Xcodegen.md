@@ -17,7 +17,7 @@
 * Свойство name — это имя проекта. 
 * Свойство options - применяет настройку конфигурации ко всему проекту. 
 * Свойство target - все цели будут указаны в этом свойстве.
-* Свойство type - типы этого таргета. Н/р: application, app-extension, framework, bundle, library.static. [Перечень всех типов](https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md#:~:text=This%20will%20provide%20default). [Разница фреймворка/библиотека](/Frameworks/Framework:Library.md).
+* Свойство type - типы этого таргета. Н/р: application, app-extension, framework, bundle, library.static. [Список](https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md#:~:text=This%20will%20provide%20default) всех types. Разница [фреймворка/библиотека](/Frameworks/FrameworkOrLibrary.md).
   
 * Свойство source - место расположения этого таргетаю. Н/р: `source: Extensions/ShareWith`. Но если несколько расположений, то нужно указывать `source: \n\t- path: Extensions/ShareWith`.
 
