@@ -4,6 +4,7 @@
 2. [Link fast: Improve build and launch times](https://developer.apple.com/videos/play/wwdc2022/110362/)
 3. [Статические и динамические фреймворки на iOS - обсуждение с ChatGPT](https://vc.ru/dev/570484-staticheskie-i-dinamicheskie-freymvorki-na-ios-obsuzhdenie-s-chatgpt)
 4. [!!!Swift. Static and Dynamic Libraries. Frameworks](https://maxim-kryloff.medium.com/swift-static-and-dynamic-libraries-frameworks-343952d3011e)
+5. [!!!Swift. Packages and Bundles. Resources](https://maxim-kryloff.medium.com/swift-packages-and-bundles-resources-82f06c66b19e)
 
 ## Framework
 

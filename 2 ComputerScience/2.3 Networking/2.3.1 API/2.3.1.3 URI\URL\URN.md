@@ -10,7 +10,7 @@
 
 **Endpoint** - часть адреса, идущая после доменного имени (например, после .com/). Пример: /watch?v=e_atyw0IDqg
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URI.jpg?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URL.jpg?raw=true)
 
 **Query-параметры** - часть URI, следующая после ?. Пример: ?v=e_atyw0IDqg
 
