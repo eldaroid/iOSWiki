@@ -181,7 +181,7 @@ thread2.start()
 
 Участок кода между `lock()` и `unlock()` называется критическая секция. NSLock позволяет вызывать `unlock()` только тому потоку с которого был вызван `lock()`.
 
-[Deadlock](https://github.com/eldaroid/iOSWiki/blob/master/Многопоточность%20и%20Память/ProblemsOfConcurrency.md#:~:text=deadlock):
+[Deadlock](/3%20Memory%20and%20Concurrency/3.2%20Concurrency/ProblemsOfConcurrency.md):
 
 ```swift
 let lock = NSLock()
