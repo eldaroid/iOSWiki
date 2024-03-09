@@ -1,12 +1,12 @@
 ## Value and Reference Types
 
-|Value Types (хранятся в [стеке](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.2%20Stack.md)) | Referene Types (хранятся в [куче](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md))|
+|[Value Types](./ValueTypes/) (хранятся в [стеке](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.2%20Stack.md)) | [Reference Types](./ReferenceTypes/) (хранятся в [куче](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md))|
 |------------|------------|
-| Struct | Class|
+| [Struct](./Struct.md) | [Class](./Class/Class.md)|
 | Enum | Function|
 | Double | Closure|
 | String | |
-| Set | |
+| [Set](../CollectionsAndTuple/AssociatedArray.md) | |
 | Tuple | |
 | Array | |
 | Dictionary | |

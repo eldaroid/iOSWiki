@@ -42,6 +42,13 @@
 
 > Int и Int? - разные данные.
 
+## Associated value (присоединяемые значения) в enum'ах
+ 
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/AssociatedValue.gif?raw=true)
+
+## Associated array = Dictionary/Set
+
+[Ассоциативные массивы](./DataStructures/CollectionsAndTuple/AssociatedArray.md) ([словари в Swift](./DataStructures/CollectionsAndTuple/AssociatedArray.md) или [Set](./DataStructures/CollectionsAndTuple/AssociatedArray.md)) или Hashed Collections.
 
 # B 
 
