@@ -124,7 +124,6 @@ struct ContentView: View {
             Button(action: {
                 self.animating = false
                 self.trace.reset()
-                withTransaction(AnyTransition.slide, <#T##body: () throws -> Result##() throws -> Result#>)
                 withAnimation(self.selectedAnimation.1.speed(self.slowAnimations ? 0.25 : 1), {
                     self.animating = true
                 })

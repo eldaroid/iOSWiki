@@ -22,9 +22,11 @@
 
 * Если вы измените систему координат в frame, размер вида останется таким же в кадре и границах
 
+![FrameVsBounds3](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/UIKit/SetOriginFrameAndBounds.gif?raw=true)
+
 ### Что произойдет, если вы преобразуете вид, используя 20 градусов по часовой стрелке?
 
-![FrameVsBounds3](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/UIKit/FrameVSBoundsRotation.jpeg?raw=true)
+![FrameVsBounds4](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/UIKit/FrameVSBoundsRotation.jpeg?raw=true)
 
 * Frame = (x: 20, y: 52, width: 180, height: 187)
 
