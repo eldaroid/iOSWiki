@@ -1,0 +1,54 @@
+# Animation
+
+1. [Основы анимации SwiftUI](https://medium.com/simform-engineering/basics-of-swift-ui-animations-d1aa2485a5d9)
+2. [Explore SwiftUI animation](https://developer.apple.com/videos/play/wwdc2023/10156/)
+
+
+
+Типы анимации:
+
+* Explicit Animation (Явная анимация) = withAnimation;
+
+    Определяется с помощью замыкания withAnimation {…} , и анимироваться будут только значения параметров, измененные внутри фигурных скобок. По сути, здесь мы явно просим SwiftUI анимировать изменения, происходящие в результате изменения состояния.
+
+* Implicit Animation (Неявная анимация);
+
+    Cамый быстрый способ реализовать обзоры анимации. Это самый простой вид анимации в SwiftUI, и модификатор используется для любых изменений, происходящих внутри представления (которые поддерживают эту анимацию: offset, opacity, scaleEffect, rotationEffect, frame, color, border, shadow, gradient).
+
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/TypesOfAnimation.jpeg?raw=true)
+
+
+
+[Согласно эплу](https://developer.apple.com/videos/play/wwdc2023/10156/), существую виды анимации:
+
+* Timing curve (по дефолту duration=0.35сек.): 
+    * default
+    * linear
+    * easeIn - начинается медленно и ускоряется по мере приближения к концу
+    * easeOut - начинается быстро и замедляется по мере приближения к концу последовательности
+    * easeInOut - начинается медленно, затем ускоряется, а затем снова замедляется
+
+* Spring
+    * default spring
+
+    * smooth // нет отскока
+        ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/smooth.png?raw=true)
+    
+    * snappy // маленький отскок 
+        ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/snappy.png?raw=true)
+    
+    * bouncy // средний отскок
+        ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/bounce.png?raw=true)
+    
+    * interpolating spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
+
+* [Higher order](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.1%20Declarative/2.2.2.1.1%20FunctionalProgramming(FP).md): 
+    * speed
+    * delay
+    * repeatCount
+
+
+
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/AnimationStyles.png?raw=true)
+
+Просмотр демонстрации: [Project](./AnimationProject/)
