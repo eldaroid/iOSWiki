@@ -7,6 +7,7 @@
 5. - [ ] [API для удаленной асинхронной выборки с помощью Apple Combine](https://habr.com/ru/post/476678/)
 6. - [ ] [Начинаем работу с Combine](https://apptractor.ru/info/articles/combine-tutorial-1.html)
 7. - [x] [RxSwift to Combine Cheatsheet](https://github.com/CombineCommunity/rxswift-to-combine-cheatsheet)
+8. [Using Combine](https://heckj.github.io/swiftui-notes/#reference-throttle)
 
 Combine - это фреймворк функционального [реактивного](https://github.com/eldaroid/iOSWiki/blob/master/DesignPattern/ReactiveProgramming.md) программирования, запущенный Apple на WWDC 2019 в качестве замены RxSwift. 
 
@@ -15,6 +16,9 @@ Combine - это фреймворк функционального [реакти
 ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/Combine.jpg?raw=true)
 
 ### [Publisher](https://developer.apple.com/documentation/combine/publisher)
+
+<details><summary>Open</summary>
+<p>
 
 **Publisher** — это начальная точка потока данных. По сути это объект, который создает какие-либо данные. Паблишером может быть любой объект, удовлетворяющий требованиям протокола Publisher, с двумя ассоциированными типами: Output и Failure.
 
@@ -38,18 +42,24 @@ let sequencePublisher = array.publisher
 
 Например, если мы захотим вывести все данные, полученные от паблишера (элементы массива), то нам потребуется подписчик.
 
-### Список Publisher`ов
+### Publishers
 
-Convenience Publishers: 
-* Future
-* Just(true) - создается определенный `Publisher<Bool, Never>`, который выдает единственное значение (true), и немедленно завершает работу
-* Deferred
-* Empty - который не выдает никаких значений и немедленно завершает
-* Fail - который не выдает никаких значений и немедленно завершается с ошибкой
-* Record
+| Combine | Combine x2 | SwiftUI | Foundation |
+|---|---|---|---|
+| Just(true) | - | @Published | [URLSession.dataTaskPublisher](https://heckj.github.io/swiftui-notes/#reference-datataskpublisher) |
+| Empty() | - | ObservableObject | [publisher on KVO instance](https://heckj.github.io/swiftui-notes/#reference-kvo-publisher) |
+| Fail() | - |  | [NotificationCenter](https://heckj.github.io/swiftui-notes/#reference-notificationcenter) |
+| Future | - |  | [Timer](https://heckj.github.io/swiftui-notes/#reference-timer) |
+| Deferred | - |  | [Result](https://heckj.github.io/swiftui-notes/#reference-result) |
+| Record | - |  |  |
 
+</p>
+</details>
 
 ### Операторы:
+
+<details><summary>Open</summary>
+<p>
 
 [Полный список Publisher Operators от Apple](https://developer.apple.com/documentation/combine/publishers-merge-publisher-operators)
 
@@ -67,9 +77,17 @@ Convenience Publishers:
 
 Controlling Timing операторы:
 
-* delay
-* debounce
-* throttle
+* delay - 
+* debounce - операция фильтрации. При получении значения делается пауза в заданный интервал времени и отправляется последнее и __**единственное**__ значение. Если в заданный интервал приходит новое значение, то отсчет паузы возобновляется
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/debounce.jpeg?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/debounce2.jpeg?raw=true)
+    > Пример: Панель поиска, где пользователи могут вводить поисковые запросы. Если пользователь продолжает печатать в течение n периода, период ожидания возобновляется, гарантируя, что вызов API будет выполнен только после небольшой паузы в наборе текста.
+* throttle - операция фильтрации. Cобирает несколько результатов с течением времени и отправляет один результат, но делает это с фиксированными временными окнами
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/throttle.jpeg?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/throttle2.jpeg?raw=true)
+    > Пример: Ккнопка, которую пользователи могут нажимать, вы хотите обрабатывать нажатия, но не допускать случайных множественных нажатий в быстрой последовательности. `throttle` гарантирует, что событие нажатия кнопки обрабатывается только один раз каждые 500 миллисекунд, независимо от того, сколько раз была нажата кнопка.
+    
+* measure interval -
 
 Объединяющие операторы:
 
@@ -80,7 +98,13 @@ Controlling Timing операторы:
 * .combineLatest
 * .zip
 
+</p>
+</details>
+
 ### [Subscriber](https://developer.apple.com/documentation/combine/subscriber)
+
+<details><summary>Open</summary>
+<p>
 
 **Subscriber** — это конечная точка потока данных, далее будем называть его подписчик. По сути это объект, который подписывается на паблишер и взаимодействуют с полученными и паблишера данными.
 
@@ -112,9 +136,8 @@ sequencePublisher
 func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable
 ```
 
-Subjects:
-* CurrentValueSubject - 
-* PassthroughSubject - 
+</p>
+</details>
 
 Методы: 
 
@@ -123,6 +146,7 @@ Subjects:
 `.setFailureType(to: Error.self)` - превращает `Publisher<Bool, Never>` в `Publisher<Bool, Error>`
 
 `.eraseToAnyPublisher()` - чтобы был AnyPublisher<>, добавлять в конец
+
 
 ### Combine в SwiftUI
 
