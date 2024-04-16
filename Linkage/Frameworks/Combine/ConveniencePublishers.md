@@ -10,9 +10,14 @@
 2. Publishers for closure:
     + `Future<Int, Never>` - он начинает выполняться сразу при инициализации, не дожидаясь подписчика. Подписчик может «пропустить» нужное ему событие.
     + `Deferred` - что заставить Future вести себя менее эгоистично и дождаться подписчика оборачиваем его в блок Deferred { }.
-3. Publishers for value: Subject — это паблишер, который позволяет отправлять в поток данных события извне ручками.
-    + PassthroughSubject -
-    + CurrentValueSubject -
+3. Publishers for value: `Subject` — это паблишер, который позволяет отправлять в поток данных события (`value`, `completion`) извне ручками. Могут поддерживать несколько подписчиков, что означает, что они находятся в отношениях «один ко многим подписчикам»
+    + `PassthroughSubject` -
+    + `CurrentValueSubject` -
+    + `@Published`
+4. ConnectablePublisher
+    + Autoconnect
+    + MakeConnectable
+    + Multicast
     
 
 ### Result
@@ -94,7 +99,7 @@ completion status: finished
 </p>
 </details>
 
-### Fail
+### Fail -
 
 <details><summary>Open</summary>
 <p>
@@ -148,6 +153,29 @@ completion status: finished
 <details><summary>Open</summary>
 <p>
 
+Помимо `Empty()`, вы можете добавить `.append(Empty)` к любому издателю, чтобы создать пустой паблишер:
+
+```swift
+Just(1)
+    .append(Empty(completeImmediately: false))
+    .sink(
+        receiveCompletion: { print("completion: \($0)") },
+        receiveValue: { print("value: \($0)") })
+```
+
+Output: `value: 2`
+
+```swift
+Just(1)
+    .append(Empty(completeImmediately: true))
+    .sink(
+        receiveCompletion: { print("completion: \($0)") },
+        receiveValue: { print("value: \($0)") })
+```
+
+Output: `value: 2 completion: finished`
+
+
 </p>
 </details>
 
@@ -156,15 +184,105 @@ completion status: finished
 <details><summary>Open</summary>
 <p>
 
-`Future<Int, Never>` - функция которая возвращает объект, начинает выполняться сразу при инициализации, не дожидаясь подписчика. Подписчик может «пропустить» нужное ему событие.
+`Future<Int, Never>` - в качестве параметра он принимает замыкание, и разработчики могут использовать promise внутри замыкания для отправки результата, выполняется сразу при инициализации, не дожидаясь подписчика. Подписчик может «пропустить» нужное ему событие.
+
+`Future` можно использваоть когда мы объединяем некоторые асинхронные задачи в издателе и получаем только один результат. например, получение данных из локальной базы данных или загрузка данных с удаленного сервера.
+
+```swift
+Future { promise in
+    AF.request("https://domain/path/to").response { response in
+        let id model = toModel(response) else {
+            promise(.success(model))
+        } else {
+            promise(.failure(someError))
+        }
+    }
+}.sink { x in
+    print(x) /// [model]
+}
+```
 
 </p>
 </details>
 
-### Deferred
+### Deferred-
 
 <details><summary>Open</summary>
 <p>
 
+1. [Использование промисов и фьючерсов в сочетании](https://www.donnywals.com/using-promises-and-futures-in-combine/)
+
 </p>
 </details>
+
+### PassthroughSubject
+
+<details><summary>Open</summary>
+<p>
+
+```swift
+let passthru = PassthroughSubject<Int, Never>()
+let c1 = passthru.sink { print($0) }
+let c2 = passthru.sink { print($0) }
+let c3 = passthru.sink { print($0) }
+passthru.send(1) /// [1,1,1]
+passthru.send(2) /// [2,2,2]
+```
+
+</p>
+</details>
+
+### CurrentValueSubject
+
+<details><summary>Open</summary>
+<p>
+
+CurrentValueSubject имеет начальное значение и обновляет его при вызове методов отправки. Это гарантирует, что подписчикам будет доставлено последнее значение сразу после оформления подписки.
+
+```swift
+let currentVal = CurrentValueSubject<Int, Never>(1)
+let c1 = currentVal.sink { print($0) } /// [1]
+let c2 = currentVal.sink { print($0) } /// [1]
+let c3 = currentVal.sink { print($0) } /// [1]
+currentVal.send(2) /// [2,2,2]
+currentVal.send(3) /// [3,3,3]
+```
+
+</p>
+</details>
+
+### @Published
+
+<details><summary>Open</summary>
+<p>
+
+Чаще всего @Published используется для изменения свойств ObservableObject, потому что @Published создаст внутри себя CurrentValueSubject, который будет отправлять события каждый раз, когда это свойство изменяется.
+
+ObservableObject использует в связке с @Published для агрегирования всех событий, сгенерированных @Published, что означает, что мы можем подписаться на издателя ObservableObject вместо подписки на каждое из его @Published. 
+
+Издатели (SwiftUI предлагает StateObject, ObservedObject и EnvironmentObject, все из которых подписываются на агрегированного издателя ObservableObject и автоматически обновляют пользовательский интерфейс).
+
+Имплементация @Published:
+
+```swift
+@propertyWrapper
+struct Published<T> {
+    
+    let currentValue: CurrentValueSubject<T, Never>
+    
+    init(wrappedValue: T) {
+        currentValue = CurrentValueSubject(wrappedValue)
+    }
+    
+    var wrappedValue: T {
+        get { currentValue.value }
+        set { currentValue.send(newValue) }
+    }
+    
+    var projectedValue: CurrentValueSubject<T, Never> { currentValue }
+}
+```
+
+</p>
+</details>
+

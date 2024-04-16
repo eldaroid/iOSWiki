@@ -11,7 +11,10 @@
 
 Combine - это фреймворк функционального [реактивного](https://github.com/eldaroid/iOSWiki/blob/master/DesignPattern/ReactiveProgramming.md) программирования, запущенный Apple на WWDC 2019 в качестве замены RxSwift. 
 
-Для того чтобы начать работать с Combine, необходимо познакомиться с тремя основными компонентами: паблишерами, подписчиками и операторами:
+Для того чтобы начать работать с Combine, необходимо познакомиться с тремя основными компонентами: 
+* Паблишеры - является источником событий, ответственным за отправку событий нисходящим каналам (оператору или подписчику)
+* Подписчик - несет ответственность за получение этих событий от восходящего канала (издателя или оператора)
+* Операторы - берет на себя ответственность за обработку событий от восходящих потоков (Издателя или Оператора) и их доставку к нижестоящим (Подписчикам)
 
 ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/Combine.jpg?raw=true)
 
@@ -98,6 +101,17 @@ Controlling Timing операторы:
 * .combineLatest
 * .zip
 
+TDB: 
+
+Методы: 
+
+`.receive(on: DispatchQueue.main)` - все, что влияет на UI, нужно делать в главном потоке. Вызывать перед `.sink`
+
+`.setFailureType(to: Error.self)` - превращает `Publisher<Bool, Never>` в `Publisher<Bool, Error>`
+
+`.eraseToAnyPublisher()` - чтобы был AnyPublisher<>, добавлять в конец
+
+
 </p>
 </details>
 
@@ -106,9 +120,9 @@ Controlling Timing операторы:
 <details><summary>Open</summary>
 <p>
 
-**Subscriber** — это конечная точка потока данных, далее будем называть его подписчик. По сути это объект, который подписывается на паблишер и взаимодействуют с полученными и паблишера данными.
+**Subscriber** — это конечная точка потока данных, далее будем называть его подписчик. По сути это объект, который подписывается на паблишер и взаимодействуют с полученными и паблишера данными. В Combine, имеется 2 встроенных подписчика: Sink и Assign, оба соответствуют протоколу Subscriber.
 
-Он представлен протоколом с двумя ассоциированными типами: `Input` и `Failure`.
+Протокол представлен с двумя ассоциированными типами: `Input` и `Failure`.
 
 `Input` — данные определенного типа, который он может обработать.
 
@@ -120,6 +134,8 @@ public protocol Subscriber<Input, Failure> : CustomCombineIdentifierConvertible 
     associatedtype Failure: Error
 }
 ```
+
+#### Sink
 
 Пример:
 
@@ -136,21 +152,27 @@ sequencePublisher
 func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable
 ```
 
+#### Assign
+
+В большинстве случаев Sink достаточно. Но когда мы работаем над обновлением свойств экземпляра путем подписки на Publisher. Для нас есть более простой подписчик под названием Assign. Мы можем использовать Assign для обновления свойств, указав его KeyPath.
+
+Пример:
+```swift
+class Person {
+    @Published var name = "Yanbo Sha"
+}
+class View {
+    var text = ""
+}
+let view = View()
+let person = Person()
+let cancellable = person.$name.assign(to: \.text, on: view)
+person.name = "Rock"
+print(view.text) /// "Rock" 
+```
+
 </p>
 </details>
-
-Методы: 
-
-`.receive(on: DispatchQueue.main)` - все, что влияет на UI, нужно делать в главном потоке. Вызывать перед `.sink`
-
-`.setFailureType(to: Error.self)` - превращает `Publisher<Bool, Never>` в `Publisher<Bool, Error>`
-
-`.eraseToAnyPublisher()` - чтобы был AnyPublisher<>, добавлять в конец
-
-
-### Combine в SwiftUI
-
-Например, и @Published оболочка свойств, и ObservableObject протоколы исходят из Combine, но нам не нужно было знать об этом, потому что при импорте SwiftUI мы также неявно импортируем части Combine.
 
 ### На будущее:
 
