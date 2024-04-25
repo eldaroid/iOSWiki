@@ -82,9 +82,7 @@
     7. [Optinal](/Swift/Optional.md)
     8. [Swift](/Swift/Swift.md)
 
-На будущее:
 
-[Курсы по ios от pointfree](https://www.pointfree.co/pricing)
 
 // TODO:
 !! Изучить и записать - associated type в Protocol, и associated value в enum
