@@ -19,7 +19,7 @@ protocol CollectionType : SequenceType {
 
 * **Array (массив)** - сохраняют свой порядок и могут содержать дубликаты. Массивы в свифте реализованы как структура;
 
-1. [Вся правда о массивах](https://www.youtube.com/watch?v=47_LhSf-ago)
+  1. [Вся правда о массивах](https://www.youtube.com/watch?v=47_LhSf-ago)
 
     <details><summary>Open</summary>
     <p>
@@ -38,6 +38,8 @@ protocol CollectionType : SequenceType {
       
     </p>
     </details>
+
+---
 
 * **Set (множество)** - неупорядочены и не могут содержать дубликатов. Все объекты внутри `Set` должны конфортить протокол Hashable. Set в Swift реализованы как структуры;
 
@@ -60,6 +62,8 @@ protocol CollectionType : SequenceType {
     </p>
     </details>
 
+---
+
 * **Dictionaries (словари) (Hash Map)** - неупорядоченная структура данных, которая позволяет хранить пары «ключ — значение». Dictionary в Swift реализованы как структуры;
 
 
@@ -78,7 +82,11 @@ protocol CollectionType : SequenceType {
     </p>
     </details>
 
+---
+
 * **String** [снова являются](https://developer.apple.com/documentation/swift/string) являются коллекциями. Это означает, что вы можете переворачивать их, циклически перебирать их посимвольно, использовать map() и flatMap() и многое другое.
+
+---
 
 Новые невстроенные коллекции swift:
 

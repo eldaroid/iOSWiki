@@ -2,9 +2,9 @@
 
 Protocol содержит сигнатуры функций и свойств, которые должны быть реализованы соответствующими объектами, структурами, enum
 
-#### Inheritance в протоколах
+### Inheritance в протоколах
 
-В отличии от [классов](/Swift/DataStructures/StructAndClass/Class/Class.md) (у которых методы всегда вызываются у child объектов), протоколы могут вызвать методы и у parent, если не полагаться на type inference (аннотация типов `let tmp: String`).
+В отличии от [классов](/Swift/DataStructures/ReferenceTypes/Class/Class.md) (у которых методы всегда вызываются у child объектов), протоколы могут вызвать методы и у parent, если не полагаться на type inference (аннотация типов `let tmp: String`).
 
 <details><summary>Пример1</summary>
 <p>
@@ -25,10 +25,10 @@ final class ParentClass: WeCanDrow {
     }
 }
 
-let instanceOfProtocol: WeCanDrow  = ParentClass()
-let instanceOfClass: ParentClass  = ParentClass()
+let instanceOfProtocol: WeCanDrow = ParentClass()
+let instanceOfClass: ParentClass = ParentClass()
 
-// direct method dispatch
+// direct (static) method dispatch
 instanceOfProtocol.draw() // func draw in protocol
 
 // virtual table method dispatch
@@ -63,8 +63,8 @@ final class ParentClass: WeCanDrow {
     }
 }
 
-let instanceOfProtocol: WeCanDrow  = ParentClass()
-let instanceOfClass: ParentClass  = ParentClass()
+let instanceOfProtocol: WeCanDrow = ParentClass()
+let instanceOfClass: ParentClass = ParentClass()
 
 // witness table method dispatch
 instanceOfProtocol.draw() // func draw in class
@@ -79,51 +79,6 @@ instanceOfClass.draw() // func draw in class
 
 </p>
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details><summary>Open</summary>
-<p>
-
-</p>
-</details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #### Optional

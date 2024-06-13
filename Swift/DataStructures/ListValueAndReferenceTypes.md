@@ -1,15 +1,12 @@
 ## Value and Reference Types
 
-|[Value Types](./ValueTypes/) (хранятся в [стеке](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.2%20Stack.md)) | [Reference Types](./ReferenceTypes/) (хранятся в [куче](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md))|
+|[Value Types](/Swift/DataStructures/ValueTypes/) (хранятся в [стеке](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.2%20Stack.md)) | [Reference Types](/Swift/DataStructures/ReferenceTypes/) (хранятся в [куче](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md))|
 |------------|------------|
-| [Struct](./Struct.md) | [Class](./Class/Class.md)|
+| [Struct](/Swift/DataStructures/ValueTypes/Struct.md) | [Class](/Swift/DataStructures/ReferenceTypes/Class/Class.md)|
 | Enum | Function|
 | Double | Closure|
-| String | |
-| [Set](../CollectionsAndTuple/AssociatedArray.md) | |
-| Tuple | |
-| Array | |
-| Dictionary | |
+| [Tuple](/Swift/DataStructures/ValueTypes/CollectionsAndTuple/Tuple.md) | |
+| [Collections](/Swift/DataStructures/ValueTypes/CollectionsAndTuple/Collections.md): [Set](/Swift/DataStructures/ValueTypes/CollectionsAndTuple/AssociatedArray.md), String, Array, [Dictionary](/Swift/DataStructures/ValueTypes/CollectionsAndTuple/AssociatedArray.md) | |
 
 ### Компилятор Swift может упаковывать **типы значений** или [протоколы](/Swift/Protocol/Protocol.md) и [generic](/Swift//AbstractMechanism/Generics.md), размещая их в [куче](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md):
 
@@ -20,13 +17,13 @@
 ```swift
 struct Bas<T> {
     var x: T
-    init(xx: T) {
+    init(xx: T) {  
         x = xx
     }
 }
 ```
 
-4) Без capture list происходит [захватывание](https://shantaram-kokate-swift.medium.com/capture-list-in-swift-a7d7d1328c84) value type как [strong ссылку](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.3%20ReferenceCounting/3.1.3.1%20RefCountIniOS/3.1.3.1.4%20CaptureList/Strong.md). И наоборот, с `[variable] in` создается копия (локальная переменная) внутри замыкании.
+4) Без [capture list](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.3%20ReferenceCounting/3.1.3.1%20RefCountIniOS/3.1.3.1.4%20CaptureList/) происходит [захватывание](https://shantaram-kokate-swift.medium.com/capture-list-in-swift-a7d7d1328c84) value type как [strong ссылку](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.3%20ReferenceCounting/3.1.3.1%20RefCountIniOS/3.1.3.1.4%20CaptureList/Strong.md). И наоборот, с `[variable] in`([capture list](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.3%20ReferenceCounting/3.1.3.1%20RefCountIniOS/3.1.3.1.4%20CaptureList/)) создается копия (локальная переменная) внутри замыкании.
 5) Если от значения не требуется ссылка на местоположение (например, получение ссылки на структуру с помощью &), структура может быть расположена полностью в регистрах: при работе с небольшими структурами ее члены могут быть размещены в регистрах процессора, так что она даже не живет в памяти. (Это особенно актуально для небольших, возможно, недолговечных типов значений, таких как `Ints` и `Doubles`, которые гарантированно помещаются в регистры). [Ссылка](https://stackoverflow.com/questions/71071416/stack-and-heap-misunderstanding-in-swift)
 6) Большие типы значений действительно выделяются в [heap](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.1%20RandomAccessMemory/3.1.1.3%20Heap.md): хотя это деталь реализации Swift, которая теоретически может измениться в будущем, структуры, размер которых превышает 3 машинных слова (например, больше 12 байт на 32-битной машине или 24 байт на 64-битной машине), практически гарантированно будут выделены и сохранены в куче. Это не противоречит ценности типа значения: его по-прежнему можно произвольно копировать по желанию компилятора, и компилятор делает очень хорошую работу, чтобы избежать ненужных выделений там, где это возможно.
 
@@ -39,9 +36,7 @@ struct Bas<T> {
 
 > Если размер вашего типа значения может быть определен во время компиляции, или если ваш тип значения не содержит рекурсию / не содержится ссылочным типом
 
-Эта оптимизация происходит на этапе генерации [SIL](https://github.com/apple/swift/blob/main/docs/SIL.rst).
-
-> [Swift Intermediate Language (SIL)](https://github.com/apple/swift/blob/main/docs/SIL.rst) - это промежуточный язык высокого уровня, используемый компилятором Swift, заполняющий пробел между AST и LLVM IR, подходящий для дальнейшего анализа и оптимизации кода Swift.
+Эта оптимизация происходит на этапе генерации [SIL](/Swift/Swift.md)
 
 ![TypesOfFiles](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/TypesOfFiles.jpg?raw=true)
 

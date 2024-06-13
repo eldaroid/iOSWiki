@@ -10,6 +10,8 @@
     7. :heavy_check_mark: [Variadic functions](https://www.hackingwithswift.com/sixty/5/7/variadic-functions)
     8. :heavy_check_mark: [When to use variadic functions](https://www.hackingwithswift.com/quick-start/understanding-swift/when-to-use-variadic-functions)
 
+> [Swift Intermediate Language (SIL)](https://github.com/apple/swift/blob/main/docs/SIL.rst) - это промежуточный язык высокого уровня, используемый компилятором Swift, заполняющий пробел между AST и LLVM IR, подходящий для дальнейшего анализа и оптимизации кода Swift.
+
 ## Атрибуты 
 
 1. :heavy_check_mark: [Attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html)
@@ -18,4 +20,10 @@
 
 Атрибуты: 
 
-@available - атрибут, чтобы аннотировать API с информацией о доступности, например, устарел ли API в версии. для использования API требуется версия Swift выше 5.4 и т. д. Рассмотрим несколько конкретных аспектов:
+* **@available** - атрибут, чтобы аннотировать API с информацией о доступности, например, устарел ли API в версии. для использования API требуется версия Swift выше 5.4 и т. д.
+
+* **@escaping** - 
+
+* **@objc** -
+
+* **@inlinable** -

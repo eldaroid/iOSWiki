@@ -12,7 +12,7 @@
 
 1. :heavy_check_mark: [final](https://www.hackingwithswift.com/sixty/8/4/final-classes)
 
-Final class меняет метод диспатч на дайрект (оптимизация). Без final он будет думать, что мы можем наследовать и хранить в Table Dispatch.
+Final class меняет метод диспатч на дайрект (оптимизация). Без final он будет думать, что мы можем наследовать и хранить в [Table Dispatch](/Swift/MethodDispatch/MethodDispatch.md).
 
 ## This code prints the same output twice – true or false?
 
@@ -24,8 +24,8 @@ var venusDeMilo = Statue()
 venusDeMilo.sculptor = "Alexandros of Antioch"
 var david = Statue()
 david.sculptor = "Michaelangelo"
-print(venusDeMilo.sculptor)
-print(david.sculptor)
+print(venusDeMilo.sculptor) // Alexandros of Antioch
+print(david.sculptor) // Michaelangelo
 ```
 >  This creates two different statues, so it prints two different sculptors
 
@@ -37,8 +37,8 @@ var voyager = Starship()
 voyager.maxWarp = 9.975
 var enterprise = voyager
 enterprise.maxWarp = 9.6
-print(voyager.maxWarp)
-print(enterprise.maxWarp)
+print(voyager.maxWarp) // 9.6
+print(enterprise.maxWarp) // 9.6
 ```
 
 ## Final
