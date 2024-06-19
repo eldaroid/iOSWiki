@@ -2,7 +2,7 @@
 
 Объекты Swift не уничтожаются сразу. Вместо этого они проходят 5 этапов своего жизненного цикла: live → deiniting → deinited → freed → dead:
 
-![LifecycleOfObject](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Concurrency/Si  deTables.png?raw=true)
+![LifecycleOfObject](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Concurrency/SideTables.png?raw=true)
 
 1) На Live состоянии объект жив. Его счетчики ссылок выставлены по 1. Если есть указатель на слабую ссылку, то создается side table
 
