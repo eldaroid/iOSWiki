@@ -21,26 +21,28 @@
 
 [Согласно эплу](https://developer.apple.com/videos/play/wwdc2023/10156/), существую виды анимации:
 
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/AnimationStyles.png?raw=true)
+
 * Timing curve (по дефолту duration=0.35сек.): 
-    * default
+    * default 
     * linear
     * easeIn - начинается медленно и ускоряется по мере приближения к концу
     * easeOut - начинается быстро и замедляется по мере приближения к концу последовательности
     * easeInOut - начинается медленно, затем ускоряется, а затем снова замедляется
 
-* Spring
+* Spring (эффект пружины)
     * default spring
 
-    * smooth // нет отскока
+    * smooth // нет отскока (no bounce)
         ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/smooth.png?raw=true)
     
-    * snappy // маленький отскок 
+    * snappy // маленький отскок (small bounce)
         ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/snappy.png?raw=true)
     
-    * bouncy // средний отскок
+    * bouncy // средний отскок (medium bounce)
         ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/bounce.png?raw=true)
     
-    * interpolating spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
+    * [interpolating](/Swift/Glossary.md) spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
 
 * [Higher order](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.1%20Declarative/2.2.2.1.1%20FunctionalProgramming(FP).md): 
     * speed
@@ -49,6 +51,6 @@
 
 
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/AnimationStyles.png?raw=true)
-
 Просмотр демонстрации: [Project](./AnimationProject/)
+
+----

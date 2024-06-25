@@ -1,5 +1,9 @@
 import SwiftUI
+import Combine
 
+// RecordTimingCurve используется для отслеживания текущего
+// значения анимации и вызова функции onChange
+// при каждом изменении этого значения.
 struct RecordTimingCurve: GeometryEffect {
     var onChange: (CGFloat) -> () = { _ in () }
     var animatableData: CGFloat = 0 {
@@ -13,8 +17,8 @@ struct RecordTimingCurve: GeometryEffect {
     }
 }
 
-import Combine
-
+// Класс, который отслеживает и сохраняет
+// данные анимации для последующего отображения.
 final class AnimationTrace: ObservableObject {
     let objectWillChange = PassthroughSubject<(), Never>()
     var data: [(time: CFTimeInterval, value: CGFloat)] = []
@@ -26,22 +30,22 @@ final class AnimationTrace: ObservableObject {
     var endTime: CFTimeInterval {
         data.last?.time ?? 0
     }
-        
+    
     func record(_ value: CGFloat) {
         data.append((CACurrentMediaTime(), value))
-//        if value == 1 {
-            DispatchQueue.main.async {
-                print("Data count: \(self.data.count)")
-                self.objectWillChange.send()
-            }
-//        }
+        DispatchQueue.main.async {
+            print("Data count: \(self.data.count)")
+            self.objectWillChange.send()
+        }
     }
     func reset() {
         data = []
     }
 }
 
-struct Trace: Shape {
+// Структура, реализующая протокол Shape,
+// которая строит путь на основе значений анимации.
+struct TracePath: Shape {
     var values: [(CGFloat, CGFloat)] // the second component should be in range 0...1
     
     func path(in rect: CGRect) -> Path {
@@ -62,7 +66,6 @@ struct Trace: Shape {
 let animations: [(String, Animation)] = [
     // MARK: - Timing curve
     ("default", .default),
-    (".default.repeatCount(3)", Animation.default.repeatCount(3)),
     ("linear(duration: 1)", .linear(duration: 1)),
     (".easeIn(duration: 1)", .easeIn(duration: 1)),
     (".easeOut(duration: 1)", .easeOut(duration: 1)),
@@ -78,6 +81,7 @@ let animations: [(String, Animation)] = [
     ("interactiveSpring(response: 3, dampingFraction: 2, blendDuration: 1)", .interactiveSpring(response: 3, dampingFraction: 2, blendDuration: 1)),
     
     // MARK: - Higher order
+    (".default.repeatCount(3)", Animation.default.repeatCount(3)),
     ("delay", Animation.default.delay(2)),
     ("speed", Animation.default.repeatForever()),
 ]
@@ -100,19 +104,19 @@ struct ContentView: View {
                     self.trace.record($0)
                 }, animatableData: animating ? 1 : 0))
             VStack {
-                         Trace(values: trace.data.map {
-                             (CGFloat($0), $1)
-                         })
-                             .stroke(Color.red, style: .init(lineWidth: 2))
-                             .frame(height: 150)
-                             .background(Rectangle().stroke(Color.gray, style: .init(lineWidth: 1)))
-                         HStack {
-                             Text("0")
-                             Spacer()
-                             Text("\(trace.endTime - trace.startTime)")
-                             
-                         }
-                     }.frame(width: 200)
+                TracePath(values: trace.data.map {
+                    (CGFloat($0), $1)
+                })
+                .stroke(Color.red, style: .init(lineWidth: 2))
+                .frame(height: 150)
+                .background(Rectangle().stroke(Color.gray, style: .init(lineWidth: 1)))
+                HStack {
+                    Text("0")
+                    Spacer()
+                    Text("\(trace.endTime - trace.startTime)")
+                    
+                }
+            }.frame(width: 200)
             
             Spacer()
             Picker(selection: $selectedAnimationIndex, label: EmptyView(), content: {
@@ -127,7 +131,7 @@ struct ContentView: View {
                 withAnimation(self.selectedAnimation.1.speed(self.slowAnimations ? 0.25 : 1), {
                     self.animating = true
                 })
-            }, label: { Text("Animate") })         
+            }, label: { Text("Animate") })
             Toggle(isOn: $slowAnimations, label: { Text("Slow Animations") })
         }
     }
