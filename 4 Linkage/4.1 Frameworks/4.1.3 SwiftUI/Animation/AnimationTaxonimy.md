@@ -7,19 +7,22 @@
 
 Типы анимации:
 
-* Explicit Animation (Явная анимация) = withAnimation;
+<div style="text-align: center;">
+    <img src="https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/TypesOfAnimation.jpeg?raw=true" alt="Описание изображения" style="width: 50%; height: auto;">
+</div>
 
-    Определяется с помощью замыкания withAnimation {…} , и анимироваться будут только значения параметров, измененные внутри фигурных скобок. По сути, здесь мы явно просим SwiftUI анимировать изменения, происходящие в результате изменения состояния.
+* Explicit Animation (Явная анимация) = `withAnimation`;
+
+    Определяется с помощью замыкания `withAnimation {…}` , и анимироваться будут только значения параметров, измененные внутри фигурных скобок. По сути, здесь мы явно просим SwiftUI анимировать изменения, происходящие в результате изменения состояния.
 
 * Implicit Animation (Неявная анимация);
 
     Cамый быстрый способ реализовать обзоры анимации. Это самый простой вид анимации в SwiftUI, и модификатор используется для любых изменений, происходящих внутри представления (которые поддерживают эту анимацию: offset, opacity, scaleEffect, rotationEffect, frame, color, border, shadow, gradient).
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/TypesOfAnimation.jpeg?raw=true)
 
 
 
-[Согласно эплу](https://developer.apple.com/videos/play/wwdc2023/10156/), существую виды анимации:
+[Согласно эплу](https://developer.apple.com/videos/play/wwdc2023/10156/), существую типы анимации:
 
 ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/AnimationStyles.png?raw=true)
 
@@ -42,7 +45,7 @@
     * bouncy // средний отскок (medium bounce)
         ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/bounce.png?raw=true)
     
-    * [interpolating](/Swift/Glossary.md) spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
+    * [interpolating](/Swift/Glossary.md#экстраполяцияинтерполяция) spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
 
 * [Higher order](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.1%20Declarative/2.2.2.1.1%20FunctionalProgramming(FP).md): 
     * speed
