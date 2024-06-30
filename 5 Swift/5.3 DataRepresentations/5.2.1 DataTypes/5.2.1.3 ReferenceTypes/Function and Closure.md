@@ -272,7 +272,7 @@ result("London")     // 3. I'm going to London
 
 ### 4.
 
-C замыканиями нужно быть осторожным, они создают retain cycle:
+C замыканиями нужно быть осторожным, они создают [retain cycle](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.3%20ReferenceCounting/3.1.3.1%20RefCountIniOS/3.1.3.1.4%20CaptureList/3.1.3.1.4.1%20RetainCycle.md):
 
 ```swift
 class TeamMember {
