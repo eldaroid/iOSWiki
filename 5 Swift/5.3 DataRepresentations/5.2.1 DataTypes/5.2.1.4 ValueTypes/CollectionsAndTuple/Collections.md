@@ -97,3 +97,5 @@ protocol CollectionType : SequenceType {
 * **[Deque](https://github.com/apple/swift-collections/blob/main/Documentation/Deque.md)** - реализует упорядоченную коллекцию с произвольным доступом, которая поддерживает эффективные вставки и удаления с обоих концов. По сути тот же массив;
 
 > To use OrderedSet, first add the swift-collections Swift package to your project. Then, import the OrderedCollections module: `import OrderedCollections`
+
+---
