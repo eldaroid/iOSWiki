@@ -1,6 +1,6 @@
 ## URI/URL/URN
 
-![](https://habrastorage.org/r/w1560/getpro/habr/upload_files/dcc/dc2/55f/dccdc255fb7123a0bbdad37bd64fe51d.png)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URL2.jpg?raw=true)
 
 **URI (Uniform Resource Identifier)** - унифицированный идентификатор ресурса или полный адрес, по которому происходит обращение. В кратце, он позволяет идентифицировать какой-либо ресурс: физический (https://assets.habr.com/habr-web/img/favicons/favicon-16.png - файл на сервере) или абстрактный (https://www.youtube.com/watch?v=e_atyw0IDqg - его не существует).
 
@@ -8,9 +8,11 @@
 
 **URL (Uniform Resource Locator)** - унифицированный локатор ресурса или комбинация протокола и доменного имени. Пример: https://www.youtube.com. Аналогия URL из жизни: город N/улица M/квартира L
 
-**Endpoint** - часть адреса, идущая после доменного имени (например, после .com/). Пример: /watch?v=e_atyw0IDqg
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URLSchemeIniOS.png?raw=true)
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/URL2.jpg?raw=true)
+### Составляющие URI
+
+**Endpoint** - часть адреса, идущая после доменного имени (например, после .com/). Пример: /watch?v=e_atyw0IDqg
 
 **Query-параметры** - часть URI, следующая после ?. Пример: ?v=e_atyw0IDqg
 
