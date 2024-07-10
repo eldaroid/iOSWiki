@@ -1,6 +1,6 @@
 ## URI/URL/URN
 
-![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/FullURISchem.jpg?raw=true)
+![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/ComputerScience/NewFullURISchem.jpg?raw=true)
 
 **URI (Uniform Resource Identifier)** - унифицированный идентификатор ресурса или полный адрес, по которому происходит обращение. В кратце, он позволяет идентифицировать какой-либо ресурс: физический (https://assets.habr.com/habr-web/img/favicons/favicon-16.png - файл на сервере) или абстрактный (https://www.youtube.com/watch?v=e_atyw0IDqg - его не существует).
 
