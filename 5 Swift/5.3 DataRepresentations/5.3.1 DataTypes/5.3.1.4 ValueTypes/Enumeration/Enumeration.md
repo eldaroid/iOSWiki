@@ -25,17 +25,7 @@ enum withAssociateValue {
 }
 ```
 
-##
-
-What is raw value and associated value enum in Swift?
-
-A raw value enum in Swift is an enum where each case has a pre-defined raw value. An associated value enum is an enum where each case has a value associated with it.
-
-What are enum associated values?
-
-Enum associated values are values that are associated with each case of an enum. They can be of any type and are used to provide additional information about the case.
-
-## Пользовательские операторы (infix, prefix, postfix operator)
+### Пользовательские операторы (infix, prefix, postfix operator)
 
 Пользовательские операторы перечисления могут быть полезными для улучшения читаемости и удобства вашего кода. Давайте рассмотрим подробные примеры пользовательских операторов перечисления.
 
@@ -79,3 +69,23 @@ if lowPriority <<< mediumPriority {
 
 Оператор для объединения имен файлов:
 Предположим, у вас есть перечисление `File`, которое представляет файлы, и вы хотите объединить их имена с помощью оператора `+`:
+
+
+### Использование associatedtype с ассоциированными значениями
+
+
+# TODO: https://habr.com/ru/articles/759842/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
