@@ -127,7 +127,7 @@ let crusherScore = scores["Crusher"] ?? 0
 let crusherScore = scores["Crusher", default: 0]
 ```
 
-27)_**Optional pattern** — безопасно.
+7)_**Optional pattern** — безопасно.
 ```swift
 if case let a? = x {
   print(a)

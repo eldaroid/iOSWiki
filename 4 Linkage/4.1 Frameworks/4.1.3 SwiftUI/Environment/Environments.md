@@ -117,6 +117,23 @@ struct ArticleView: View {
 
 Значительным преимуществом использования Environment и отказа от передачи ObservableObject через метод init представления является внутреннее хранилище SwiftUI. SwiftUI хранит Environment в специальной памяти фреймворка за пределами представления. Это дает неявный доступ к Environment , специфичному для представления , для всех дочерних представлений.
 
+---
+---
+
+!Прочитать про keyPath: https://www.swiftbysundell.com/articles/the-power-of-key-paths-in-swift/
+
+!Прочитать про что выбрать Observed/Environment: https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
+
+
+!The SwiftUI Environment: https://www.fivestars.blog/articles/swiftui-environment-propagation/
+
+!Добавить пункты когда про Environments буду писать: https://useyourloaf.com/blog/swiftui-custom-environment-values/
+
++++ https://www.fivestars.blog/articles/custom-environment-values-cheatsheet/ :: 
+
+[1](https://www.fivestars.blog/articles/swiftui-environment-propagation/), [2](https://www.fivestars.blog/articles/swiftui-environment-propagation-2/), [3](https://www.fivestars.blog/articles/swiftui-environment-propagation-3/), [4](https://www.fivestars.blog/articles/environmentvalues/), [5](https://www.fivestars.blog/articles/how-to-define-environment-values/).
+
+[The power of Environment in SwiftUI](https://swiftwithmajid.com/2019/08/21/the-power-of-environment-in-swiftui/)
 
 ---
 
