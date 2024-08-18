@@ -6,79 +6,49 @@ Protocol содержит сигнатуры функций и свойств, �
 
 В отличии от [классов](/Swift/DataStructures/ReferenceTypes/Class/Class.md) (у которых методы всегда вызываются у child объектов), протоколы могут вызвать методы и у parent, если не полагаться на type inference (аннотация типов `let tmp: String`).
 
-<details><summary>Пример1</summary>
-<p>
 
 ```swift
-protocol WeCanDrow {}
-
-extension WeCanDrow {
+protocol DrowProtocol { func draw() }
+extension DrowProtocol {
     func draw() {
         print("func draw in protocol")
     }
 }
 
-
-final class ParentClass: WeCanDrow {
-    func draw() {
-        print("func draw in class")
+extension DrowProtocol {
+    func pointing() {
+        print("func pointing in protocol")
     }
 }
 
-let instanceOfProtocol: WeCanDrow = ParentClass()
-let instanceOfClass: ParentClass = ParentClass()
-
-// direct (static) method dispatch
-instanceOfProtocol.draw() // func draw in protocol
+final class ParentClass: DrowProtocol {
+    func draw() {
+        print("func draw in class")
+    }
+    
+    func pointing() {
+        print("func pointing in class")
+    }
+}
 
 // virtual table method dispatch
-instanceOfClass.draw() // func draw in class
+let instanceOfClass: ParentClass = ParentClass()
+instanceOfClass.draw()     // func draw in class
+instanceOfClass.pointing() // func pointing in class
+
+let instanceOfProtocol: DrowProtocol = ParentClass()
+// witness table method dispatch
+instanceOfProtocol.draw()     // func draw in class
+// direct (static) method dispatch
+instanceOfProtocol.pointing() // func pointing in protocol
 ```
 
 У extension протоколов [static method dispatch](/Swift/MethodDispatch/MethodDispatch.md) работает таким образом, что уже во время сборки компилятор знает, что вызывать и когда (те. в данном случае отдает приоритет **типу** для вызова выполнения адреса инструкций).
-
-У классов [virtual table method dispatch](/Swift/MethodDispatch/MethodDispatch.md) отдается приоритет всегда child объекту.
-
-</p>
-</details>
-
-<details><summary>Пример2</summary>
-<p>
-
-
-```swift
-// разница здесь
-protocol WeCanDrow { func draw() }
-
-extension WeCanDrow {
-    func draw() {
-        print("func draw in protocol")
-    }
-}
-
-
-final class ParentClass: WeCanDrow {
-    func draw() {
-        print("func draw in class")
-    }
-}
-
-let instanceOfProtocol: WeCanDrow = ParentClass()
-let instanceOfClass: ParentClass = ParentClass()
-
-// witness table method dispatch
-instanceOfProtocol.draw() // func draw in class
-
-// virtual table method dispatch
-instanceOfClass.draw() // func draw in class
-```
 
 У протоколов [witness table method dispatch](/Swift/MethodDispatch/MethodDispatch.md) производит вызов функции из таблицы, которая хранит сначала реализацию класса, потом уже   протокола.
 
 У классов [virtual table method dispatch](/Swift/MethodDispatch/MethodDispatch.md) отдается приоритет всегда child объекту.
 
-</p>
-</details>
 
 
 #### Optional
