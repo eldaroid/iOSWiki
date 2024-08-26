@@ -8,39 +8,45 @@ Protocol содержит сигнатуры функций и свойств, �
 
 
 ```swift
-protocol DrowProtocol { func draw() }
-extension DrowProtocol {
-    func draw() {
-        print("func draw in protocol")
+protocol MyProtocol {
+    func method1()
+    func method3()
+}
+extension MyProtocol {
+   func method1() {
+     print("method1 in protocol")
+    }
+}
+extension MyProtocol {
+   func method2() {
+     print("method2 in protocol")
     }
 }
 
-extension DrowProtocol {
-    func pointing() {
-        print("func pointing in protocol")
-    }
+class MyClass: MyProtocol {
+  func method1() {
+     print("method1 in class")
+  }
+  func method2() {
+     print("method2 in class")
+  }
+  func method3() {
+     print("method3 in class")
+  }
 }
 
-final class ParentClass: DrowProtocol {
-    func draw() {
-        print("func draw in class")
-    }
-    
-    func pointing() {
-        print("func pointing in class")
-    }
-}
-
-// virtual table method dispatch
-let instanceOfClass: ParentClass = ParentClass()
-instanceOfClass.draw()     // func draw in class
-instanceOfClass.pointing() // func pointing in class
-
-let instanceOfProtocol: DrowProtocol = ParentClass()
+let instOfProtocol: MyProtocol = MyClass()
 // witness table method dispatch
-instanceOfProtocol.draw()     // func draw in class
+instOfProtocol.method1() // method1 in class
 // direct (static) method dispatch
-instanceOfProtocol.pointing() // func pointing in protocol
+instOfProtocol.method2() // method2 in protocol
+instOfProtocol.method3() // method3 in class
+print("--- ---")
+let instOfClass: MyClass = MyClass()
+// virtual table method dispatch
+instOfClass.method1() // method1 in class
+instOfClass.method2() // method2 in class
+instOfClass.method3() // method3 in class
 ```
 
 У extension протоколов [static method dispatch](/Swift/MethodDispatch/MethodDispatch.md) работает таким образом, что уже во время сборки компилятор знает, что вызывать и когда (те. в данном случае отдает приоритет **типу** для вызова выполнения адреса инструкций).
