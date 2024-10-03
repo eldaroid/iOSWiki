@@ -166,3 +166,5 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+# Obsidian https://obsidian.md/
+.obsidian/
