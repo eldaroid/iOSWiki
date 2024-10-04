@@ -4,9 +4,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/eldaroid/iOSWiki)]()
 [![Last Commit](https://img.shields.io/github/last-commit/eldaroid/iOSWiki)]()
 
-# 📝 Structure of Content
-
-# Project tree
+# 📝 Structure of iOSWiki Content
 
 * [1 Common](1%20Common/)
   * [1.1 Configs](1%20Common%2F1.1%20Configs/)
@@ -164,37 +162,6 @@
     * [4.1.3 SwiftUI](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI/)
       * [Animation](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation/)
         * [AnimationProject](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject/)
-          * [Animation](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation/)
-            * [Animation.entitlements](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAnimation.entitlements)
-            * [AnimationApp.swift](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAnimationApp.swift)
-            * [Assets.xcassets](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets/)
-              * [AccentColor.colorset](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets%2FAccentColor.colorset/)
-                * [Contents.json](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets%2FAccentColor.colorset%2FContents.json)
-              * [AppIcon.appiconset](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets%2FAppIcon.appiconset/)
-                * [Contents.json](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets%2FAppIcon.appiconset%2FContents.json)
-              * [Contents.json](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FAssets.xcassets%2FContents.json)
-            * [ContentView.swift](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FContentView.swift)
-            * [Preview Content](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FPreview%20Content/)
-              * [Preview Assets.xcassets](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FPreview%20Content%2FPreview%20Assets.xcassets/)
-                * [Contents.json](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation%2FPreview%20Content%2FPreview%20Assets.xcassets%2FContents.json)
-          * [Animation.xcodeproj](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj/)
-            * [project.pbxproj](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.pbxproj)
-            * [project.xcworkspace](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace/)
-              * [contents.xcworkspacedata](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fcontents.xcworkspacedata)
-              * [xcshareddata](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcshareddata/)
-                * [IDEWorkspaceChecks.plist](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcshareddata%2FIDEWorkspaceChecks.plist)
-                * [swiftpm](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcshareddata%2Fswiftpm/)
-                  * [configuration](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcshareddata%2Fswiftpm%2Fconfiguration/)
-                    * [*](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcshareddata%2Fswiftpm%2Fconfiguration%2F%2A)
-              * [xcuserdata](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcuserdata/)
-                * [eldarpopov.xcuserdatad](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcuserdata%2Feldarpopov.xcuserdatad/)
-                  * [UserInterfaceState.xcuserstate](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fproject.xcworkspace%2Fxcuserdata%2Feldarpopov.xcuserdatad%2FUserInterfaceState.xcuserstate)
-            * [xcuserdata](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata/)
-              * [eldarpopov.xcuserdatad](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata%2Feldarpopov.xcuserdatad/)
-                * [xcdebugger](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata%2Feldarpopov.xcuserdatad%2Fxcdebugger/)
-                  * [Breakpoints_v2.xcbkptlist](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata%2Feldarpopov.xcuserdatad%2Fxcdebugger%2FBreakpoints_v2.xcbkptlist)
-                * [xcschemes](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata%2Feldarpopov.xcuserdatad%2Fxcschemes/)
-                  * [xcschememanagement.plist](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationProject%2FAnimation.xcodeproj%2Fxcuserdata%2Feldarpopov.xcuserdatad%2Fxcschemes%2Fxcschememanagement.plist)
         * [AnimationTaxonimy.md](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FAnimationTaxonimy.md)
         * [CoordinateSystem.md](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FAnimation%2FCoordinateSystem.md)
       * [Environment](4%20Linkage%2F4.1%20Frameworks%2F4.1.3%20SwiftUI%2FEnvironment/)
@@ -276,66 +243,9 @@
     * [5.6.4 MessageDispatch.md](5%20Swift%2F5.6%20MethodDispatch%2F5.6.4%20MessageDispatch.md)
   * [PropertyObservers.md](5%20Swift%2FPropertyObservers.md)
 
-
+---
 
 // TODO:
 !! Изучить и записать - associated type в Protocol, и associated value в enum
 !! Дописать их в Swift Glossary
-
-
-# Bash Script Example
-
-Ниже приведен Bash-скрипт:
-
-<pre>
-#!/bin/bash
-
-# Функция для кодирования URL (для относительных ссылок)
-url_encode() {
-    local url="$1"
-    local length="${#url}"
-    for (( i = 0; i < length; i++ )); do
-        local c="${url:i:1}"
-        case "$c" in
-            [a-zA-Z0-9._-]) printf "$c" ;;
-            ' ') printf '%%20' ;;
-            *) printf '%%%02X' "'$c" ;;
-        esac
-    done
-}
-
-# Функция для рекурсивного обхода директорий и создания Markdown-дерева
-generate_tree() {
-    local current_dir="$1"
-    local indent="$2"
-    local prefix="$3"
-
-    # Проходим по каждому элементу в директории
-    for file in "$current_dir"/*; do
-        # Получаем относительный путь для ссылки
-        relative_path="${file#$root_dir/}"
-        # Кодируем относительный путь для URL
-        encoded_path=$(url_encode "$relative_path")
-
-        # Проверяем, является ли элемент директорией
-        if [ -d "$file" ]; then
-            echo "${indent}* [$prefix$(basename "$file")]($encoded_path/)"
-            # Рекурсивно обрабатываем подкаталоги
-            generate_tree "$file" "$indent  " "$prefix"
-        else
-            echo "${indent}* [$prefix$(basename "$file")]($encoded_path)"
-        fi
-    done
-}
-
-# Устанавливаем начальную директорию
-root_dir=$(pwd)
-
-# Начинаем с заголовка
-echo "# Project tree"
-echo
-
-# Запускаем генерацию дерева с начальной директории
-generate_tree "$root_dir" "" ""
-</pre>
 

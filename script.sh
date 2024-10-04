@@ -22,18 +22,41 @@ generate_tree() {
 
     # Проходим по каждому элементу в директории
     for file in "$current_dir"/*; do
+        # Проверяем, существует ли файл или директория
+        [ -e "$file" ] || continue
+
         # Получаем относительный путь для ссылки
         relative_path="${file#$root_dir/}"
         # Кодируем относительный путь для URL
         encoded_path=$(url_encode "$relative_path")
 
+        # Получаем имя файла или директории
+        basename_file=$(basename "$file")
+
         # Проверяем, является ли элемент директорией
         if [ -d "$file" ]; then
-            echo "${indent}* [$prefix$(basename "$file")]($encoded_path/)"
-            # Рекурсивно обрабатываем подкаталоги
-            generate_tree "$file" "$indent  " "$prefix"
-        else
-            echo "${indent}* [$prefix$(basename "$file")]($encoded_path)"
+            case "$basename_file" in
+                *.xcodeproj|*.xcassets)
+                    # Пропускаем директории с указанными расширениями
+                    continue
+                    ;;
+                *)
+                    # Выводим ссылку на директорию и рекурсивно обходим её содержимое
+                    echo "${indent}* [${prefix}${basename_file}](${encoded_path}/)"
+                    generate_tree "$file" "$indent  " "$prefix"
+                    ;;
+            esac
+        elif [ -f "$file" ]; then
+            case "$basename_file" in
+                *.entitlements)
+                    # Пропускаем файлы с расширением .entitlements
+                    continue
+                    ;;
+                *)
+                    # Выводим ссылку на файл
+                    echo "${indent}* [${prefix}${basename_file}](${encoded_path})"
+                    ;;
+            esac
         fi
     done
 }
