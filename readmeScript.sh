@@ -42,7 +42,7 @@ generate_tree() {
                     ;;
                 *)
                     # Выводим ссылку на директорию и рекурсивно обходим её содержимое
-                    echo "${indent}* [${prefix}${basename_file}](${encoded_path}/)"
+                    echo "${indent}* [${prefix}${basename_file} Folder](${encoded_path}/)"
                     generate_tree "$file" "$indent  " "$prefix"
                     ;;
             esac
