@@ -96,8 +96,6 @@
 | Ю      | %D0%AE    | ю                | %D1%8E    |
 | Я      | %D0%AF    | я                | %D1%8F    |
 
-
-
 ---
 
 [2.3.1.2 Rest API Theme](./2.3.1.2%20RestAPI.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.3.1.4 HTTP Methods Theme](./2.3.1.4%20HTTP_Methods.md)
