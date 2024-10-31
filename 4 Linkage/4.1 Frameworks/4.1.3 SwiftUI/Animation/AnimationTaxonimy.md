@@ -45,7 +45,7 @@
     * bouncy // средний отскок (medium bounce)
         ![](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Frameworks/SwiftUI/Animation/bounce.png?raw=true)
     
-    * [interpolating](/Swift/Glossary.md#экстраполяцияинтерполяция) spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
+    * [interpolating](/5%20Swift/5.2%20Glossary.md#экстраполяцияинтерполяция) spring - запуская анимацию несколько раз, эффект пружины будет становиться все сильнее и сильнее по мере объединения пружин
 
 * [Higher order](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.1%20Declarative/2.2.2.1.1%20FunctionalProgramming(FP).md): 
     * speed

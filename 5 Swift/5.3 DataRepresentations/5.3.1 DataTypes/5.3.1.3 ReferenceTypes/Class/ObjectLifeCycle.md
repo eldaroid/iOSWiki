@@ -1,6 +1,6 @@
 ### Жизненный цикл объекта Swift
 
-[Объекты](/5%20Swift/5.3%20DataRepresentations/5.2.1%20DataTypes/5.2.1.3%20ReferenceTypes/Class/Class.md) Swift не уничтожаются сразу. Вместо этого они проходят 5 этапов своего жизненного цикла: live → deiniting → deinited → freed → dead:
+[Объекты](/5%20Swift/5.3%20DataRepresentations/5.3.1%20DataTypes/5.3.1.3%20ReferenceTypes/Class/ObjectLifeCycle.md) Swift не уничтожаются сразу. Вместо этого они проходят 5 этапов своего жизненного цикла: live → deiniting → deinited → freed → dead:
 
 ![LifecycleOfObject](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Concurrency/SideTables.png?raw=true)
 

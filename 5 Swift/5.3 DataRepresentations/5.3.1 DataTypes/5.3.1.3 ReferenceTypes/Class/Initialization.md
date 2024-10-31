@@ -38,7 +38,7 @@ print(num) // Optional(5)
 
 
 
-## init в [структурах](/Swift/DataStructures/StructAndClass/Struct.md)
+## init в [структурах](/5%20Swift/5.3%20DataRepresentations/5.3.1%20DataTypes/5.3.1.4%20ValueTypes/Struct.md)
 
 Без init() нам обязательно нужно указывать при создании экземпляра структура нужно обязательно указать имя.
 

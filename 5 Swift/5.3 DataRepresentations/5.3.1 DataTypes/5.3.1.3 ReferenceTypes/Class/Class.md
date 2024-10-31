@@ -12,7 +12,7 @@
 
 1. :heavy_check_mark: [final](https://www.hackingwithswift.com/sixty/8/4/final-classes)
 
-Final class меняет метод диспатч на дайрект (оптимизация). Без final он будет думать, что мы можем наследовать и хранить в [Table Dispatch](/Swift/MethodDispatch/MethodDispatch.md).
+Final class меняет метод диспатч на дайрект (оптимизация). Без final он будет думать, что мы можем наследовать и хранить в [Table Dispatch](/5%20Swift/5.6%20MethodDispatch/5.6.3%20TableDispatch.md).
 
 ## This code prints the same output twice – true or false?
 
@@ -49,4 +49,4 @@ print(enterprise.maxWarp) // 9.6
 
 final enables direct dispatch on a method defined in a class. This keyword removes the possibility of any dynamic behavior. It can be used on any method, even in an extension where the dispatch would already be direct. This will also hide the method from the Objective-C runtime, and will not generate a selector.
 
-!!!Прочитать про 3 метода [Dispatch](/Swift/MethodDispatch/MethodDispatch.md)
+!!!Прочитать про [3 метода Dispatch](/5%20Swift/5.6%20MethodDispatch/5.6.1%20MethodDispatch.md)

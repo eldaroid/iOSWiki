@@ -2,7 +2,7 @@
 
 1. [All SwiftUI property wrappers explained and compared](https://www.hackingwithswift.com/quick-start/swiftui/all-swiftui-property-wrappers-explained-and-compared)
 
-Property Wrapper (“Обертка Свойства”) — это просто структура struct, в которую встроен некоторый шаблон “поведения” переменной var, которую эта структура struct “оборачивает”. Реализация [дизайн паттерна](/2%20ComputerScience/Patterns/DesignPattern/ListOfDesignPattern.md) - [декоратора](/2%20ComputerScience/Patterns/DesignPattern/Structural/Decorator.md).
+Property Wrapper (“Обертка Свойства”) — это просто структура struct, в которую встроен некоторый шаблон “поведения” переменной var, которую эта структура struct “оборачивает”. Реализация [дизайн паттерна](/2%20ComputerScience/2.4%20Patterns/2.4.3%20DesignPattern/2.4.3.1%20ListOfDesignPattern.md) - [декоратора](/2%20ComputerScience/2.4%20Patterns/2.4.3%20DesignPattern/2.4.3.4%20Structural/Decorator.md).
 
 > Благодаря этому мы наконец-то поймем, что такие вещи как @State, @StateObject, @Published, @ObservedObject и другие @штуковины делают под «капотом»
 
@@ -27,7 +27,7 @@ Property Wrapper (“Обертка Свойства”) — это просто
 
 * [@GestureState](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-gesturestate-property-wrapper) хранит значения, связанные с жестом, который в данный момент выполняется, например, насколько далеко вы провели пальцем, за исключением того, что он будет сброшен до значения по умолчанию, когда жест остановится;
 
-* @Namespace создает [пространство имен](/Swift/Glossary.md#:~:text=Namespace) анимации, позволяющее совмещать эффекты геометрии, которые могут использоваться другими представлениями;
+* @Namespace создает [пространство имен](/5%20Swift/5.2%20Glossary.md#:~:text=Namespace) анимации, позволяющее совмещать эффекты геометрии, которые могут использоваться другими представлениями;
 
 * @NSApplicationDelegateAdaptor используется для создания и регистрации класса в качестве делегата приложения для приложения macOS;
 

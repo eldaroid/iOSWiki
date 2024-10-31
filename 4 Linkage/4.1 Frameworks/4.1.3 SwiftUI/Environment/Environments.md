@@ -120,6 +120,8 @@ struct ArticleView: View {
 ---
 ---
 
+# TBD
+
 !Прочитать про keyPath: https://www.swiftbysundell.com/articles/the-power-of-key-paths-in-swift/
 
 !Прочитать про что выбрать Observed/Environment: https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
