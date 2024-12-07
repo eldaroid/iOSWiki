@@ -13,3 +13,6 @@
 
 ![hash table](https://github.com/eldaroid/pictures/blob/master/iOSWiki/Swift/hash_table.png?raw=true)
 
+---
+
+[5.3.1.4.4 Collections And Tuple Theme Folder](../5.3.1.4.4%20CollectionsAndTuple/) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [Collections Theme](./Collections.md)

@@ -146,3 +146,5 @@ if case let a? = x {
 ```
 
 ---
+
+[Indirect Enum Theme](./IndirectEnum.md)) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [5.3.1.4.4 Collections And Tuple Theme Folder](../5.3.1.4.4%20CollectionsAndTuple/)

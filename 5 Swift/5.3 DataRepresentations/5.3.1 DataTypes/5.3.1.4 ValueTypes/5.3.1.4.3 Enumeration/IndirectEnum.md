@@ -158,3 +158,5 @@ enum MyEnum {
 ```
 
 ---
+
+[Enumeration Theme](./Enumeration.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [Optiona Theme](./Optional.md)

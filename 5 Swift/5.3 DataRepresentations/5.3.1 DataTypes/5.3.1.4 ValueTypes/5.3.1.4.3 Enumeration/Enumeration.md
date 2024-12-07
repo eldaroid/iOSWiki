@@ -76,16 +76,6 @@ if lowPriority <<< mediumPriority {
 
 # TODO: https://habr.com/ru/articles/759842/
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
+[5.3.1.4.3 Enumeration Theme Folder](./5.3.1.4.3%20Enumeration/) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [Indirect Enum Theme](./IndirectEnum.md)

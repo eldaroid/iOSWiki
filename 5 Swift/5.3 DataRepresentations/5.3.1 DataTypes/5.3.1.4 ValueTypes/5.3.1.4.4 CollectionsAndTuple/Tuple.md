@@ -30,3 +30,7 @@ struct Person {
 
 
 >  Кортежи дают нам некоторую безопасность имен кортежей, но могут расти и изменяться, как массивы
+
+---
+
+[Collections Theme](./Collections.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [5.3.2 Data Structures Theme Folder](/5%20Swift/5.3%20DataRepresentations/5.3.2%20DataStructures/)

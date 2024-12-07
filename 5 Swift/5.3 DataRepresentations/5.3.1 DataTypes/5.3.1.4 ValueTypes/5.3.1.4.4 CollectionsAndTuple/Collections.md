@@ -99,3 +99,5 @@ protocol CollectionType : SequenceType {
 > To use OrderedSet, first add the swift-collections Swift package to your project. Then, import the OrderedCollections module: `import OrderedCollections`
 
 ---
+
+[Associated Array Theme](./AssociatedArray.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [Tuple Theme](./Tuple.md)
