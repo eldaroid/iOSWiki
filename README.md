@@ -4,7 +4,19 @@
 [![Repo Size](https://img.shields.io/github/repo-size/eldaroid/iOSWiki)]()
 [![Last Commit](https://img.shields.io/github/last-commit/eldaroid/iOSWiki)]()
 
-# 📝 Structure of iOSWiki Content
+# 👨‍🎓 Для кого это?
+
+Эти материалы будут полезны для:
+* Для любого, кто захочет стать iOS разработчиком;
+* Для iOS разработчиков, которые готовятся к собеседованию;
+* Для iOS разработчиков, которые находятся на уровне trainee|junior|middle и хотят вырасти;
+* Для инженеров, которые хотят понимать больше про [Computer Science](./2%20ComputerScience/);
+
+# 💼🧑🏻‍💼 Матрицы компетенций
+
+Ознакомиться с матрицей компетенций для Junior/Middle/Senior iOS/Android Инженера разработчика: [iOS/Android](./МатрицаКомпетенцийAndroidIOS.xlsx.zip)
+
+# 📝 Структура iOSWiki Content
 
 * [1 Common Folder](1%20Common/)
   * [1.1 Configs Folder](1%20Common%2F1.1%20Configs/)
@@ -22,7 +34,9 @@
       * [1.1.6.3 Debugging.md](1%20Common%2F1.1%20Configs%2F1.1.6%20Xcode%2F1.1.6.3%20Debugging.md)
     * [CleanUpMac.sh](1%20Common%2F1.1%20Configs%2FCleanUpMac.sh)
   * [1.2 Git Folder](1%20Common%2F1.2%20Git/)
-    * [1.2.1 Markdown.md](1%20Common%2F1.2%20Git%2F1.2.1%20Markdown.md)
+    * [1.2.1 Markdown Folder](1%20Common%2F1.2%20Git%2F1.2.1%20Markdown/)
+      * [1.2.1.1 Markdown.md](1%20Common%2F1.2%20Git%2F1.2.1%20Markdown%2F1.2.1.1%20Markdown.md)
+      * [1.2.1.2 MermaidDiagram.md](1%20Common%2F1.2%20Git%2F1.2.1%20Markdown%2F1.2.1.2%20MermaidDiagram.md)
     * [1.2.2 Git.md](1%20Common%2F1.2%20Git%2F1.2.2%20Git.md)
     * [1.2.3 Flow Folder](1%20Common%2F1.2%20Git%2F1.2.3%20Flow/)
       * [1.2.3.1 Gitflow.md](1%20Common%2F1.2%20Git%2F1.2.3%20Flow%2F1.2.3.1%20Gitflow.md)
@@ -34,6 +48,7 @@
       * [1.2.5.2 commit-msg.md](1%20Common%2F1.2%20Git%2F1.2.5%20GitHook%2F1.2.5.2%20commit-msg.md)
   * [1.3 Terminal Folder](1%20Common%2F1.3%20Terminal/)
     * [1.3.1 Teminal.md](1%20Common%2F1.3%20Terminal%2F1.3.1%20Teminal.md)
+    * [1.3.2 DeepDiveInTerminal.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20DeepDiveInTerminal.md)
     * [1.3.2 TextEditors Folder](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors/)
       * [1.3.2.1 TextEditors.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors%2F1.3.2.1%20TextEditors.md)
       * [1.3.2.2 VimModes.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors%2F1.3.2.2%20VimModes.md)
@@ -56,13 +71,17 @@
   * [2.1 Algoritms Folder](2%20ComputerScience%2F2.1%20Algoritms/)
     * [2.1.1 AboutAlgo.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.1%20AboutAlgo.md)
     * [2.1.2 ListOfAlgoritms.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.2%20ListOfAlgoritms.md)
-    * [2.1.3 Logical Expressions Theme](/2%20ComputerScience/2.1%20Algoritms/2.1.3%20Logical%20Expressions.md)
-    * [2.1.4 Leetcode Folder](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Leetcode/)
-      * [2.1.4.1 Anagram.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Leetcode%2F2.1.3.1%20Anagram.md)
-      * [2.1.4.2 CountCharInStr.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Leetcode%2F2.1.3.2%20CountCharInStr.md)
-      * [2.1.4.3 GenerateBrackets.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Leetcode%2F2.1.3.3%20GenerateBrackets.md)
-    * [2.1.5 Sorting Folder](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Sorting/)
-      * [2.1.6.1 ListOfSortingAlgoritms.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Sorting%2F2.1.4.1%20ListOfSortingAlgoritms.md)
+    * [2.1.3 Operators Folder](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Operators/)
+      * [2.1.3.1 Logical Expressions.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Operators%2F2.1.3.1%20Logical%20Expressions.md)
+      * [2.1.3.2 Unary.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Operators%2F2.1.3.2%20Unary.md)
+      * [2.1.3.3 Binary.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Operators%2F2.1.3.3%20Binary.md)
+      * [2.1.3.3 Ternary.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.3%20Operators%2F2.1.3.3%20Ternary.md)
+    * [2.1.4 Leetcode Folder](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Leetcode/)
+      * [2.1.4.1 Anagram.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Leetcode%2F2.1.4.1%20Anagram.md)
+      * [2.1.4.2 CountCharInStr.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Leetcode%2F2.1.4.2%20CountCharInStr.md)
+      * [2.1.4.3 GenerateBrackets.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.4%20Leetcode%2F2.1.4.3%20GenerateBrackets.md)
+    * [2.1.5 Sorting Folder](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.5%20Sorting/)
+      * [2.1.5.1 ListOfSortingAlgoritms.md](2%20ComputerScience%2F2.1%20Algoritms%2F2.1.5%20Sorting%2F2.1.5.1%20ListOfSortingAlgoritms.md)
   * [2.2 Languages Folder](2%20ComputerScience%2F2.2%20Languages/)
     * [2.2.1 TypesOfLanguages.md](2%20ComputerScience%2F2.2%20Languages%2F2.2.1%20TypesOfLanguages.md)
     * [2.2.2 Paradigm Folder](2%20ComputerScience%2F2.2%20Languages%2F2.2.2%20Paradigm/)
@@ -117,12 +136,14 @@
       * [2.4.4.5 SOLID.md](2%20ComputerScience%2F2.4%20Patterns%2F2.4.4%20DesignPrinciple%2F2.4.4.5%20SOLID.md)
     * [2.4.5 Tests Folder](2%20ComputerScience%2F2.4%20Patterns%2F2.4.5%20Tests/)
       * [2.4.5.1 AboutTests.md](2%20ComputerScience%2F2.4%20Patterns%2F2.4.5%20Tests%2F2.4.5.1%20AboutTests.md)
+      * [2.4.5.2 DrivenDevelopment.md](2%20ComputerScience%2F2.4%20Patterns%2F2.4.5%20Tests%2F2.4.5.2%20DrivenDevelopment.md)
       * [2.4.5.2 iOSTests.md](2%20ComputerScience%2F2.4%20Patterns%2F2.4.5%20Tests%2F2.4.5.2%20iOSTests.md)
   * [2.5 Cybersecurity Folder](2%20ComputerScience%2F2.5%20Cybersecurity/)
     * [2.5.1 Cryptology.md](2%20ComputerScience%2F2.5%20Cybersecurity%2F2.5.1%20Cryptology.md)
     * [2.5.2 Encryption.md](2%20ComputerScience%2F2.5%20Cybersecurity%2F2.5.2%20Encryption.md)
     * [2.5.3 Certificate.md](2%20ComputerScience%2F2.5%20Cybersecurity%2F2.5.3%20Certificate.md)
     * [2.5.4 Digital Signature (signing).md](2%20ComputerScience%2F2.5%20Cybersecurity%2F2.5.4%20Digital%20Signature%20%28signing%29.md)
+    * [2.5.5 AuthenticationvsAuthorization.md](2%20ComputerScience%2F2.5%20Cybersecurity%2F2.5.5%20AuthenticationvsAuthorization.md)
     * [RSA.md](2%20ComputerScience%2F2.5%20Cybersecurity%2FRSA.md)
     * [SSL.md](2%20ComputerScience%2F2.5%20Cybersecurity%2FSSL.md)
     * [SecurityAndPrivacy.md](2%20ComputerScience%2F2.5%20Cybersecurity%2FSecurityAndPrivacy.md)
@@ -225,15 +246,16 @@
         * [Closure.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.3%20ReferenceTypes%2FClosure.md)
         * [Function.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.3%20ReferenceTypes%2FFunction.md)
       * [5.3.1.4 ValueTypes Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes/)
-        * [CollectionsAndTuple Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FCollectionsAndTuple/)
-          * [AssociatedArray.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FCollectionsAndTuple%2FAssociatedArray.md)
-          * [Collections.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FCollectionsAndTuple%2FCollections.md)
-          * [Tuple.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FCollectionsAndTuple%2FTuple.md)
-        * [Enumeration Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FEnumeration/)
-          * [Enumeration.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FEnumeration%2FEnumeration.md)
-          * [IndirectEnum.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FEnumeration%2FIndirectEnum.md)
-          * [Optional.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FEnumeration%2FOptional.md)
-        * [Struct.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2FStruct.md)
+        * [5.3.1.4.1 MainTypes.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.1%20MainTypes.md)
+        * [5.3.1.4.2 Struct.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.2%20Struct.md)
+        * [5.3.1.4.3 Enumeration Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration/)
+          * [Enumeration.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration%2FEnumeration.md)
+          * [IndirectEnum.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration%2FIndirectEnum.md)
+          * [Optional.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration%2FOptional.md)
+        * [5.3.1.4.4 CollectionsAndTuple Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple/)
+          * [AssociatedArray.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FAssociatedArray.md)
+          * [Collections.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FCollections.md)
+          * [Tuple.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FTuple.md)
     * [5.3.2 DataStructures Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.2%20DataStructures/)
       * [5.3.2.1 ListOfDataStructures.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.2%20DataStructures%2F5.3.2.1%20ListOfDataStructures.md)
   * [5.4 Protocol Folder](5%20Swift%2F5.4%20Protocol/)
@@ -250,14 +272,17 @@
     * [5.6.3 TableDispatch.md](5%20Swift%2F5.6%20MethodDispatch%2F5.6.3%20TableDispatch.md)
     * [5.6.4 MessageDispatch.md](5%20Swift%2F5.6%20MethodDispatch%2F5.6.4%20MessageDispatch.md)
   * [PropertyObservers.md](5%20Swift%2FPropertyObservers.md)
-* [Junior:Middle:Senior.xlsx.zip](Junior%3AMiddle%3ASenior.xlsx.zip)
+* [Матрицы компетенций для Junior/Middle/Senior iOS/Android Инженера разработчика](./МатрицаКомпетенцийAndroidIOS.xlsx.zip)
 * [LICENSE](LICENSE)
 * [README.md](README.md)
 * [readmeScript.sh](readmeScript.sh)
+
+# 👨‍🏫 Цель проекта
+
+Данный репозиторий был создан исключительно с целью пользования собственным материалом в обучающих целях, но вы также можете не стесняться контрибутить и улучшать репозиторий 😁
 
 ---
 
 // TODO:
 !! Изучить и записать - associated type в Protocol, и associated value в enum
 !! Дописать их в Swift Glossary
-
