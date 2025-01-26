@@ -4,35 +4,6 @@
 
 Swift позволяет нам использовать функции, как и любой другой тип, например строки и целые числа. Это означает, что вы можете создать функцию и присвоить ее переменной, вызвать эту функцию, используя эту переменную, и даже передать эту функцию другим функциям в качестве параметров. Функции, используемые таким образом, называются замыканиями
 
-## inout
-
-1. :heavy_check_mark: [When should you use inout parameters?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-inout-parameters)
-2. :heavy_check_mark: [inout parameters](https://www.hackingwithswift.com/sixty/5/10/inout-parameters)
-
-Параметры функции изменять нельзя, и, чтобы обойти это ограничение, добавим inout-параметр, который допускает изменение. Это тот же указатель в си (*), для передачи переменной в качестве inout необходимо добавить &.
-
-```
-var num1: Int = 1
-var char1 = "a"
-
-func changeNumber(num: Int) {
-    var num = num
-    num = 2
-}
-changeNumber(num: num1)
-print(num1) // 1
-
-func changeChar(char: inout String) {
-    char = "b"
-}
-changeChar(char: &char1)
-print(char1) // b
-```
-
-> нельзя передавать константы (let) как inout параметр (&my_let)
-
----
-
 ## mutating func
 
 1. :heavy_check_mark: [Mutating methods](https://www.hackingwithswift.com/sixty/7/5/mutating-methods)
@@ -76,13 +47,6 @@ MyRect.scaleBy(3)
 Будет ошибка компиляции, потому что мы пытаемся константную переменную изменить.
 
 ### throw/throws
-
-1. :heavy_check_mark: [Working with throwing functions in Swift](https://www.donnywals.com/working-with-throwing-functions-in-swift/)
-2. :heavy_check_mark: [When should you write throwing functions?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-write-throwing-functions)
-3. :heavy_check_mark: [Running throwing functions](https://www.hackingwithswift.com/sixty/5/9/running-throwing-functions)
-4. :heavy_check_mark: [Why does Swift make us use try before every throwing function?](https://www.hackingwithswift.com/quick-start/understanding-swift/why-does-swift-make-us-use-try-before-every-throwing-function)
-5. :heavy_check_mark: [Optional try](https://www.hackingwithswift.com/sixty/10/8/optional-try)
-
 Пример, [взятый отсюда](https://www.hackingwithswift.com/sixty/5/8/writing-throwing-functions):
 
 ```swift
@@ -110,7 +74,71 @@ do {
 >
 > Обратить внимание где пишется `throws`, а где `throw`;
 >
-> Swift не позволит вам случайно запустить `throws` функцию, поэтому нужно использовать do (запускает раздел кода, который может вызвать проблемы), try (используется перед каждой функцией, которая может вызвать ошибку), catch позволяет вам корректно обрабатывать ошибки;
+
+Swift не позволит вам случайно запустить `throws` функцию, поэтому нужно использовать do (запускает раздел кода, который может вызвать проблемы), try (используется перед каждой функцией, которая может вызвать ошибку), catch позволяет вам корректно обрабатывать ошибки;
+
+## defer (отложить)
+
+`defer` используется для того, чтобы отложить выполнение блока кода до завершения текущей области видимости:
+
+```swift
+func deferExample() {
+    defer { 
+        print("defer")
+    }
+    print("Область видимости")
+}
+```
+
+Особенностью `defer` - выполняются в обратном порядке их объявления ([LIFO — Last In, First Out](/3%20Memory%20and%20Concurrency/3.1%20Memory/3.1.2%20RandomAccessMemory/3.1.2.2%20Stack.md)):
+
+```swift
+func deferExample() {
+    func someInnerFunction() {
+        defer { print(1) }
+    }
+
+    defer {
+        print(2)
+        defer { print(3) }
+    }
+
+    defer {
+        print(4)
+        someInnerFunction()
+    }
+    print(5)
+}
+// 5 4 1 2 3
+```
+
+
+## inout
+
+1. :heavy_check_mark: [When should you use inout parameters?](https://www.hackingwithswift.com/quick-start/understanding-swift/when-should-you-use-inout-parameters)
+2. :heavy_check_mark: [inout parameters](https://www.hackingwithswift.com/sixty/5/10/inout-parameters)
+
+Параметры функции изменять нельзя, и, чтобы обойти это ограничение, добавим inout-параметр, который допускает изменение. Это тот же указатель в си (*), для передачи переменной в качестве inout необходимо добавить &.
+
+```
+var num1: Int = 1
+var char1 = "a"
+
+func changeNumber(num: Int) {
+    var num = num
+    num = 2
+}
+changeNumber(num: num1)
+print(num1) // 1
+
+func changeChar(char: inout String) {
+    char = "b"
+}
+changeChar(char: &char1)
+print(char1) // b
+```
+
+> нельзя передавать константы (let) как inout параметр (&my_let)
 
 ## Пользовательские операторы (infix, prefix, postfix operator)
 
