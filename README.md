@@ -16,6 +16,13 @@
 
 Ознакомиться с матрицей компетенций для Junior/Middle/Senior iOS/Android Инженера разработчика: [iOS/Android](./МатрицаКомпетенцийAndroidIOS.xlsx.zip)
 
+# 👨‍🏫 Цель проекта
+
+Данный репозиторий был создан исключительно с целью пользования собственным материалом в обучающих целях, но вы также можете не стесняться контрибутить и улучшать репозиторий 😁
+
+<img alt="Star the Expo repo on GitHub to support the project" src="https://user-images.githubusercontent.com/9664363/185428788-d762fd5d-97b3-4f59-8db7-f72405be9677.gif" width="50%">
+
+
 # 📝 Структура iOSWiki Content
 
 * [1 Common Folder](1%20Common/)
@@ -47,7 +54,7 @@
       * [1.2.5.1 GitHook.md](1%20Common%2F1.2%20Git%2F1.2.5%20GitHook%2F1.2.5.1%20GitHook.md)
       * [1.2.5.2 commit-msg.md](1%20Common%2F1.2%20Git%2F1.2.5%20GitHook%2F1.2.5.2%20commit-msg.md)
   * [1.3 Terminal Folder](1%20Common%2F1.3%20Terminal/)
-    * [1.3.0 Terminal.md](1%20Common%2F1.3%20Terminal%2F1.3.0%20Teminal.md)
+    * [1.3.0 Terminal.md](1%20Common%2F1.3%20Terminal%2F1.3.0%20Terminal.md)
     * [1.3.1 DeepDiveInTerminal.md](1%20Common%2F1.3%20Terminal%2F1.3.1%20DeepDiveInTerminal.md)
     * [1.3.2 TextEditors Folder](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors/)
       * [1.3.2.1 TextEditors.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors%2F1.3.2.1%20TextEditors.md)
@@ -102,7 +109,7 @@
       * [2.3.1.5 ResponseStatusCode.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.1%20API%2F2.3.1.5%20ResponseStatusCode.md)
     * [2.3.2 Web Folder](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web/)
       * [2.3.2.1 WWW.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web%2F2.3.2.1%20WWW.md)
-      * [2.3.2.3 Local and Wide Area Netwotk](/2%20ComputerScience/2.3%20Networking/2.3.2%20Web/2.3.2.2%20LocalAndWideAreaNetwork.md)
+      * [2.3.2.2 LocalAndWideAreaNetwork.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web%2F2.3.2.2%20LocalAndWideAreaNetwork.md)
       * [2.3.2.3 Protocols.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web%2F2.3.2.3%20Protocols.md)
       * [2.3.2.4 IP.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web%2F2.3.2.4%20IP.md)
       * [2.3.2.5 Ports.md](2%20ComputerScience%2F2.3%20Networking%2F2.3.2%20Web%2F2.3.2.5%20Ports.md)
@@ -256,9 +263,10 @@
           * [IndirectEnum.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration%2FIndirectEnum.md)
           * [Optional.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.3%20Enumeration%2FOptional.md)
         * [5.3.1.4.4 CollectionsAndTuple Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple/)
-          * [AssociatedArray.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FAssociatedArray.md)
-          * [Collections.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FCollections.md)
-          * [Tuple.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2FTuple.md)
+          * [5.3.1.4.4.1 Collections.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2F5.3.1.4.4.1%20Collections.md)
+          * [5.3.1.4.4.2 AssociatedArray.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2F5.3.1.4.4.2%20AssociatedArray.md)
+          * [5.3.1.4.4.3 Tuple.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2F5.3.1.4.4.3%20Tuple.md)
+          * [5.3.1.4.4.4 HigherOrderFunctions.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.1%20DataTypes%2F5.3.1.4%20ValueTypes%2F5.3.1.4.4%20CollectionsAndTuple%2F5.3.1.4.4.4%20HigherOrderFunctions.md)
     * [5.3.2 DataStructures Folder](5%20Swift%2F5.3%20DataRepresentations%2F5.3.2%20DataStructures/)
       * [5.3.2.1 ListOfDataStructures.md](5%20Swift%2F5.3%20DataRepresentations%2F5.3.2%20DataStructures%2F5.3.2.1%20ListOfDataStructures.md)
   * [5.4 Protocol Folder](5%20Swift%2F5.4%20Protocol/)
@@ -280,14 +288,7 @@
 * [readmeScript.sh](readmeScript.sh)
 * [МатрицаКомпетенцийAndroidIOS.xlsx.zip](МатрицаКомпетенцийAndroidIOS.xlsx.zip)
 
-# 👨‍🏫 Цель проекта
+# TODO
 
-Данный репозиторий был создан исключительно с целью пользования собственным материалом в обучающих целях, но вы также можете не стесняться контрибутить и улучшать репозиторий 😁
-
-<img alt="Star the Expo repo on GitHub to support the project" src="https://user-images.githubusercontent.com/9664363/185428788-d762fd5d-97b3-4f59-8db7-f72405be9677.gif" width="50%">
-
----
-
-// TODO:
-!! Изучить и записать - associated type в Protocol, и associated value в enum
-!! Дописать их в Swift Glossary
+* [ ] Изучить и записать - associated type в Protocol, и associated value в enum. Дописать их в Swift Glossary
+* [ ] Многопоточка. Виды, типы и тп
