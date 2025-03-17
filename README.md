@@ -64,6 +64,7 @@
       * [1.3.3.2 Link(ln).md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.2%20Link%28ln%29.md)
       * [1.3.3.3 Chmod.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.3%20Chmod.md)
       * [1.3.3.4 MetadataAttributes.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.4%20MetadataAttributes.md)
+      * [1.3.3.5 SearchingInfo.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.5%20SearchingInfo.md)
     * [1.3.4 Regex Folder](1%20Common%2F1.3%20Terminal%2F1.3.4%20Regex/)
       * [1.3.4.1 Regex.md](1%20Common%2F1.3%20Terminal%2F1.3.4%20Regex%2F1.3.4.1%20Regex.md)
       * [1.3.4.2 GreedyAndLazySearch.md](1%20Common%2F1.3%20Terminal%2F1.3.4%20Regex%2F1.3.4.2%20GreedyAndLazySearch.md)
@@ -216,14 +217,15 @@
       * [4.1.4.5 Subscriber.md](4%20Linkage%2F4.1%20Frameworks%2F4.1.4%20Combine%2F4.1.4.5%20Subscriber.md)
   * [4.2 IosDevTools Folder](4%20Linkage%2F4.2%20IosDevTools/)
     * [4.2.1 Building Folder](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building/)
-      * [4.2.1.0 Packege Manager Theme Folder](/4%20Linkage/4.2%20IosDevTools/4.2.1%20Building/4.2.1.0%20PackageManager/)
-        * [4.2.1.1 Homebew Theme](/4%20Linkage/4.2%20IosDevTools/4.2.1%20Building/4.2.1.0%20PackageManager/4.2.1.0.1%20Homebrew.md)
-        * [4.2.1.2 NPM](/4%20Linkage/4.2%20IosDevTools/4.2.1%20Building/4.2.1.0%20PackageManager/4.2.1.0.2%20NodePM.md)
+      * [4.2.1.0 PackageManager Folder](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.0%20PackageManager/)
+        * [4.2.1.0.1 Homebrew.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.0%20PackageManager%2F4.2.1.0.1%20Homebrew.md)
+        * [4.2.1.0.2 NodePM.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.0%20PackageManager%2F4.2.1.0.2%20NodePM.md)
       * [4.2.1.1 Simulator.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.1%20Simulator.md)
       * [4.2.1.2 DependenciesManagement.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.2%20DependenciesManagement.md)
       * [4.2.1.3 SwiftLint.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.3%20SwiftLint.md)
       * [4.2.1.4 Xcodegen.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.4%20Xcodegen.md)
       * [4.2.1.5 Debug.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.5%20Debug.md)
+      * [4.2.1.6 CI.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.1%20Building%2F4.2.1.6%20CI.md)
     * [4.2.2 Routing Folder](4%20Linkage%2F4.2%20IosDevTools%2F4.2.2%20Routing/)
       * [4.2.2.1 RoutervsCoordinator.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.2%20Routing%2F4.2.2.1%20RoutervsCoordinator.md)
       * [4.2.2.2 Deeplink.md](4%20Linkage%2F4.2%20IosDevTools%2F4.2.2%20Routing%2F4.2.2.2%20Deeplink.md)
@@ -290,7 +292,8 @@
 * [readmeScript.sh](readmeScript.sh)
 * [МатрицаКомпетенцийAndroidIOS.xlsx.zip](МатрицаКомпетенцийAndroidIOS.xlsx.zip)
 
-# TODO
+# TODO (with #TBD)
 
 * [ ] Изучить и записать - associated type в Protocol, и associated value в enum. Дописать их в Swift Glossary
-* [ ] Многопоточка. Виды, типы и тп
+* [ ] SSL, Encryption
+* [ ] Searching Info
