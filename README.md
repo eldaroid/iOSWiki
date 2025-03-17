@@ -60,7 +60,7 @@
       * [1.3.2.1 TextEditors.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors%2F1.3.2.1%20TextEditors.md)
       * [1.3.2.2 VimModes.md](1%20Common%2F1.3%20Terminal%2F1.3.2%20TextEditors%2F1.3.2.2%20VimModes.md)
     * [1.3.3 CLI Folder](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI/)
-      * [1.3.3.1 Bash.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.1%20Bash.md)
+      * [1.3.3.1 Shells.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.1%20Shells.md)
       * [1.3.3.2 Link(ln).md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.2%20Link%28ln%29.md)
       * [1.3.3.3 Chmod.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.3%20Chmod.md)
       * [1.3.3.4 MetadataAttributes.md](1%20Common%2F1.3%20Terminal%2F1.3.3%20CLI%2F1.3.3.4%20MetadataAttributes.md)
