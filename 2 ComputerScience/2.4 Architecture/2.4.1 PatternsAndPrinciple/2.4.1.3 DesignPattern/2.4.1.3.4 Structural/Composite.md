@@ -2,7 +2,7 @@
 
 1. [Structural design pattern composite](https://daddycoding.com/2023/03/19/composite/)
 
-> Один из паттернов в [ФП](/2%20ComputerScience/Languages/Paradigm/Declarative/FunctionalProgramming(FP).md).
+> Один из паттернов в [ФП](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.1%20Declarative/2.2.2.1.1%20FunctionalProgramming(FP).md).
 
 Составной шаблон проектирования — это структурный шаблон проектирования, который позволяет объединять объекты в древовидные структуры для представления иерархий целых частей. Составной шаблон позволяет клиентам единообразно обрабатывать отдельные объекты и композиции объектов.
 
