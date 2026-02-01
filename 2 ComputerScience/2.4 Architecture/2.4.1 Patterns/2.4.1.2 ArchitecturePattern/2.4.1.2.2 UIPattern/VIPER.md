@@ -13,7 +13,7 @@
 * "R", Routing: contains navigation logic for describing which screens are shown in which order.
 
 
-#### [VIP](./2.4.2.2.3%20VIP.md) vs VIPER
+#### [VIP](./VIP.md) vs VIPER
 
 Разница между VIP и VIPER - полярность. VIP - однополярный роутер. VIPER - двух полярный роутер.
 
@@ -22,4 +22,4 @@
 
 ---
 
-[2.4.2.2.3 VIP Theme](./2.4.2.2.3%20VIP.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.3 Design Pattern Theme Folder](/2%20ComputerScience/2.4%20Patterns/2.4.3%20DesignPattern/)
+[VIP UIPattern Theme](./VIP.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.3 Design Pattern Theme Folder](/2%20ComputerScience/2.4%20Architecture/2.4.1%20Patterns/2.4.1.3%20DesignPattern/)

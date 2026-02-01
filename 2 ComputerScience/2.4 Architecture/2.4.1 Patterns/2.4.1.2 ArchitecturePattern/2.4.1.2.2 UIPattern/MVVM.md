@@ -21,4 +21,4 @@
 
 ---
 
-[2.4.2.2.1 MVC Theme](./2.4.2.2.1%20MVC.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.2.2.3 VIP Theme](./2.4.2.2.3%20VIP.md)
+[MVC UIPattern  Theme](./MVC.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [VIP Theme](./VIP.md)

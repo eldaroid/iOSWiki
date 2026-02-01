@@ -31,4 +31,4 @@ When one MVC wants to talk to another, it always treat that MVC as one of its Vi
 
 ---
 
-[2.4.2.2 UI Pattern Theme Folder](../2.4.2.2%20UIPattern/) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.2.2.2 MVVM Theme](./2.4.2.2.2%20MVVM.md)
+[2.4.1.2.2 UI Pattern Theme Folder](../2.4.1.2.2%20UIPattern/) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [MVVM Theme](./MVVM.md)

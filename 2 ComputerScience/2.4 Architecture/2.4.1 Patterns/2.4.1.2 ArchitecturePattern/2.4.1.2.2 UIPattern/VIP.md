@@ -1,6 +1,6 @@
 ## VIP
 
-#### VIP vs [VIPER](./2.4.2.2.4%20VIPER.md)
+#### VIP vs [VIPER](./VIPER.md)
 
 VIP and VIPER have the same basic components, but the data flow is different. Although VIP follows a unidirectional approach (однополярный роутер), VIPER has a bidirectional (двуполярный презентер) flow that starts with the presenter.
 
@@ -10,4 +10,4 @@ In VIPER, the presenter directs data between the view and the interactor. The vi
 
 ---
 
-[2.4.2.2.2 MVVM Theme](./2.4.2.2.2%20MVVM.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.2.2.4 VIPER Theme](./2.4.2.2.4%20VIPER.md)
+[MVVM UIPattern Theme](./MVVM.mdd) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [VIPER Theme](./VIPER.md)
