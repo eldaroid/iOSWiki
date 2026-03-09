@@ -35,7 +35,7 @@ P.S.: Видео сайта [cleancoders.com](https://cleancoders.com/series/cle
 
 ### Требования
 
-SOLID и [ООП](../../2.2%20Languages/2.2.2%20Paradigm/2.2.2.2%20Imperative/2.2.2.2.2%20OOP.md) неразрывно связаны. Так получилось, что именно в ООП языках появилась удобная и безопасная поддержка динамического полиморфизма. Фактически, в контексте SOLID под ООП понимается именно динамический полиморфизм.
+SOLID и [ООП](/2%20ComputerScience/2.2%20Languages/2.2.2%20Paradigm/2.2.2.2%20Imperative/2.2.2.2.2%20OOP.md) неразрывно связаны. Так получилось, что именно в ООП языках появилась удобная и безопасная поддержка динамического полиморфизма. Фактически, в контексте SOLID под ООП понимается именно динамический полиморфизм.
 
 Полиморфизм дает возможность для разных типов использовать один код. Полиморфизм можно грубо разделить на динамический и статический:
 * Динамический полиморфизм — это про абстрактные классы, интерфейсы, утиную типизацию, т.е. только в рантайме будет понятно, с каким типом будет работать наш код.
@@ -127,7 +127,7 @@ SOLID и [ООП](../../2.2%20Languages/2.2.2%20Paradigm/2.2.2.2%20Imperative/2.
 </p>
 </details>
 
-### [Dependency Inversion Design Principle](./2.4.1.4.2%20DI.md) — принцип инверсии зависимости
+### [Dependency Inversion Design Principle](./DI.md) — принцип инверсии зависимости
 
 <details><summary>Open</summary>
 <p>
@@ -164,4 +164,4 @@ SOLID и [ООП](../../2.2%20Languages/2.2.2%20Paradigm/2.2.2.2%20Imperative/2.
 
 ---
 
-[2.4.1.4.4 YAGNI Design Principle Theme](./2.4.1.4.4%20YAGNI.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.2 Client-Server Theme](/2%20ComputerScience/2.4%20Architecture/2.4.2%20Client-Server.md)
+[KISS Design Principle Theme](./KISS.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [YAGNI Design Principle Theme](./YAGNI.md)

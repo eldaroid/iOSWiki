@@ -10,4 +10,4 @@ In VIPER, the presenter directs data between the view and the interactor. The vi
 
 ---
 
-[MVVM UIPattern Theme](./MVVM.mdd) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [VIPER Theme](./VIPER.md)
+[MVVM UIPattern Theme](./MVVM.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [VIPER Theme](./VIPER.md)

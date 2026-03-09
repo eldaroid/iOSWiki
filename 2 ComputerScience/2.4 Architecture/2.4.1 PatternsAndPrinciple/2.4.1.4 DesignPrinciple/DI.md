@@ -2,7 +2,7 @@
 
 1. [Difference between dependency injection and dependency inversion?](https://github.com/sashakid/ios-guide/blob/master/Main/6_architecture.md#difference-between-dependency-injection-and-dependency-inversion)
 
-## Принцип [Dependency inversion из SOLID](./2.4.4.5%20SOLID.md)
+## Принцип [Dependency inversion из SOLID](./SOLID.md)
 
 Модули верхних уровней не должны зависеть от деталей нижнего уровня. А оба этих уровней должны зависеть от деталей абстракций. 
 
@@ -10,7 +10,7 @@
 
 ## Dependency injection
 
-Dependency Injection — это способ реализации [Dependency Inversion из SOLID](./2.4.4.5%20SOLID.md). Это про внедрение зависимостей в объект.
+Dependency Injection — это способ реализации [Dependency Inversion из SOLID](./SOLID.md). Это про внедрение зависимостей в объект.
 
 * [SwinJect](https://github.com/Swinject/Swinject);
 * [Needle](https://github.com/uber/needle) от uber;
@@ -18,4 +18,4 @@ Dependency Injection — это способ реализации [Dependency In
 
  ---
 
-[2.4.4.1 DRY Theme](./2.4.4.1%20%20DRY.md) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [2.4.4.3 KISS Theme](./2.4.4.3%20KISS.md)
+[2.4.3 Design Pattern Theme](../2.4.1.3%20DesignPattern/) | [Back To iOSWiki Contents](https://github.com/eldaroid/iOSWiki) | [DRY Design Principle Theme](./DRY.md)
